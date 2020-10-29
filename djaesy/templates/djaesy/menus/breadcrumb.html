@@ -1,0 +1,6 @@
+ <ol class="breadcrumb m-0">
+    <li class="breadcrumb-item active"><a href="{% if item.url %}{{ item.url }}{% else %}javascript: void(0);{% endif %}">{{ item.title }}</a></li>
+    {% if item.children %}
+        {% include 'djaesy/menus/breadcrumb-item.html' with children=item.children %}
+    {% endif %}
+</ol>

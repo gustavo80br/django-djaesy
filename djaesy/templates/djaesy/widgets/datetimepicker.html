@@ -1,0 +1,6 @@
+<div class="input-group form-datetimepicker">
+    <div class="input-group-prepend">
+        <div class="input-group-text"><i class="{{ widget.icon }}"></i></div>
+    </div>
+    <input type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "django/forms/widgets/attrs.html" %}>
+</div>

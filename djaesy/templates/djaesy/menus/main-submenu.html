@@ -1,0 +1,15 @@
+<ul class="treeview-menu sub-menu" aria-expanded="false">
+    {% for sub_item in items %}
+    <li class="{% if sub_item.children %}treeview {% endif %}{% if sub_item.selected %}active{% endif %}">
+        <a v-on:click.stop.prevent="openTab($event, '{{ sub_item.url }}', '{{ sub_item.icon }}', '{{ sub_item.title }}')" ref="trigger" href="{% if sub_item.url %}{{ sub_item.url }}{% else %}javascript: void(0);{% endif %}" class="{% if sub_item.selected %}active {% endif %}{% if sub_item.children %}has-arrow{% endif %}">
+            <i class="{% if sub_item.icon %}{{ sub_item.icon }}{% else %}mdi mdi-menu{% endif %}"></i>
+            {{ sub_item.title }}
+        </a>
+        {% if sub_item.children %}
+            {% with items=sub_item.children template_name='djaesy/menus/main-submenu.html' %}
+                {% include template_name %}
+            {% endwith %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

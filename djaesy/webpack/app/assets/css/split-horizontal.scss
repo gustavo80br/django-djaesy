@@ -1,0 +1,87 @@
+﻿
+#split-container {
+  height:calc(100vh - var(--top-navbar-height));
+  min-height:calc(100vh - var(--top-navbar-height));
+  max-height:calc(100vh - var(--top-navbar-height));
+  overflow: hidden;
+}
+
+#data-scroll-area {
+  max-height: calc(100% - 54px);
+}
+
+#data-controls {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.10);
+  padding: 0 24px;
+  height: 56px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  #id_track_range {
+    width: 14rem;
+    font-size: 0.84rem;
+  }
+  #area-toggle-button {
+    box-shadow: none !important;
+    #area-toggle-icon {
+      transition: transform .2s ease-out, all .2s ease-out;
+    }
+    #area-toggle-icon.close-icon:before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+#data-scroll-area {
+  .dataframe thead th {
+    top: 0;
+  }
+  .dataframe {
+    tr th:nth-child(2),
+    tr th:last-child {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    tr th:nth-child(2),
+    tr td:nth-child(2) {
+      padding-left: 1.4rem !important
+    }
+  }
+}
+
+.split {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.gutter {
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.gutter.gutter-vertical {
+  cursor: row-resize;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+}
+
+.split.split-horizontal, .gutter.gutter-horizontal {
+  height: 100%;
+  float: left;
+}
+.split.split-vertical, .gutter.gutter-vertical {
+  width: 100%;
+  float: left;
+}

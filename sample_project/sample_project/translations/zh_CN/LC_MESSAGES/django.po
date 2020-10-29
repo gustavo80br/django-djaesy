@@ -1,0 +1,1501 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-12 04:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\accounts\menus.py:8 .\accounts\menus.py:10 .\app_panel\menus.py:13
+#: .\app_panel\menus.py:15 .\app_panel\models.py:85
+msgid "Usuários"
+msgstr "使用者"
+
+#: .\accounts\menus.py:11 .\app_panel\menus.py:16
+msgid "Perfis"
+msgstr "访问资料"
+
+#: .\accounts\models.py:24
+msgid "CPF"
+msgstr "CPF编号"
+
+#: .\accounts\models.py:25 .\clients\models.py:99 .\trackers\models.py:47
+msgid "Estado"
+msgstr "州"
+
+#: .\accounts\models.py:26 .\clients\models.py:98
+msgid "CEP"
+msgstr "邮政编码"
+
+#: .\accounts\models.py:43 .\alerts\models.py:68 .\alerts\models.py:144
+#: .\alerts\models.py:225 .\app_panel\models.py:70 .\clients\models.py:514
+#: .\maintenance\models.py:41 .\trackers\models.py:248 .\trackers\models.py:258
+msgid "Nome"
+msgstr "名称"
+
+#: .\accounts\models.py:74
+msgid "O Nome informado já está em uso, escolha outro nome."
+msgstr "该名称已被使用，请选择其他名称。"
+
+#: .\alerts\alerts.py:6 .\trackers\models.py:24
+msgid "Atraso de Transmissão"
+msgstr "通讯延迟"
+
+#: .\alerts\alerts.py:11
+msgid "Bloqueio"
+msgstr "块"
+
+#: .\alerts\alerts.py:15 .\alerts\models.py:69 .\alerts\models.py:79
+#: .\alerts\models.py:238
+msgid "Cerca"
+msgstr "虚拟围栏"
+
+#: .\alerts\alerts.py:20
+msgid "Falha de Alimentação"
+msgstr "电源故障"
+
+#: .\alerts\alerts.py:28
+msgid "Pânico"
+msgstr "恐慌"
+
+#: .\alerts\forms.py:68 .\clients\forms.py:420 .\clients\forms.py:550
+#: .\clients\views.py:166 .\clients\views.py:177 .\clients\views.py:253
+#: .\clients\views.py:264 .\maintenance\forms.py:23
+msgid "Pesquisar"
+msgstr "搜索"
+
+#: .\alerts\menus.py:10 .\alerts\models.py:262
+#: .\monitoring\templates\monitoring\vehicle.html:159
+msgid "Alertas"
+msgstr "警报"
+
+#: .\alerts\models.py:21
+msgid "🔺 Crítica"
+msgstr "🔺 临界"
+
+#: .\alerts\models.py:22
+msgid "🟠 Alta"
+msgstr "🟠 重大"
+
+#: .\alerts\models.py:23
+msgid "🟡 Média"
+msgstr "🟡 裨"
+
+#: .\alerts\models.py:24
+msgid "🟢 Baixa"
+msgstr "🟢 下来"
+
+#: .\alerts\models.py:47
+#, python-brace-format
+msgid "Variável {o}{var}{c} não é uma opção disponível"
+msgstr "变量{o}{var}{c}不可用"
+
+#: .\alerts\models.py:54
+msgid "Telefone {val.strip()} inválido"
+msgstr "无效的{val.strip()}手机"
+
+#: .\alerts\models.py:63
+msgid "Email {val.strip()} inválido"
+msgstr "无效的{val.strip()}电子邮件"
+
+#: .\alerts\models.py:80
+msgid "Cercas"
+msgstr "虚拟围栏"
+
+#: .\alerts\models.py:94 .\commands\models.py:10 .\commands\models.py:33
+msgid "ID"
+msgstr "ID"
+
+#: .\alerts\models.py:95
+msgid "Slug"
+msgstr "金属块"
+
+#: .\alerts\models.py:99
+msgid "Tipo de Alerta"
+msgstr "警报类型"
+
+#: .\alerts\models.py:100
+msgid "Tipos de Alerta"
+msgstr "警报类型"
+
+#: .\alerts\models.py:147
+#, fuzzy
+#| msgid "Endereço"
+msgid "Endereços de E-mail"
+msgstr "地址"
+
+#: .\alerts\models.py:148
+msgid "Separe os endereços por vírgula"
+msgstr "用逗号分隔地址"
+
+#: .\alerts\models.py:153
+#, fuzzy
+#| msgid "Telefone"
+msgid "Telefones"
+msgstr "电话号码"
+
+#: .\alerts\models.py:154
+msgid ""
+"Separe os telefones por vírgula. Utilize somente números e o sinal + para "
+"código internacional."
+msgstr "用逗号分隔手机。 国际代码只能使用数字和+号。"
+
+#: .\alerts\models.py:159
+msgid "Assunto do E-mail"
+msgstr "电子邮件主题"
+
+#: .\alerts\models.py:167
+msgid "Corpo do E-mail"
+msgstr "邮件正文"
+
+#: .\alerts\models.py:174
+msgid "Mensagem SMS"
+msgstr "简讯"
+
+#: .\alerts\models.py:180 .\alerts\models.py:234 .\trackers\models.py:109
+#: .\trackers\models.py:265 .\trackers\models.py:271
+msgid "Ativo"
+msgstr "活性"
+
+#: .\alerts\models.py:190
+#, fuzzy
+#| msgid "Notificações"
+msgid "Notificação"
+msgstr "通知"
+
+#: .\alerts\models.py:191 .\alerts\models.py:232
+msgid "Notificações"
+msgstr "通知"
+
+#: .\alerts\models.py:226
+msgid "Severidade"
+msgstr "严重程度"
+
+#: .\alerts\models.py:227 .\monitoring\views.py:109 .\trackers\models.py:69
+#: .\trackers\models.py:88 .\trackers\views.py:120 .\trackobj\views.py:267
+msgid "Tipo"
+msgstr "型"
+
+#: .\alerts\models.py:229
+msgid "Aplicar para todos os Veículos"
+msgstr "申请对于所有车辆"
+
+#: .\alerts\models.py:230 .\clients\views.py:46 .\clients\views.py:126
+#: .\clients\views.py:210 .\clients\views.py:301 .\clients\views.py:391
+#: .\clients\views.py:479 .\i3track\permissions.py:26 .\monitoring\views.py:292
+#: .\monitoring\views.py:315 .\monitoring\views.py:337 .\trackers\views.py:71
+#: .\trackers\views.py:122 .\trackobj\menus.py:11 .\trackobj\models.py:154
+#: .\trackobj\views.py:88 .\trackobj\views.py:146 .\trackobj\views.py:193
+#: .\trackobj\views.py:244
+msgid "Veículos"
+msgstr "车"
+
+#: .\alerts\models.py:239
+msgid "Atraso máximo de transmissão em minutos"
+msgstr "最大通讯延迟在几分钟内"
+
+#: .\alerts\models.py:261
+msgid "Alerta"
+msgstr "警报"
+
+#: .\alerts\models.py:370 .\trackers\models.py:235
+msgid "Houve um erro de sistema, contate o administrador: "
+msgstr "发生系统错误，请与管理员联系："
+
+#: .\app_panel\base_models.py:13
+msgid "Criado em"
+msgstr "被创造上"
+
+#: .\app_panel\base_models.py:16
+msgid "Criado por"
+msgstr "被创造由"
+
+#: .\app_panel\base_models.py:25
+msgid "Última alteração"
+msgstr "最后更新"
+
+#: .\app_panel\base_models.py:28
+msgid "Alterado por"
+msgstr "变了由"
+
+#: .\app_panel\base_models.py:60
+msgid "Atualizar o valor do campo Criado Por não é permitido."
+msgstr "更改字段“更新者”是不允许的."
+
+#: .\app_panel\base_views.py:237
+msgid "Saiba mais"
+msgstr "了解更多"
+
+#: .\app_panel\base_views.py:323 .\app_panel\base_views.py:707
+#: .\app_panel\base_views.py:722 .\i3track\permissions.py:10
+#: .\i3track\permissions.py:20 .\i3track\permissions.py:30
+#: .\i3track\permissions.py:41 .\i3track\permissions.py:52
+#: .\i3track\permissions.py:63 .\i3track\permissions.py:74
+#: .\i3track\permissions.py:85 .\i3track\permissions.py:96
+#: .\i3track\permissions.py:107 .\i3track\permissions.py:118
+#: .\i3track\permissions.py:129 .\i3track\permissions.py:140
+#: .\i3track\permissions.py:151
+msgid "Remover"
+msgstr "删除"
+
+#: .\app_panel\base_views.py:462
+msgid "Ação executada com sucesso."
+msgstr "成功记录执行."
+
+#: .\app_panel\base_views.py:468
+msgid ""
+"Erro na execução da ação. Entre em contao to com o admistrador do sistema."
+msgstr "执行操作时出错。 请与系统管理员联系。"
+
+#: .\app_panel\base_views.py:482
+msgid "Sem permissão: {action[\"permission\"]}."
+msgstr "Forbidden: {action[\"permission\"]}."
+
+#: .\app_panel\base_views.py:498
+msgid "Não foi possível por PROTECT."
+msgstr "PROTECT不允许"
+
+#: .\app_panel\base_views.py:679
+msgid "Filtros"
+msgstr "过滤"
+
+#: .\app_panel\base_views.py:711
+msgid "Excel"
+msgstr "Excel"
+
+#: .\app_panel\base_views.py:715
+msgid "CSV"
+msgstr "CSV电子表格"
+
+#: .\app_panel\base_views.py:937
+#: .\app_panel\templates\app_panel\crud\list.html:82
+#: .\app_panel\templates\app_panel\crud\list.html:295
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:247
+msgid "Criar"
+msgstr "新"
+
+#: .\app_panel\base_views.py:975
+msgid "Item criado com sucesso"
+msgstr "新项被创造"
+
+#: .\app_panel\base_views.py:982
+msgid "Selecione a área da imagem"
+msgstr "选择图像区域"
+
+#: .\app_panel\base_views.py:992 .\i3track\permissions.py:9
+#: .\i3track\permissions.py:19 .\i3track\permissions.py:29
+#: .\i3track\permissions.py:40 .\i3track\permissions.py:51
+#: .\i3track\permissions.py:62 .\i3track\permissions.py:73
+#: .\i3track\permissions.py:84 .\i3track\permissions.py:95
+#: .\i3track\permissions.py:106 .\i3track\permissions.py:117
+#: .\i3track\permissions.py:128 .\i3track\permissions.py:139
+#: .\i3track\permissions.py:150
+msgid "Editar"
+msgstr "编辑"
+
+#: .\app_panel\base_views.py:1243
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "空列表和 “%(class_name)s.allow_empty” 是假的."
+
+#: .\app_panel\fields.py:18
+msgid "Enter a postal code in the format 00000-000."
+msgstr "输入格式的邮政编码 00000-000."
+
+#: .\app_panel\fields.py:19
+msgid "Invalid Postal Code"
+msgstr "邮政编码无效"
+
+#: .\app_panel\fields.py:30
+msgid "Postal Code"
+msgstr "邮政编码"
+
+#: .\app_panel\login_views.py:23
+msgid "Login Inválido"
+msgstr "无效的登录名或密码"
+
+#: .\app_panel\login_views.py:31 .\app_panel\login_views.py:65
+#: .\app_panel\models.py:69 .\app_panel\templates\app_panel\login.html:9
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:9
+#: .\trackers\models.py:251
+msgid "Email"
+msgstr "电子邮件"
+
+#: .\app_panel\login_views.py:34 .\app_panel\templates\app_panel\login.html:10
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:10
+#: .\app_panel\user_forms.py:12
+msgid "Senha"
+msgstr "密码"
+
+#: .\app_panel\login_views.py:36 .\app_panel\templates\app_panel\login.html:8
+#: .\app_panel\templates\app_panel\reset-password-complete.html:8
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:8
+#: .\app_panel\templates\app_panel\reset-password-done.html:8
+#: .\app_panel\templates\app_panel\reset-password.html:8
+msgid "Entrar"
+msgstr "登入"
+
+#: .\app_panel\login_views.py:68 .\app_panel\login_views.py:111
+msgid "Redefinir Senha"
+msgstr "重设密码"
+
+#: .\app_panel\login_views.py:97
+msgid "Nova senha"
+msgstr "新密码"
+
+#: .\app_panel\login_views.py:105
+msgid "Repita a nova senha"
+msgstr "重复新密码"
+
+#: .\app_panel\login_views.py:118
+msgid "Enter new password"
+msgstr "输入新密码"
+
+#: .\app_panel\login_views.py:128 .\app_panel\login_views.py:129
+#: .\app_panel\templates\app_panel\base.html:144
+#: .\app_panel\templates\app_panel\user\user-change-password.html:13
+msgid "Mudar Senha"
+msgstr "更改密码"
+
+#: .\app_panel\login_views.py:151
+msgid "Senha Alterada"
+msgstr "密码已更改"
+
+#: .\app_panel\login_views.py:152
+msgid "Senha Alterada com Sucesso!"
+msgstr "密码修改成功！"
+
+#: .\app_panel\models.py:24 .\app_panel\models.py:73
+msgid "Perfil de Acesso"
+msgstr "访问资料"
+
+#: .\app_panel\models.py:25
+msgid "Perfís de Acesso"
+msgstr "访问资料"
+
+#: .\app_panel\models.py:84
+msgid "Usuário"
+msgstr "用户"
+
+#: .\app_panel\templates\app_panel\base.html:85
+#, fuzzy
+#| msgid "Alertas"
+msgid "Alertas Ativos"
+msgstr "警报"
+
+#: .\app_panel\templates\app_panel\base.html:107
+msgid "Tradução"
+msgstr "翻译"
+
+#: .\app_panel\templates\app_panel\base.html:129
+msgid "Tela Cheia"
+msgstr "全屏"
+
+#: .\app_panel\templates\app_panel\base.html:147
+msgid "Sair"
+msgstr "登出"
+
+#: .\app_panel\templates\app_panel\base.html:342
+msgid "Filtrar lista..."
+msgstr "筛选器清单..."
+
+#: .\app_panel\templates\app_panel\base.html:345
+msgid "Nenhum item selecionado!"
+msgstr "未选择任何项目！"
+
+#: .\app_panel\templates\app_panel\base.html:346
+msgid "Selecione ao menos um item para executar a ação."
+msgstr "选择至少一个项目执行动作。 "
+
+#: .\app_panel\templates\app_panel\base.html:348
+msgid "Muitos itens selecionados!"
+msgstr "许多选择的项目!"
+
+#: .\app_panel\templates\app_panel\base.html:349
+msgid "Esta ação deve ser executada em um item por vez."
+msgstr "必须一次对一项执行此操作。"
+
+#: .\app_panel\templates\app_panel\base.html:350
+msgid "Limite de itens selecionados para executar a ação foi atingido."
+msgstr "已达到选择执行该操作的项目数限制."
+
+#: .\app_panel\templates\app_panel\crud\create.html:9
+#: .\app_panel\templates\app_panel\crud\form.html:112
+#: .\app_panel\templates\app_panel\crud\list.html:406
+#: .\app_panel\templates\app_panel\crud\update.html:9
+#: .\app_panel\templates\app_panel\role\create-role.html:26
+#: .\app_panel\templates\app_panel\test_form.html:40
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:372
+msgid "Voltar"
+msgstr "背部"
+
+#: .\app_panel\templates\app_panel\crud\create.html:16
+#: .\app_panel\templates\app_panel\crud\form.html:119
+#: .\app_panel\templates\app_panel\role\create-role.html:33
+#: .\app_panel\templates\app_panel\test_form.html:47
+msgid "Salvar e criar outro"
+msgstr "保存并创建其他"
+
+#: .\app_panel\templates\app_panel\crud\create.html:20
+#: .\app_panel\templates\app_panel\crud\form.html:123
+#: .\app_panel\templates\app_panel\crud\update.html:20
+#: .\app_panel\templates\app_panel\role\create-role.html:37
+#: .\app_panel\templates\app_panel\test_form.html:51
+msgid "Salvar"
+msgstr "保存"
+
+#: .\app_panel\templates\app_panel\crud\list.html:30
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:30
+msgid "de"
+msgstr "从"
+
+#: .\app_panel\templates\app_panel\crud\list.html:31
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:31
+msgid "Limpar Filtro"
+msgstr "清除筛选"
+
+#: .\app_panel\templates\app_panel\crud\list.html:56
+#: .\app_panel\templates\app_panel\crud\list.html:178
+#: .\monitoring\templates\monitoring\vehicle.html:213
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:56
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:154
+msgid "Ações"
+msgstr "动作"
+
+#: .\app_panel\templates\app_panel\crud\list.html:288
+#, python-format
+msgid "Nenhum %(verbose_name)s existente."
+msgstr "不存在 %(verbose_name)s"
+
+#: .\app_panel\templates\app_panel\crud\list.html:320
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:272
+msgid "Itens por Página"
+msgstr "每页项目"
+
+#: .\app_panel\templates\app_panel\crud\list.html:333
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:285
+msgid "Página 1"
+msgstr "第1页"
+
+#: .\app_panel\templates\app_panel\crud\list.html:349
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:301
+msgid "Página"
+msgstr "页"
+
+#: .\app_panel\templates\app_panel\crud\list.html:361
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:313
+msgid "Ir para página"
+msgstr "转到页面"
+
+#: .\app_panel\templates\app_panel\crud\list.html:407
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:373
+msgid "Continuar"
+msgstr "继续"
+
+#: .\app_panel\templates\app_panel\crud\update.html:16
+msgid "Salvar e continuar editando"
+msgstr "保存并继续编辑"
+
+#: .\app_panel\templates\app_panel\includes\filter.html:7
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:328
+msgid "Filtrar"
+msgstr "过滤器"
+
+#: .\app_panel\templates\app_panel\includes\filter.html:9
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:330
+msgid "Limpar"
+msgstr "明确"
+
+#: .\app_panel\templates\app_panel\login.html:7
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:7
+msgid "Esqueceu sua senha?"
+msgstr "忘记密码了？"
+
+#: .\app_panel\templates\app_panel\reset-password-complete.html:9
+msgid "Senha alterada!"
+msgstr "密码已更改！"
+
+#: .\app_panel\templates\app_panel\reset-password-complete.html:15
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                Sua senha foi definida. Você pode prosseguir e se "
+#| "autenticar agora. Clique em Entrar!\n"
+#| "                "
+msgid ""
+"Sua senha foi definida. Você pode prosseguir e se autenticar agora. Clique "
+"em Entrar!"
+msgstr "您的密码已重置。您可以立即登录。点击登录！"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:9
+msgid "Verifique seu Email"
+msgstr "查看你的邮件"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:10
+msgid "Tentar Novamente"
+msgstr "再试一次"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:15
+msgid ""
+"Se o endereço enviado for válido, você receberá um email com um link para "
+"redefinir sua senha. Caso não tenha recebido o email, verifique sua caixa de "
+"span ou se inseriu seu endereço de email corretamente."
+msgstr ""
+"如果发送的地址有效，您将收到一封电子邮件，其中包含指向重置你的密码。如果您尚"
+"未收到电子邮件，请检查您的垃圾邮件或者您输入的电子邮件地址正确无误."
+
+#: .\app_panel\templates\app_panel\reset-password.html:9
+msgid "Informe seu Email cadastrado"
+msgstr "输入您的注册的电子邮件"
+
+#: .\app_panel\user_forms.py:9 .\app_panel\user_forms.py:68
+msgid "The two password fields didn’t match."
+msgstr "两个密码字段不匹配。"
+
+#: .\app_panel\user_forms.py:17
+msgid "Confirme a Senha"
+msgstr "确认密码"
+
+#: .\app_panel\user_forms.py:20 .\app_panel\user_forms.py:81
+msgid "Enter the same password as before, for verification."
+msgstr "输入与以前相同的密码进行验证。"
+
+#: .\app_panel\user_forms.py:71
+msgid "Password"
+msgstr "密码"
+
+#: .\app_panel\user_forms.py:78
+msgid "Password confirmation"
+msgstr "确认密码"
+
+#: .\app_panel\views.py:94
+msgid ""
+"\n"
+"    <p>Sua senha é de uso pessoal e exclusivo, deve seguir algumas regras:\n"
+"    <ul>\n"
+"        <li>Conter pelo menos 8 caracteres.</li>\n"
+"        <li>Não ser inteiramente numérica</li>\n"
+"        <li>Não ser similar às suas informações pessoais.</li>\n"
+"        <li>Não ser uma senha muito comunmente usada.</li>\n"
+"    </ul>\n"
+"    "
+msgstr ""
+"\n"
+"    <p>您的密码仅供个人和私人使用，您必须遵守一些规则:\n"
+"    <ul>\n"
+"        <li>至少包含8个字符.</li>\n"
+"        <li>没有成为完全地数值的</li>\n"
+"        <li>不要与您的个人信息相似.</li>\n"
+"        <li>不要成为常用密码.</li>\n"
+"    </ul>\n"
+"    "
+
+#: .\clients\forms.py:246 .\clients\models.py:105 .\trackers\models.py:249
+msgid "Contato"
+msgstr "联系"
+
+#: .\clients\forms.py:247 .\clients\models.py:106
+msgid "Telefone de Contato"
+msgstr "联系电话"
+
+#: .\clients\forms.py:248 .\clients\models.py:107
+msgid "Email de contato"
+msgstr "联系电子邮件"
+
+#: .\clients\forms.py:249 .\clients\models.py:108
+msgid "Comentário"
+msgstr "评论"
+
+#: .\clients\forms.py:335 .\clients\models.py:146 .\clients\views.py:299
+#: .\clients\views.py:389 .\clients\views.py:478
+msgid "CNPJ/CPF"
+msgstr "CNPJ/CPF"
+
+#: .\clients\forms.py:337 .\clients\models.py:144
+msgid "Tipo de Cliente"
+msgstr "客户类型"
+
+#: .\clients\menus.py:15 .\clients\models.py:285 .\clients\models.py:309
+msgid "Empresas"
+msgstr "公司"
+
+#: .\clients\models.py:49 .\clients\models.py:56
+msgid "O valor informado não é um CPF ou CNPJ válido."
+msgstr "无效数量 CPF 或 CNPJ."
+
+#: .\clients\models.py:63
+msgid "Informe um Tipo de Cliente válido."
+msgstr "输入有效的客户类型。"
+
+#: .\clients\models.py:68
+msgid "Informe um CNPJ válido para Pessoa Jurídica"
+msgstr "输入有效的 CNPJ 人合法的"
+
+#: .\clients\models.py:70
+msgid "Informe um CPF válido para Pessoa Física"
+msgstr "输入有效的 CPF对于个人"
+
+#: .\clients\models.py:95
+msgid "Razão Social"
+msgstr "公司名"
+
+#: .\clients\models.py:96
+msgid "Nome Fantasia"
+msgstr "商标"
+
+#: .\clients\models.py:100
+msgid "Endereço"
+msgstr "地址"
+
+#: .\clients\models.py:101 .\trackers\models.py:48
+msgid "Cidade"
+msgstr "市"
+
+#: .\clients\models.py:102
+msgid "Bairro"
+msgstr "邻里"
+
+#: .\clients\models.py:103 .\trackers\models.py:46
+msgid "País"
+msgstr "国家"
+
+#: .\clients\models.py:124
+msgid "CNPJ"
+msgstr "CNPJ"
+
+#: .\clients\models.py:140
+msgid "Pessoa Jurídica"
+msgstr "法人实体"
+
+#: .\clients\models.py:141
+msgid "Pessoa Física"
+msgstr "身体的人"
+
+#: .\clients\models.py:173 .\clients\models.py:320 .\clients\models.py:372
+#: .\clients\models.py:395 .\clients\models.py:464 .\clients\models.py:492
+#: .\monitoring\views.py:121
+msgid "Representante"
+msgstr "代表人物"
+
+#: .\clients\models.py:174 .\clients\models.py:272 .\clients\models.py:321
+msgid "Representantes"
+msgstr "代表"
+
+#: .\clients\models.py:202 .\clients\models.py:237 .\clients\models.py:345
+#: .\clients\models.py:373 .\clients\models.py:403 .\clients\models.py:472
+#: .\clients\models.py:500 .\monitoring\views.py:123
+msgid "Cliente"
+msgstr "客户"
+
+#: .\clients\models.py:203 .\clients\models.py:238 .\clients\models.py:279
+#: .\clients\models.py:316 .\clients\models.py:346
+msgid "Clientes"
+msgstr "客户群"
+
+#: .\clients\models.py:284 .\clients\models.py:371 .\clients\models.py:387
+#: .\clients\models.py:458 .\clients\models.py:486 .\monitoring\views.py:119
+msgid "Empresa"
+msgstr "公司"
+
+#: .\clients\models.py:370
+msgid "Sistema"
+msgstr "系统"
+
+#: .\clients\models.py:383
+msgid "Vínculo"
+msgstr "实体链接"
+
+#: .\clients\models.py:436
+msgid "Itens de sistema não podem ter vínculo com uma entidade."
+msgstr "系统项目无法链接到实体。"
+
+#: .\clients\models.py:440
+msgid "Especifique o vínculo correto."
+msgstr "指定正确的链接。"
+
+#: .\clients\models.py:515 .\trackers\models.py:83 .\trackers\views.py:119
+msgid "Código"
+msgstr "代号"
+
+#: .\clients\models.py:526 .\i3track\permissions.py:102
+msgid "Centro de Custo"
+msgstr "成本中心"
+
+#: .\clients\models.py:527
+msgid "Centros de Custo"
+msgstr "成本中心"
+
+#: .\clients\views.py:47 .\clients\views.py:127 .\clients\views.py:211
+#: .\clients\views.py:300 .\clients\views.py:390 .\i3track\permissions.py:113
+#: .\trackers\menus.py:11 .\trackers\models.py:136 .\trackers\views.py:28
+#: .\trackers\views.py:69 .\trackers\views.py:121 .\trackobj\views.py:269
+msgid "Módulos"
+msgstr "模组"
+
+#: .\clients\views.py:84 .\clients\views.py:93 .\clients\views.py:344
+#: .\clients\views.py:357
+msgid "Busque por Razão Social ou CNPJ"
+msgstr "按公司名称搜索或CNPJ"
+
+#: .\commands\models.py:11 .\commands\models.py:20 .\commands\models.py:35
+msgid "Comando"
+msgstr "命令"
+
+#: .\commands\models.py:12
+msgid "String de Configuração"
+msgstr "配置字符串"
+
+#: .\commands\models.py:13 .\maintenance\models.py:30
+#: .\maintenance\models.py:42 .\trackers\models.py:70 .\trackobj\models.py:41
+#: .\trackobj\views.py:192
+msgid "Descrição"
+msgstr "说明"
+
+#: .\commands\models.py:14
+msgid "Módulos Habilitados"
+msgstr "启用的跟踪器"
+
+#: .\commands\models.py:21 .\commands\views.py:12
+msgid "Comandos"
+msgstr "命令"
+
+#: .\commands\models.py:27
+msgid "Enviando"
+msgstr "正在发送"
+
+#: .\commands\models.py:28
+msgid "Sucesso"
+msgstr "成功的"
+
+#: .\commands\models.py:29
+msgid "Error"
+msgstr "失误"
+
+#: .\commands\models.py:30
+msgid "Expirado"
+msgstr "已过期"
+
+#: .\commands\models.py:34 .\monitoring\views.py:116 .\trackers\models.py:135
+#: .\trackobj\models.py:43
+msgid "Módulo"
+msgstr "模组"
+
+#: .\commands\models.py:36 .\commands\models.py:38
+msgid "Dados do Comando"
+msgstr "命令数据"
+
+#: .\commands\models.py:37 .\monitoring\views.py:113
+msgid "Status"
+msgstr "状态"
+
+#: .\commands\models.py:44
+msgid "Comando Enviado"
+msgstr "命令已发送"
+
+#: .\commands\models.py:45 .\commands\views.py:64 .\commands\views.py:65
+msgid "Comandos Enviados"
+msgstr "发送命令"
+
+#: .\i3track\permissions.py:6
+msgid "Usuários e Perfís"
+msgstr "用户和个人资料"
+
+#: .\i3track\permissions.py:8 .\i3track\permissions.py:18
+#: .\i3track\permissions.py:28 .\i3track\permissions.py:39
+#: .\i3track\permissions.py:50 .\i3track\permissions.py:61
+#: .\i3track\permissions.py:72 .\i3track\permissions.py:83
+#: .\i3track\permissions.py:94 .\i3track\permissions.py:105
+#: .\i3track\permissions.py:116 .\i3track\permissions.py:127
+#: .\i3track\permissions.py:138 .\i3track\permissions.py:149
+msgid "Adicionar"
+msgstr "加"
+
+#: .\i3track\permissions.py:11 .\i3track\permissions.py:21
+#: .\i3track\permissions.py:31 .\i3track\permissions.py:42
+#: .\i3track\permissions.py:53 .\i3track\permissions.py:64
+#: .\i3track\permissions.py:75 .\i3track\permissions.py:86
+#: .\i3track\permissions.py:97 .\i3track\permissions.py:108
+#: .\i3track\permissions.py:119 .\i3track\permissions.py:130
+#: .\i3track\permissions.py:141 .\i3track\permissions.py:152
+msgid "Visualizar"
+msgstr "视图"
+
+#: .\i3track\permissions.py:12 .\i3track\permissions.py:22
+#: .\i3track\permissions.py:32 .\i3track\permissions.py:43
+#: .\i3track\permissions.py:54 .\i3track\permissions.py:65
+#: .\i3track\permissions.py:76 .\i3track\permissions.py:87
+#: .\i3track\permissions.py:98 .\i3track\permissions.py:109
+#: .\i3track\permissions.py:120 .\i3track\permissions.py:131
+#: .\i3track\permissions.py:142 .\i3track\permissions.py:153
+msgid "Exportar"
+msgstr "汇出"
+
+#: .\i3track\permissions.py:16
+msgid "Perfís de Usuários"
+msgstr "用户访问配置文件"
+
+#: .\i3track\permissions.py:36
+msgid "Administrar Clientes"
+msgstr "管理客户"
+
+#: .\i3track\permissions.py:47
+msgid "Clientes de Empresas"
+msgstr "公司客户"
+
+#: .\i3track\permissions.py:58
+msgid "Clientes de Representates"
+msgstr "零售商客户"
+
+#: .\i3track\permissions.py:69
+msgid "Administrar Empresas"
+msgstr "管理公司"
+
+#: .\i3track\permissions.py:80
+msgid "Administrar Representantes"
+msgstr "管理零售商"
+
+#: .\i3track\permissions.py:91
+msgid "Representantes de Empresas"
+msgstr "公司零售商"
+
+#: .\i3track\permissions.py:124
+msgid "Tipo de Módulos"
+msgstr "“跟踪器类型”"
+
+#: .\i3track\permissions.py:135 .\trackers\models.py:61
+msgid "Fabricantes de Módulo"
+msgstr "追踪器制造商"
+
+#: .\i3track\permissions.py:146 .\trackers\models.py:93
+msgid "Modelos de Módulo"
+msgstr "追踪器型号"
+
+#: .\i3track\permissions.py:167 .\monitoring\menus.py:7
+#: .\monitoring\menus.py:10 .\monitoring\views.py:63 .\monitoring\views.py:64
+msgid "Monitoramento"
+msgstr "监控方式"
+
+#: .\i3track\permissions.py:169
+msgid "Acessar mapa de monitoramento"
+msgstr "访问监控图"
+
+#: .\i3track\permissions.py:170
+msgid "Acessar tabela de monitoramento"
+msgstr "访问监控表"
+
+#: .\i3track\settings.py:186
+msgid "Português"
+msgstr "葡萄牙语"
+
+#: .\i3track\settings.py:187
+msgid "English"
+msgstr "英语"
+
+#: .\i3track\settings.py:188
+msgid "简体中文"
+msgstr "简体中文"
+
+#: .\maintenance\menus.py:10
+msgid "Manutenção"
+msgstr "保养"
+
+#: .\maintenance\models.py:18
+msgid "Item de Manutenção"
+msgstr "保养项目"
+
+#: .\maintenance\models.py:19 .\maintenance\models.py:44
+msgid "Itens de Manutenção"
+msgstr "保养项目"
+
+#: .\maintenance\models.py:27
+msgid "Item"
+msgstr "项目"
+
+#: .\maintenance\models.py:28
+msgid "Plano"
+msgstr "计划"
+
+#: .\maintenance\models.py:32
+msgid "Intervalo em Tempo"
+msgstr "时间间隔"
+
+#: .\maintenance\models.py:33
+msgid "Intervalo em Km"
+msgstr "里程表间隔"
+
+#: .\maintenance\models.py:34
+msgid "Intervalo em Horas"
+msgstr "工作时间间隔"
+
+#: .\maintenance\models.py:36
+msgid "Margem de Alerta %"
+msgstr "警报阈值 %"
+
+#: .\maintenance\models.py:45 .\trackobj\models.py:57
+msgid "Tipos de Veículo"
+msgstr "车辆类型"
+
+#: .\maintenance\models.py:46
+msgid "Modelos de Veículos"
+msgstr "车辆型号"
+
+#: .\maintenance\models.py:56
+msgid "Plano de Manutenção"
+msgstr "维修计划"
+
+#: .\maintenance\models.py:57
+msgid "Planos de Manutenção"
+msgstr "维修计划"
+
+#: .\monitoring\forms.py:36
+msgid "Preencha ao menos um dos campos de pesquisa."
+msgstr "至少填写一个搜索字段。"
+
+#: .\monitoring\forms.py:43
+msgid "Insira uma data de inicio menor do que a data final."
+msgstr "输入开始日期，请小于结束日期。"
+
+#: .\monitoring\models.py:10
+msgid "15 minutos"
+msgstr "15分钟"
+
+#: .\monitoring\models.py:11
+msgid "30 minutos"
+msgstr "30分钟"
+
+#: .\monitoring\models.py:12
+msgid "1 hora"
+msgstr "1小时"
+
+#: .\monitoring\models.py:13
+msgid "3 horas"
+msgstr "3小时"
+
+#: .\monitoring\models.py:14
+msgid "6 horas"
+msgstr "6个小时"
+
+#: .\monitoring\models.py:15
+msgid "12 horas"
+msgstr "12小时"
+
+#: .\monitoring\models.py:16
+msgid "24 horas"
+msgstr "24小时"
+
+#: .\monitoring\models.py:17
+msgid "1 semana"
+msgstr "1周"
+
+#: .\monitoring\models.py:18
+msgid "1 mês"
+msgstr "1个月"
+
+#: .\monitoring\templates\monitoring\dashboard.html:361
+msgid "Atraso máximo de comunicação:"
+msgstr "最大通讯延迟："
+
+#: .\monitoring\templates\monitoring\dashboard.html:370
+#, fuzzy
+#| msgid "Veículos"
+msgid "Total de Veículos:"
+msgstr "车辆总数："
+
+#: .\monitoring\templates\monitoring\dashboard.html:373
+msgid "Transmitindo:"
+msgstr "传送中:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:376
+msgid "Em Atraso:"
+msgstr "延迟:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:471
+msgid "Comunicação"
+msgstr "通讯"
+
+#: .\monitoring\templates\monitoring\dashboard.html:476
+msgid "Transmitindo"
+msgstr "传送中"
+
+#: .\monitoring\templates\monitoring\dashboard.html:480
+#: .\monitoring\views.py:289
+msgid "Sinal Forte"
+msgstr "好信号"
+
+#: .\monitoring\templates\monitoring\dashboard.html:484
+#: .\monitoring\views.py:288
+msgid "Sinal Fraco"
+msgstr "低信号"
+
+#: .\monitoring\templates\monitoring\dashboard.html:488
+#: .\monitoring\views.py:287
+msgid "Em Atraso"
+msgstr "延迟"
+
+#: .\monitoring\templates\monitoring\map-tooltip.html:37
+#, fuzzy
+#| msgid "Última Transmissão"
+msgid "Última transmissão há"
+msgstr "最后传送"
+
+#: .\monitoring\templates\monitoring\vehicle.html:154
+msgid "Histórico"
+msgstr "历史沿革"
+
+#: .\monitoring\templates\monitoring\vehicle.html:166
+#, fuzzy
+#| msgid "Manutenção"
+msgid "Manutenções"
+msgstr "保养"
+
+#: .\monitoring\templates\monitoring\vehicle.html:732
+msgid "Clique para ver o histórico isolado deste módulo"
+msgstr "单击以查看该模块的隔离历史记录"
+
+#: .\monitoring\templates\monitoring\vehicle.html:745
+#, fuzzy
+#| msgid "Odômetro"
+msgid "Odômetro:"
+msgstr "里程表"
+
+#: .\monitoring\templates\monitoring\vehicle.html:751
+#, fuzzy
+#| msgid "Horímetro"
+msgid "Horímetro:"
+msgstr "小时表"
+
+#: .\monitoring\templates\monitoring\vehicle.html:756
+msgid "Clique para ver no Mapa"
+msgstr "点击查看地图"
+
+#: .\monitoring\templates\monitoring\vehicle.html:757
+#, fuzzy
+#| msgid "Última alteração"
+msgid "Último endereço:"
+msgstr "最后更新"
+
+#: .\monitoring\templates\monitoring\vehicle.html:767
+#, fuzzy
+#| msgid "Empresa"
+msgid "Empresa:"
+msgstr "公司"
+
+#: .\monitoring\templates\monitoring\vehicle.html:773
+#, fuzzy
+#| msgid "Representante"
+msgid "Representante:"
+msgstr "代表人物"
+
+#: .\monitoring\templates\monitoring\vehicle.html:779
+#, fuzzy
+#| msgid "Cliente"
+msgid "Cliente:"
+msgstr "客户"
+
+#: .\monitoring\templatetags\monitoring.py:44
+msgid "Dado de GPS não disponível"
+msgstr "GPS数据不可用"
+
+#: .\monitoring\templatetags\monitoring.py:50
+msgid "Dado de Rede indisponível"
+msgstr "网络数据不可用"
+
+#: .\monitoring\templatetags\monitoring.py:56 .\monitoring\views.py:406
+msgid "Dado de Motor não disponível"
+msgstr "引擎数据不可用"
+
+#: .\monitoring\templatetags\monitoring.py:62 .\monitoring\views.py:412
+msgid "Dado de Movimento não disponível"
+msgstr "动作数据不可用"
+
+#: .\monitoring\templatetags\monitoring.py:68
+msgid "Dado de Energia não disponível"
+msgstr "能源数据不可用"
+
+#: .\monitoring\templatetags\monitoring.py:81
+msgid "Sem sinal GPS"
+msgstr "没有GPS讯号"
+
+#: .\monitoring\templatetags\monitoring.py:83
+msgid "Transmitindo posição GPS"
+msgstr "传送GPS位置"
+
+#: .\monitoring\templatetags\monitoring.py:123 .\monitoring\views.py:425
+msgid "Motor parado"
+msgstr "引擎停止"
+
+#: .\monitoring\templatetags\monitoring.py:139 .\monitoring\views.py:442
+#, fuzzy
+#| msgid "Veículos"
+msgid "Veículo parado"
+msgstr "车辆停止"
+
+#: .\monitoring\templatetags\monitoring.py:177 .\monitoring\views.py:331
+msgid "Energizado"
+msgstr "Powered"
+
+#: .\monitoring\views.py:108 .\trackers\views.py:183 .\trackobj\models.py:153
+msgid "Veículo"
+msgstr "车辆"
+
+#: .\monitoring\views.py:110 .\trackers\models.py:82 .\trackers\views.py:118
+#: .\trackers\views.py:181 .\trackobj\models.py:119
+msgid "Modelo"
+msgstr "模型"
+
+#: .\monitoring\views.py:111
+msgid "Módulo ID"
+msgstr "追踪器编号"
+
+#: .\monitoring\views.py:112
+msgid "Última Atualização"
+msgstr "最后更新"
+
+#: .\monitoring\views.py:114 .\monitoring\views.py:501 .\trackers\models.py:36
+msgid "Horímetro"
+msgstr "小时表"
+
+#: .\monitoring\views.py:115 .\monitoring\views.py:502 .\trackers\models.py:37
+msgid "Odômetro"
+msgstr "里程表"
+
+#: .\monitoring\views.py:117 .\trackers\models.py:275 .\trackobj\models.py:102
+msgid "Estoque"
+msgstr "股票"
+
+#: .\monitoring\views.py:118
+msgid "Empresa CNPJ"
+msgstr "公司 CNPJ"
+
+#: .\monitoring\views.py:120
+msgid "Representante CNPJ"
+msgstr "零售商 CNPJ"
+
+#: .\monitoring\views.py:122
+msgid "Cliente CNPJ"
+msgstr "客户 CNPJ"
+
+#: .\monitoring\views.py:178 .\monitoring\views.py:179
+msgid "Dashboard"
+msgstr "仪表板"
+
+#: .\monitoring\views.py:310
+msgid "Motor Ligado"
+msgstr "引擎开启"
+
+#: .\monitoring\views.py:311
+msgid "Motor Desligado"
+msgstr "发动机关闭"
+
+#: .\monitoring\views.py:312
+msgid "Em Viagem"
+msgstr "旅途中"
+
+#: .\monitoring\views.py:332
+msgid "Em Bateria"
+msgstr "上电池"
+
+#: .\monitoring\views.py:333
+msgid "Bateria Fraca"
+msgstr "低电量"
+
+#: .\monitoring\views.py:334
+msgid "Não Informado"
+msgstr "Not informed"
+
+#: .\monitoring\views.py:497
+msgid "Início"
+msgstr "首页>"
+
+#: .\monitoring\views.py:498
+msgid "Fim"
+msgstr "完结"
+
+#: .\monitoring\views.py:499
+#, fuzzy
+#| msgid "Situação"
+msgid "Duração"
+msgstr "状态"
+
+#: .\monitoring\views.py:500
+msgid "Estado no Período"
+msgstr "期间状态"
+
+#: .\monitoring\views.py:739
+msgid ""
+"Houve um problema técnico para obter os dados deste veículo. Estamos "
+"trabalhando para resolvê-lo! Desculpe o transtorno."
+msgstr "获取此车辆的数据存在技术问题。 我们正在努力解决它！ 不便之处，敬请原谅。"
+
+#: .\monitoring\views.py:747
+msgid ""
+"Não encontramos dados para o período selecionado. Estamos apresentando os "
+"dados mais recentes em nossa base de dados."
+msgstr "在所选期间内，我们没有找到任何数据。 我们正在数据库中显示最新数据。"
+
+#: .\monitoring\views.py:787
+msgid "Não foram encontrados dados para este veículo."
+msgstr "找不到该车的数据。"
+
+#: .\trackers\models.py:23
+msgid "Última Transmissão"
+msgstr "最后传送"
+
+#: .\trackers\models.py:25
+msgid "Atraso de Transmissão em Minutos"
+msgstr "传输延迟（以分钟为单位）"
+
+#: .\trackers\models.py:31
+msgid "Qualidade GPS"
+msgstr "GPS质量"
+
+#: .\trackers\models.py:41
+msgid "Alimentação"
+msgstr "电源"
+
+#: .\trackers\models.py:43
+msgid "Timer do Motor"
+msgstr "马达计时器"
+
+#: .\trackers\models.py:44
+#, fuzzy
+#| msgid "Severidade"
+msgid "Velocidade"
+msgstr "速度"
+
+#: .\trackers\models.py:56
+msgid "ID do Fabricante"
+msgstr "制造商编号"
+
+#: .\trackers\models.py:57 .\trackers\models.py:85 .\trackers\views.py:179
+#: .\trackobj\models.py:88 .\trackobj\views.py:268
+msgid "Fabricante"
+msgstr "制造商"
+
+#: .\trackers\models.py:60
+msgid "Fabricante de Módulo"
+msgstr "追踪器制造商"
+
+#: .\trackers\models.py:73
+msgid "Tipo de Módulo"
+msgstr "追踪器类型"
+
+#: .\trackers\models.py:74
+msgid "Tipos de Módulo"
+msgstr "追踪器类型"
+
+#: .\trackers\models.py:92 .\trackers\models.py:106
+msgid "Modelo de Módulo"
+msgstr "追踪器型号"
+
+#: .\trackers\models.py:104
+msgid "Unique ID"
+msgstr "唯一身份"
+
+#: .\trackers\models.py:107
+msgid "Número Serial"
+msgstr "序列号"
+
+#: .\trackers\models.py:110 .\trackers\models.py:282
+msgid "Data de Ativação"
+msgstr "启用日期"
+
+#: .\trackers\models.py:111
+msgid "Ativado até"
+msgstr "活性直到"
+
+#: .\trackers\models.py:112
+msgid "Ativado para Países"
+msgstr "活跃于国家"
+
+#: .\trackers\models.py:115
+msgid "Veículo Associado"
+msgstr "相关车辆"
+
+#: .\trackers\models.py:228
+msgid "Já existe um Módulo com o mesmo Serial ID para este fabricante"
+msgstr "该制造商已经有一个具有相同序列号的追踪器"
+
+#: .\trackers\models.py:250
+msgid "Telefone"
+msgstr "电话号码"
+
+#: .\trackers\models.py:256
+msgid "Operadora"
+msgstr "操作员"
+
+#: .\trackers\models.py:259
+msgid "Número do Contrato"
+msgstr "合同编号"
+
+#: .\trackers\models.py:260
+msgid "Início do Contrato"
+msgstr "合同初始日期"
+
+#: .\trackers\models.py:261
+msgid "Fidelidade em Meses"
+msgstr "数月的忠诚度"
+
+#: .\trackers\models.py:264
+msgid "Quota de MBytes por Mês"
+msgstr "传输配额（兆字节/月）"
+
+#: .\trackers\models.py:272
+msgid "Bloqueado"
+msgstr "受阻"
+
+#: .\trackers\models.py:273
+msgid "Cancelado"
+msgstr "已取消"
+
+#: .\trackers\models.py:274
+msgid "Suspenso"
+msgstr "已暂停"
+
+#: .\trackers\models.py:278 .\trackers\models.py:279
+msgid "ICCID"
+msgstr "ICCID"
+
+#: .\trackers\models.py:280
+msgid "Situação"
+msgstr "状态"
+
+#: .\trackers\models.py:283
+msgid "Prazo de Fidelidade"
+msgstr "忠诚期"
+
+#: .\trackers\views.py:18 .\trackobj\views.py:131
+msgid "Fabricantes"
+msgstr "制造商"
+
+#: .\trackers\views.py:29 .\trackers\views.py:70 .\trackers\views.py:100
+#: .\trackobj\views.py:89 .\trackobj\views.py:145 .\trackobj\views.py:184
+msgid "Modelos"
+msgstr "模型"
+
+#: .\trackers\views.py:52 .\trackobj\views.py:75 .\trackobj\views.py:144
+msgid "Tipos"
+msgstr "种类"
+
+#: .\trackers\views.py:180
+msgid "Serial"
+msgstr "序列号"
+
+#: .\trackers\views.py:182
+msgid "Ativação"
+msgstr "激活"
+
+#: .\trackobj\models.py:38
+msgid "Tempo de Monitoramento"
+msgstr "监控时间"
+
+#: .\trackobj\models.py:38
+msgid "Em meses"
+msgstr "在几个月内"
+
+#: .\trackobj\models.py:40
+msgid "Identificador"
+msgstr "识别码"
+
+#: .\trackobj\models.py:50 .\trackobj\models.py:56 .\trackobj\models.py:85
+#: .\trackobj\views.py:194
+msgid "Tipo de Veículo"
+msgstr "车辆类型"
+
+#: .\trackobj\models.py:52 .\trackobj\models.py:66 .\trackobj\models.py:81
+#: .\trackobj\models.py:127
+msgid "Imagem"
+msgstr "图片"
+
+#: .\trackobj\models.py:64 .\trackobj\models.py:70
+msgid "Fabricante de Veículo"
+msgstr "车辆制造商"
+
+#: .\trackobj\models.py:67 .\trackobj\models.py:82 .\trackobj\models.py:128
+msgid "Ajuste de Imagem"
+msgstr "影像调整"
+
+#: .\trackobj\models.py:71
+msgid "Fabricantes de Veículo"
+msgstr "车辆制造商"
+
+#: .\trackobj\models.py:78 .\trackobj\models.py:92
+msgid "Modelo de Veículo"
+msgstr "车辆型号"
+
+#: .\trackobj\models.py:79
+msgid "Código do Modelo"
+msgstr "型号代码"
+
+#: .\trackobj\models.py:93
+msgid "Modelos de Veículo"
+msgstr "车辆型号"
+
+#: .\trackobj\models.py:103
+msgid "Vendido"
+msgstr "已售出"
+
+#: .\trackobj\models.py:104
+msgid "Revenda"
+msgstr "转售"
+
+#: .\trackobj\models.py:108
+msgid "Nacional"
+msgstr "国民"
+
+#: .\trackobj\models.py:109
+msgid "Importado"
+msgstr "进口的"
+
+#: .\trackobj\models.py:117
+msgid "Comercial"
+msgstr "商业广告"
+
+#: .\trackobj\models.py:121
+msgid "Ano/Modelo"
+msgstr "年份/型号"
+
+#: .\trackobj\models.py:122
+msgid "Data de Venda"
+msgstr "卖日期"
+
+#: .\trackobj\models.py:123
+msgid "Nota Fiscal"
+msgstr "发票"
+
+#: .\trackobj\models.py:124
+msgid "Fabricação"
+msgstr "制造业"
+
+#: .\trackobj\models.py:186
+#, fuzzy
+#| msgid "Error"
+msgid "Erro"
+msgstr "失误"
+
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:240
+#, python-format
+msgid ""
+"\n"
+"                                                Nenhum %(verbose_name)s "
+"existente.\n"
+"                                            "
+msgstr ""
+"\n"
+"                                                不存在 %(verbose_name)s.\n"
+"                                            "
+
+#~ msgid "Roaming"
+#~ msgstr "遨游"

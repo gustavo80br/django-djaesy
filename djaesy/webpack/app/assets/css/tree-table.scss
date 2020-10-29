@@ -1,0 +1,138 @@
+﻿
+table.data-child-table {
+    table-layout: fixed;
+}
+
+table.data-child-table tr.shown td.controls > i.open-icon {
+    display: none;
+    // background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat center center;
+}
+
+table.data-child-table tr.shown td.controls > i.close-icon {
+    display: block;
+    // background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat center center;
+}
+
+table.data-child-table td.controls > i.close-icon {
+    display: none;
+    // background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat center center;
+}
+
+table.data-child-table td.controls.h_5 {
+    display: none;
+}
+
+table.data-child-table tr.shown td {
+    background-color: rgba(255, 255, 0, 0.176) !important;
+    transition: .5s;
+    font-weight: 800
+}
+
+table.data-child-table th.controls,
+table.data-child-table td.controls {
+    width: 30px;
+    transition: .5s;
+}
+
+table.data-child-table td.controls {
+    // background: url(https://www.datatables.net/examples/resources/details_open.png) no-repeat center center;
+    cursor: pointer;
+}
+
+table.data-child-table td.controls.no-button {
+    background: none;
+    cursor: inherit;
+}
+
+table.data-child-table th.description-col,
+table.data-child-table td.description-col {
+    width: 300px !important;
+}
+
+table.data-child-table td.description-col.h_2 {
+    width: calc(300px - 1rem) !important;
+    padding-left: 2rem;
+}
+table.data-child-table td.description-col.h_3 {
+    width: calc(300px - 3rem) !important;
+    padding-left: 4rem;
+}
+table.data-child-table td.description-col.h_4 {
+    width: calc(300px - 5rem) !important;
+    padding-left: 6rem;
+}
+table.data-child-table td.description-col.h_5 {
+    width: calc(300px - 7rem) !important;
+    padding-left: 8rem;
+}
+
+
+table.data-child-table td.controls.h_1 i {
+    padding-left: 0.4rem;
+}
+table.data-child-table td.controls.h_2 i {
+    padding-left: 0.8rem;
+}
+table.data-child-table td.controls.h_3 i {
+    padding-left: 1.2rem;
+}
+table.data-child-table td.controls.h_4 i {
+    padding-left: 1.6rem;
+}
+
+
+table.data-child-table.dataframe thead th {
+    position: sticky !important;
+    top: 0;
+}
+
+table.data-child-table th.number-data-col,
+table.data-child-table td.number-data-col {
+    width: 10% !important;
+    overflow: hidden !important;
+}
+
+table.data-child-table tbody > tr > td {
+    border-right: none;
+}
+
+table.data-child-table thead > tr > th {
+    white-space: pre-wrap !important;
+}
+
+//td.details-control1 {
+//    background: url(https://www.datatables.net/examples/resources/details_open.png) no-repeat center center;
+//    cursor: pointer;
+//    width: 40px;
+//    transition: .5s;
+//}
+//
+//tr.shown td.details-control1 {
+//    background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat center center;
+//    width: 40px;
+//    transition: .5s;
+//}
+//
+//td.details-control2 {
+//    background: url(https://www.datatables.net/examples/resources/details_open.png) no-repeat center center;
+//    cursor: pointer;
+//    width: 50px;
+//    transition: .5s;
+//}
+//
+//tr.shown td.details-control2 {
+//    background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat center center;
+//    width: 50px;
+//    transition: .5s;
+//}
+
+.fee-col {
+    text-align: right;
+}
+
+.label-col {
+    text-align: left;
+}
+
+
+

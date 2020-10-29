@@ -1,0 +1,22 @@
+{% load crispy_forms_tags %}
+{% csrf_token %}
+{% if form_helper.form_method %}
+    <div class="row">
+        {%  if form.non_field_errors %}
+            <div class="col col-12">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Erro! </strong>
+                        {% for error in form.non_field_errors %}
+                            {{ error }}
+                        {% endfor %}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        {% endif %}
+        {% crispy form form_helper %}
+    </div>
+{% else %}
+    {{ form|crispy }}
+{% endif %}

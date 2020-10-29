@@ -1,0 +1,522 @@
+{% extends 'djaesy/base.html' %}
+{% load list_view %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block page_content %}
+    {% if total_count > 0 %}
+
+        <div class="container-fluid">
+            <div class="row page-title-box page-title-fixed justify-content-between align-items-center">
+                <!-- Title -->
+                <div class="col col-auto">
+                    <div class="container-fluid header-box">
+                        <div class="row align-items-center justify-content-between">
+                            {% if page_icon %}
+                                <div class="col col-auto pl-0 pr-2">
+                                    <i class="{{ page_icon }} mdi-36px"></i>
+                                </div>
+                            {% endif %}
+                            <div class="col col-auto pl-0 pr-0">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <div class="row align-items-center ">
+                                            <div class="col-auto">
+                                                <h4 class="h4-responsive mb-0">{{ content_title|default:'content_title context variable' }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Title -->
+                <!-- Filter Data -->
+                <div class="col-auto">
+                    {% if is_filtered %}
+                        {{ filtered_count }} {% trans 'de' %} {{ total_count }}
+                        <a href="{% url request.resolver_match.url_name %}">{% trans 'Limpar Filtro' %}</a>
+                    {% else %}
+                        {{ total_count }}
+                        {% if total_count > 1 %}{{ verbose_name_plural }}{% else %}
+                            {{ verbose_name }}{% endif %}
+                    {% endif %}
+                </div>
+                <!-- End Filter Data -->
+                <!-- Action Buttons -->
+                <div class="col col-auto d-none d-md-block right-buttons">
+                    {% if total_count %}
+                        {% if actions.actions_group and total_count > 0 and not filtered_count < 1 %}
+                            <button id="btnGroupDrop1" type="button"
+                                    class="btn btn-mdi btn-md btn-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"
+                                    data-placement="left" data-trigger="hover" data-delay="500" title="Execute ações sobre itens selecionados">
+                                <i class="mdi mdi-18px mdi-playlist-play"></i>&nbsp;{% trans 'Ações' %}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                {% for action in actions.actions_group %}
+                                    {% with action_name=action.action_name %}
+                                        <a id="call_action_{{ action.id }}"
+                                           class="dropdown-item call_action"
+                                           data-action="{{ action.id }}"
+                                           data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
+                                           data-maxselected="{{ action.max_selected }}">
+                                            <i class="{{ action.icon }} mdi-18px"></i>
+                                            <span class="d-md-none d-lg-inline">{{ action.label }}</span>
+                                        </a>
+                                    {% endwith %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% if can_create %}
+                            <a class="btn btn-sm btn-primary shadow-sm waves-effect waves-light" href="{% url create_url_name %}">
+                                <i class="mdi mdi-plus-circle-outline"></i>
+                                <span class="d-none d-lg-inline">{% trans 'Criar' %}</span>
+                            </a>
+                        {% endif %}
+                        {% if total_count > 0 and not filtered_count < 1 %}
+                            {% for action in actions.main_actions %}
+                                {% with action_name=action.action_name %}
+                                    {% if action_name == 'delete_action' and can_delete or action_name != 'delete_action' %}
+                                    <button id="call_action_{{ action.id }}"
+                                            class="btn btn-sm btn-secondary shadow-sm waves-effect waves-light {% if action_name == 'delete_action' %}btn-danger tooltip-toggle{% else %}btn-secondary{% endif %} call_action"
+                                            data-action="{{ action.id }}"
+                                            data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
+                                            data-maxselected="{{ action.max_selected }}"
+                                            {% if action_name == 'delete_action' %}data-placement="bottom" data-delay="500" title="Remover itens selecionados"{% endif %}>
+                                        <i class="{{ action.icon }}"></i>
+                                        <span class="d-none d-lg-inline">{{ action.label }}</span>
+                                    </button>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endfor %}
+                            {% for action_group in actions.secondary_groups %}
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button"
+                                            class="btn btn-sm btn-secondary shadow-sm waves-effect waves-light dropdown-toggle"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                        {% if action_group.icon %}
+                                            <i class="{{ action_group.icon }}"></i>
+                                        {% endif %}
+                                        <span class="d-none d-lg-inline">{{ action_group.name }}</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        {% for group_action in action_group.actions %}
+                                            {% with action_name=group_action.action_name %}
+                                                <a id="call_action_{{ group_action.id }}"
+                                                   class="dropdown-item call_action"
+                                                   data-action="{{ group_action.id }}"
+                                                   data-form="{% if group_action.custom_form %}true{% else %}false{% endif %}"
+                                                   data-maxselected="{{ group_action.max_selected }}">
+                                                    <i class="{{ group_action.icon }}"></i>
+                                                    {{ group_action.label }}
+                                                </a>
+                                            {% endwith %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endif %}
+                </div>
+                <!-- End Buttons -->
+                <!-- Action Modal Button on Small Screens -->
+                <div class="col col-auto d-block d-md-none">
+                    <div class="datatable_controls btn-group" role="group" aria-label="First group">
+                        <button class="btn btn-md btn-secondary" data-toggle="modal" data-target="#list_action_modal">
+                            <i class="mdi mdi-playlist-check mdi-18px"></i>
+                            <span class="d-none d-sm-inline">{% trans 'Ações' %}</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- End Action Modal Button on Small Screens -->
+            </div>
+        </div>
+
+
+
+
+
+        <form method="get" action="" id="paginator">
+            {% for key, data in request.GET.items %}
+                {% if key != 'order_by' and key != 'order' %}
+                    <input type="hidden" name="{{ key }}" id="{{ key }}" value="{{ data }}"/>
+                {% endif %}
+            {% endfor %}
+            <input type="hidden" name="order_by" id="order_by" value="{{ request.GET.order_by }}"/>
+            <input type="hidden" name="order" id="order" value="{{ request.GET.order }}"/>
+
+            <table id="{{ list_table.table_id }}" class="{{ list_table.table_classes }}">
+                <thead>
+                    <tr>
+                        {% for th in list_table.table_headers %}
+                            {% if forloop.counter0 in list_table.hidden_columns %}
+                                <th class="hidden"></th>
+                            {% else %}
+                                {% if forloop.counter0 not in list_table.unsortable_columns %}
+                                    <th class="sortable">
+                                {% else %}
+                                    <th>
+                                {% endif %}
+                                    {{ th }}&nbsp;
+                                    {% if forloop.counter0 not in list_table.unsortable_columns %}
+                                        {% if list_table.order_by == th %}
+                                            {% if list_table.order == 'asc' %}
+                                                <i class="mdi mdi mdi-arrow-down dataframe-order asc"></i>
+                                            {% else %}
+                                                <i class="mdi mdi mdi-arrow-up dataframe-order desc"></i>
+                                            {% endif %}
+                                        {% else %}
+                                            <i class="mdi mdi-swap-vertical dataframe-order"></i>
+                                        {% endif %}
+                                    {% endif %}
+                                </th>
+                                {% if forloop.counter == 1 %}
+                                    {% if list_table.select_column %}
+                                        <th><i class="mdi mdi-check-all select-all-action"></i></th>
+                                    {% else %}
+                                        <th class="hidden"></th>
+                                    {% endif %}
+                                    {% if has_actions %}
+                                        <th class="sorting_disabled" rowspan="1" colspan="1">{% trans 'Ações' %}</th>
+                                    {% else %}
+                                        <th class="hidden"></th>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tr in list_table.table %}
+                        <tr>
+                            {% for td in tr %}
+                                {% if forloop.counter0 in list_table.hidden_columns %}
+                                    <td class="hidden"></td>
+                                {% else %}
+                                    {% if forloop.counter == 2 %}
+                                        {% if list_table.select_column %}
+                                            <td><a class="action-icon-button row-checkbox"><i class="mdi mdi-checkbox-blank-outline"></i></a></td>
+                                        {% else %}
+                                            <td class="hidden"></td>
+                                        {% endif %}
+                                        {% if has_actions %}
+                                        <td>
+                                            {% if can_change %}
+                                                <a class="dataframe-action-btn update-item-action action-icon-button" href="{% url list_table.update_url tr.0 %}">
+                                                    <i class="mdi mdi-square-edit-outline"></i>
+                                                </a>
+                                            {% endif %}
+                                            {% if can_delete %}
+                                                <a id="call_item_action_1" class="dataframe-action-btn call-item-action action-icon-button" data-action="1" data-form="True" data-maxselected="0">
+                                                    <i class="mdi mdi-trash-can-outline"></i>
+                                                </a>
+                                            {% endif %}
+                                        </td>
+                                        {% else %}
+                                            <td class="hidden"></td>
+                                        {% endif %}
+                                        <td>
+                                            {% if can_change %}
+                                                <a href="{% url list_table.update_url tr.0 %}">{{ td }}</a>
+                                            {% else %}
+                                                {{ td }}
+                                            {% endif %}
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            {% if td %}
+                                                {% if forloop.counter in list_table.related_links %}
+                                                    {% with list_table.related_links|get_item:forloop.counter as related_link %}
+                                                        <a class="related-link" href="{{ related_link.url }}{{ tr|get_index:related_link.value }}">
+                                                            <span class="value">{{ td|safe }}&nbsp;</span>
+                                                            <span class="link-text">
+                                                                {{ related_link.link_text|safe }}
+                                                            </span>
+                                                        </a>
+                                                    {% endwith %}
+                                                {% else %}
+                                                    {{ td|safe }}
+                                                {% endif %}
+                                            {% else %}
+                                                -
+                                            {% endif %}
+                                        </td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </form>
+
+    {% else %}
+
+        <!-- Start page_content block -->
+        <div class="page-content">
+            <!-- Start content_container block -->
+            <div class="container-fluid">
+                <!-- start page title -->
+
+
+                <div class="row page-title-box justify-content-between">
+                    <div class="col col-auto">
+                        <h2 class="mb-0">
+                            {% if page_icon %}
+                                <i class="{{ page_icon }} header-icon"></i>
+                            {% endif %}
+                            {{ content_title|default:'content_title context variable' }}
+                            {% block content_subtitle %}
+                                {% if content_subtitle %}
+                                    <small>{{ content_subtitle }}</small>{% endif %}
+                            {% endblock %}
+                            {% block content_actions %}
+                            {% endblock %}
+                        </h2>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- start content-->
+                        {% block content %}
+                            <div class="container-fluid">
+                                <div class="row text-center">
+                                    <div class="col-12">
+                                        <h4 class="mb-4">
+                                            {% blocktrans %}Nenhum {{ verbose_name }} existente.{% endblocktrans %}
+                                        </h4>
+                                    </div>
+                                    <div class="col-12">
+                                        {% if can_create %}
+                                        <a class="btn btn-lg btn-mdi btn-primary waves-effect waves-light"
+                                           href="{% url create_url_name %}"> <i
+                                                class="mdi mdi-plus-circle-outline"></i> {% trans 'Criar' %} {{ verbose_name }}
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endblock %}
+                        <!-- end content -->
+                    </div>
+                </div>
+                <!-- end content_grid -->
+            </div>
+            <!-- End content_container block -->
+        </div>
+        <!-- End page_content block -->
+
+    {% endif %}
+
+{% endblock %}
+
+
+{% block footer %}
+    <form method="get" action="" id="paginator">
+        <div class="row justify-content-between form-inline">
+            <div class="col col-auto form-group page-size-selector">
+                <label>{% trans "Itens por Página" %} </label>&nbsp;
+                <select name="page_size" id="page_size" class="form-control select2widget select2field form-control" onchange="this.form.submit();">
+                    {% for psize in page_sizes %}
+                        <option {% if psize == page_size %}selected{% endif %} value="{{ psize }}">{{ psize }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% if is_paginated %}
+                <div class="col col-auto">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pg-dark-grey">
+                            <li class="page-item {% if page_obj.number == 1 %}disabled{% endif %}">
+                                <a href="?{% paginated_filter page=1 %}" class="page-link" tabindex="-1"><i
+                                        class="mdi mdi mdi-chevron-double-left"></i> {% trans 'Página 1' %}</a>
+                            </li>
+                            <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                                <a href="?{% if page_obj.has_previous %}{% paginated_filter page=page_obj.previous_page_number %}{% endif %}"
+                                   class="page-link" tabindex="-1"><i class="mdi mdi-arrow-left"></i></a>
+                            </li>
+                            {% for p in paginator_range %}
+                                <li class="page-item {% if p == page_obj.number %}active{% endif %}"><a
+                                        href="?{% paginated_filter page=p %}" class="page-link">{{ p }}</a></li>
+                            {% endfor %}
+                            <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                                <a href="?{% if page_obj.has_next %}{% paginated_filter page=page_obj.next_page_number %}{% endif %}"
+                                   class="page-link"><i class="mdi mdi-arrow-right"></i></a>
+                            </li>
+                            <li class="page-item {% if page_obj.number == paginator.num_pages %}disabled{% endif %}">
+                                <a href="?{% paginated_filter page=paginator.num_pages %}" class="page-link"
+                                   tabindex="-1">{% trans 'Página' %} {{ paginator.num_pages }} <i
+                                        class="mdi mdi mdi-chevron-double-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col col-auto form-group">
+                    {% for key, data in request.GET.items %}
+                        {% if key != 'page' and key != 'page_size' %}
+                            <input type="hidden" name="{{ key }}" id="{{ key }}" value="{{ data }}"/>
+                        {% endif %}
+                    {% endfor %}
+                    <label for="page">{% trans 'Ir para página' %} </label>&nbsp;
+                    <input onchange="this.form.submit();" class="textinput textInput form-control" type="number"
+                           name="page" id="page" value="{{ page_obj.number }}" min="1"
+                           max="{{ page_obj.paginator.num_pages }}" step="1"/>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}
+
+{% block control_sidebar %}
+    {% include 'djaesy/includes/filter.html' %}
+{% endblock %}
+
+{% block modal_content %}
+
+    {% if previous_selected %}
+        <input id="list_previous_selected" type="hidden" value="{{ previous_selected }}">
+    {% endif %}
+
+    {% if action_invalid %}
+        <input id="action_invalid" type="hidden" value="{{ action_invalid }}">
+    {% endif %}
+
+    <div id="list_action_modal" class="modal fade action_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="mdi mdi-playlist-check"></i>&nbsp;{% trans 'Ações' %}
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% if total_count %}
+
+                        {% if actions.actions_group and total_count > 0 and not filtered_count < 1 %}
+                            <button id="btnGroupDrop2" type="button"
+                                    class="btn btn-block mb-3 btn-md btn-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"
+                                    data-placement="left" data-trigger="hover" data-delay="500" title="Execute ações sobre itens selecionados">
+                                <i class="mdi mdi-playlist-play mdi-18px"></i>&nbsp;{% trans 'Ações' %}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                                {% for action in actions.actions_group %}
+                                    {% with action_name=action.action_name %}
+                                        <a id="call_action_{{ action.id }}"
+                                           class="dropdown-item call_action"
+                                           data-action="{{ action.id }}"
+                                           data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
+                                           data-maxselected="{{ action.max_selected }}">
+                                            <i class="{{ action.icon }}"></i>
+                                            <span class="d-md-none d-lg-inline">{{ action.label }}</span>
+                                        </a>
+                                    {% endwith %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        {% if can_create %}
+                            <a class="btn btn-block mb-3 btn-md btn-primary waves-effect waves-light" href="{% url create_url_name %}">
+                                <i class="mdi mdi-18px mdi-plus-circle-outline"></i>
+                                <span>{% trans 'Criar' %}</span>
+                            </a>
+                        {% endif %}
+
+                        {% if total_count > 0 and not filtered_count < 1 %}
+                            {% for action in actions.main_actions %}
+                                {% with action_name=action.action_name %}
+                                    {% if action_name == 'delete_action' and can_delete or action_name != 'delete_action' %}
+                                    <button id="call_action_{{ action.id }}"
+                                            class="btn btn-block mb-3 btn-md {% if action_name == 'delete_action' %}btn-danger tooltip-toggle{% else %}btn-secondary{% endif %} waves-effect waves-light call_action"
+                                            data-action="{{ action.id }}"
+                                            data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
+                                            data-maxselected="{{ action.max_selected }}"
+                                            {% if action_name == 'delete_action' %}data-placement="bottom" data-delay="500" title="Remover itens selecionados"{% endif %}>
+                                        <i class="{{ action.icon }} mdi-18px"></i>
+                                        <span>{{ action.label }}</span>
+                                    </button>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endfor %}
+                            {% for action_group in actions.secondary_groups %}
+                                    <button id="btnGroupDrop3" type="button"
+                                            class="btn btn-block mb-3 btn-md btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                        {% if action_group.icon %}
+                                            <i class="{{ action_group.icon }} mdi-18px"></i>
+                                        {% endif %}
+                                        <span>{{ action_group.name }}</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                                        {% for group_action in action_group.actions %}
+                                            {% with action_name=group_action.action_name %}
+                                                <a id="call_action_{{ group_action.id }}"
+                                                   class="dropdown-item call_action"
+                                                   data-action="{{ group_action.id }}"
+                                                   data-form="{% if group_action.custom_form %}true{% else %}false{% endif %}"
+                                                   data-maxselected="{{ group_action.max_selected }}">
+                                                    <i class="{{ group_action.icon }} mdi-18px"></i>
+                                                    {{ group_action.label }}
+                                                </a>
+                                            {% endwith %}
+                                        {% endfor %}
+                                    </div>
+
+                            {% endfor %}
+                        {% endif %}
+
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Voltar' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% for action in actions.actions_list %}
+        <!-- Action Modal {{ action.id }}-->
+        <div id="action_modal_{{ action.id }}" class="modal fade action_modal" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <form id="action_form_{{ action.id }}" method="post">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle"><i class="{{ action.icon }}"></i>&nbsp;
+                                {% if action.modal_title %}
+                                    {{ action.modal_title }}{% else %}{{ action.label }}{% endif %}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            {% if action.modat_text %}<p>{{ action.modal_text }}</p>{% endif %}
+                            {% include 'djaesy/includes/render_form.html' with form=action.form_instance %}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">{% trans 'Voltar' %}</button>
+                            <button type="submit" class="btn btn-primary">{% trans 'Continuar' %}</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    {{ filterset.form.media }}
+{% endblock %}

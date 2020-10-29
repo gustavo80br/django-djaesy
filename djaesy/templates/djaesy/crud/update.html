@@ -1,0 +1,24 @@
+{% extends 'djaesy/crud/form.html' %}
+{% load i18n %}
+
+{% block footer %}
+    <div class="float-left">
+        {% if back_url_name %}
+            <a href="{% url back_url_name %}" class="btn btn-mdi btn-secondary">
+                <i class="mdi mdi-arrow-left"></i>
+                {% trans 'Voltar' %}
+            </a>
+        {% endif %}
+    </div>
+    <div class="float-right">
+        <button type="submit" name="new_action" value="1" id="new_action" class="btn btn-mdi btn-outline-secondary">
+            <i class="mdi mdi-lead-pencil"></i>
+            {% trans 'Salvar e continuar editando' %}
+        </button>
+        <button type="submit" name="list_action" value="1" id="list_action" class="btn btn-mdi btn-primary">
+            <i class="mdi mdi-upload"></i>
+            {% trans 'Salvar' %}
+        </button>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,10 @@
+<ul class="sub-menu" aria-expanded="false">
+    {% for sub_item in items %}
+    <li>
+        <a href="{{ sub_item.url }}">
+            <i class="{% if sub_item.icon %}{{ sub_item.icon }}{% else %}mdi mdi-menu{% endif %}"></i>
+            {{ sub_item.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>

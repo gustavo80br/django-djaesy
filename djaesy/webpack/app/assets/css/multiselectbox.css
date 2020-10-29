@@ -1,0 +1,162 @@
+
+/* -- Initial CSS Clear -- */
+
+.multiselectbox .selection,
+.multiselectbox .select2-selection.select2-selection--multiple,
+.multiselectbox .select2-selection__rendered,
+.multiselectbox .select2-selection__clear,
+.multiselectbox .select2-container,
+.multiselectbox .selection > .select2-selection > ul > li > .select2-search__field,
+.multiselectbox .select2-selection__choice
+{
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: auto !important;
+    float: none !important;
+}
+
+/* -- Controls --*/
+
+.multiselectbox {
+    position: relative;
+    display: block;
+}
+
+.multiselectbox .multiselectbox-controls {
+    display: block;
+    width: 100%;
+}
+
+.multiselectbox .select2-search.select2-search--inline {
+    display: none !important;
+}
+
+.multiselectbox .select2-results__option[aria-selected="true"] {
+    display: none;
+}
+
+.multiselectbox .select2-results__option {
+
+}
+
+.multiselectbox .select2-dropdown {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 4px !important;
+    border: 1px solid #ced4da;
+    height: 200px !important;
+    z-index: 0 !important;
+}
+
+.multiselectbox .select2-container--above.select2-container.select2-container--default.select2-container--open {
+    border-radius: 4px !important;
+    border: 1px solid #ced4da;
+    height: 200px !important;
+}
+
+.multiselectbox .select2-selection.select2-selection--multiple {
+    border: none !important;
+}
+
+.multiselectbox .select2-selection.select2-selection--multiple.form-control:focus {
+    color: inherit !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.multiselectbox .select2-selection__choice {
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 6px 12px 6px 36px !important;
+}
+
+.multiselectbox .select2-results__option.select2-results__option--highlighted:hover,
+.multiselectbox .select2-selection__choice:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+
+
+.multiselectbox .select2-selection__choice__remove {
+    position: absolute;
+    width: 90%;
+    color: inherit !important;
+    margin-left: -22px !important;
+    font-size: 1rem !important;
+}
+
+.multiselectbox .select2-results__option.select2-results__option--highlighted {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.multiselectbox .select2-container--default .select2-results > .select2-results__options {
+    border-radius: 4px !important;
+    border: 1px solid #ced4da;
+    min-height: 200px !important;
+}
+
+div.multiselectbox span.select2.select2-container.select2-container--default.select2-container--below.select2-container--open {
+    border-radius: 4px !important;
+    border: 1px solid #ced4da;
+}
+
+.multiselectbox .select2-dropdown {
+    position: relative;
+    border-radius: 0 !important;
+    border: none !important;
+    height: 200px !important;
+}
+
+.multiselectbox .select2.select2-container {
+    position: relative !important;
+    height: 200px !important;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 49% !important;
+    float: right !important;
+}
+
+.multiselectbox .select2-container--open {
+    position: relative !important;
+    height: 200px !important;
+    max-height: 200px;
+    width: 49% !important;
+    float: left !important;
+}
+
+/*.select2-results__options {*/
+    /*height: auto !important;*/
+    /*max-height: none !important;*/
+    /*/*overflow-y: visible;*/
+/*}*/
+
+/*.select2-results__options {*/
+    /*overflow-y: hidden !important;*/
+/*}*/
+
+/*ul.select2-selection__rendered {*/
+    /*-moz-transform: rotate(180deg);*/
+    /*-webkit-transform: rotate(180deg);*/
+    /*transform: rotate(180deg);*/
+/*}*/
+/*ul.select2-selection__rendered > li {*/
+    /*-moz-transform: rotate(-180deg);*/
+    /*-webkit-transform: rotate(-180deg);*/
+    /*transform: rotate(-180deg);*/
+/*}*/
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    margin-top: -0.45rem !important;
+    padding: 0 !important;
+    padding-top: 6px !important;
+    max-height: 12px !important;
+}

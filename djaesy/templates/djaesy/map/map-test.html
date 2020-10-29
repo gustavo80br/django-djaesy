@@ -1,0 +1,105 @@
+{% extends 'djaesy/base.html' %}
+{% load crispy_forms_tags %}
+{% load leaflet_tags %}
+{% load i18n %}
+
+{% block extra_css %}
+    {% leaflet_css plugins="bouncemarker,draw" %}
+{% endblock %}
+
+{% block extra_js %}
+    {% leaflet_js plugins="bouncemarker,draw" %}
+    <script type="text/javascript">
+
+        var greenIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        });
+
+        var redIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        });
+
+        var yellowIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        });
+
+        function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function getIcon() {
+            let icon_list = [
+                yellowIcon,
+                redIcon,
+                greenIcon
+            ];
+            let i = getRandomInt(0,3);
+            return icon_list[i];
+        }
+
+        function map_init_basic (map, options) {
+
+            map.layerscontrol.setPosition('topleft');
+
+            L.marker([-19.6973263172808,-50.6914274936605], {icon: getIcon()}).addTo(map);
+            L.marker([-21.1038256670372,-42.5970410383671], {icon: getIcon()}).addTo(map);
+            L.marker([-21.2075308065888,-42.5079376707611], {icon: getIcon()}).addTo(map);
+            L.marker([-21.1088400305878,-42.4478101604916], {icon: getIcon()}).addTo(map);
+            L.marker([-21.0731167010235,-42.5035260770982], {icon: getIcon()}).addTo(map);
+            L.marker([-21.4611384100422,-42.3516729495054], {icon: getIcon()}).addTo(map);
+            L.marker([-21.4394068978078,-42.358629884261], {icon: getIcon()}).addTo(map);
+            L.marker([-21.2974620098352,-42.2673286650231], {icon: getIcon()}).addTo(map);
+            L.marker([-21.2495198561179,-42.3112438626765], {icon: getIcon()}).addTo(map);
+            L.marker([-20.991932561174,-42.370329449631], {icon: getIcon()}).addTo(map);
+            L.marker([-20.9700520998023,-42.2916176957204], {icon: getIcon()}).addTo(map);
+            L.marker([-20.9707531254343,-42.1820288650319], {icon: getIcon()}).addTo(map);
+            L.marker([-20.9274535948232,-42.455297935607], {icon: getIcon()}).addTo(map);
+            L.marker([-20.7232470538557,-42.4234751789697], {icon: getIcon()}).addTo(map);
+            L.marker([-20.5717525469148,-42.5817352375728], {icon: getIcon()}).addTo(map);
+            L.marker([-20.4116376115435,-42.5573512654389], {icon: getIcon()}).addTo(map);
+            L.marker([-20.6098247385846,-42.5365345920805], {icon: getIcon()}).addTo(map);
+            L.marker([-20.5097291575634,-42.5256095149704], {icon: getIcon()}).addTo(map);
+            L.marker([-20.9228091729495,-42.2567702006159], {icon: getIcon()}).addTo(map);
+            L.marker([-20.7089505614148,-42.3700947530201], {icon: getIcon()}).addTo(map);
+            L.marker([-20.8808929039723,-42.2118166517407], {icon: getIcon()}).addTo(map);
+            L.marker([-20.9214968413742,-42.1482586257288], {icon: getIcon()}).addTo(map);
+            L.marker([-20.8745198993306,-42.1595458666934], {icon: getIcon()}).addTo(map);
+            L.marker([-20.7052868394984,-42.2175299258035], {icon: getIcon()}).addTo(map);
+            L.marker([-20.7261396623168,-42.1404557461561], {icon: getIcon()}).addTo(map);
+            L.marker([-20.5970918166832,-42.2657635627329], {icon: getIcon()}).addTo(map);
+            L.marker([-20.3811225639483,-42.3782563554046], {icon: getIcon()}).addTo(map);
+            L.marker([-20.4629257182382,-42.2851525289083], {icon: getIcon()}).addTo(map);
+            L.marker([-20.5721201839645,-42.1006830242489], {icon: getIcon()}).addTo(map);
+            L.marker([-20.6996230409887,-42.0240804286999], {icon: getIcon()}).addTo(map);
+            L.marker([-20.4771960782468,-41.995646139664], {icon: getIcon()}).addTo(map);
+            L.marker([-20.5710255397816,-41.8368120555273], {icon: getIcon()}).addTo(map);
+            L.marker([-20.1401741864827,-42.679455798107], {icon: getIcon()}).addTo(map);
+            L.marker([-20.0922458760266,-42.6269015860186], {icon: getIcon()}).addTo(map);
+            L.marker([-20.1678550728563,-42.3893471547892], {icon: getIcon()}).addTo(map);
+            L.marker([-19.828234301863,-42.6326399203653], {icon: getIcon()}).addTo(map);
+
+        }
+
+    </script>
+{% endblock %}
+
+{% block page_content %}
+    {% leaflet_map "yourmap" settings_overrides=map_settings callback="window.map_init_basic" %}
+{% endblock %}

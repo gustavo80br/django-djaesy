@@ -1,0 +1,130 @@
+{% extends 'djaesy/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block main_content_start %}
+    <form action="" method="post" enctype="multipart/form-data">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        {% include 'djaesy/includes/render_form.html' %}
+
+        {% if form.formsets %}
+            {% for formset in form.formsets %}
+                {% include 'djaesy/includes/render_formset.html' %}
+                <a class="btn btn-sm btn-mdi btn-secondary" href="#" onclick="return add_inline_form('{{ formset.management_form.prefix }}')">
+                    <i class="mdi mdi-plus-circle-outline"></i> Adicionar Item
+                </a>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+
+    {{ form.media }}
+    {% if form.formsets %}
+        {% for formset in form.formsets %}
+            {{ formset.media }}
+        {% endfor %}
+    {% endif %}
+
+    <script>
+
+    function increment_form_ids(el, to, name) {
+        var from = to - 1;
+        $(':input', $(el)).each(function(i,e){
+            var old_name = $(e).attr('name');
+            var old_id = $(e).attr('id');
+            $(e).attr('name', old_name.replace(from, to));
+            $(e).attr('id', old_id.replace(from, to));
+            $(e).val('');
+            $(e).attr({checked: false});
+        });
+        $('label', $(el)).each(function(i,e){
+            var old_for = $(e).attr('for');
+            $(e).attr('for', old_for.replace(from, to));
+        });
+        $(':checkbox', $(el)).each(function(i,e){
+            $(e).prop( "checked", false );
+        });
+    }
+
+    function disable_inputs(el) {
+        $(':input', $(el)).each(function (i, e) {
+            $(e).attr('disabled', 'disabled');
+        });
+        $(':checkbox', $(el)).each(function (i, e) {
+            $(e).removeAttr('disabled');
+        });
+    }
+
+    function enable_inputs(el) {
+        $(':input', $(el)).each(function(i,e){
+            $(e).removeAttr('disabled');
+        });
+    }
+
+    function add_inline_form(name) {
+
+        let first = $('#id_'+name+'-0-id').parents('.formset-instance,.multiField');
+        let last = first.children('.inline-related').last();
+        let copy = $(last).clone(true);
+        let count = first.children('.inline-related').length;
+
+        copy.show();
+        copy.addClass('added-by-js');
+        $(last).after(copy);
+        $('input#id_'+name+'-TOTAL_FORMS').val(count+1);
+        increment_form_ids(copy, count, name);
+
+        return false;
+    }
+
+    $(function() {
+        $('.formset-delete').on('change', function(e) {
+            let instance = $(this).parents('.inline-related');
+            if(this.checked) {
+                if(instance.hasClass('added-by-js')) {
+                    instance.remove();
+                } else {
+                    disable_inputs(instance);
+                }
+            } else {
+                enable_inputs(instance);
+            }
+        });
+    });
+
+    </script>
+
+{% endblock %}
+
+{% block footer %}
+    <div class="float-left">
+        {% if back_url_name %}
+            <a href="{% url back_url_name %}" class="btn btn-mdi btn-secondary">
+                <i class="mdi mdi-arrow-left"></i>
+                {% trans 'Voltar' %}
+            </a>
+        {% endif %}
+    </div>
+    <div class="float-right">
+        <button type="submit" name="new_action" value="1" id="new_action" class="btn btn-mdi btn-outline-secondary">
+            <i class="mdi mdi mdi-plus-circle-outline"></i>
+            {% trans 'Salvar e criar outro' %}
+        </button>
+        <button type="submit" name="list_action" value="1" id="list_action" class="btn btn-mdi btn-primary">
+            <i class="mdi mdi-upload"></i>
+            {% trans 'Salvar' %}
+        </button>
+    </div>
+{% endblock %}
+
+{% block main_content_end %}
+    </form>
+{% endblock %}

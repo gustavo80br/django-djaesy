@@ -1,0 +1,98 @@
+{% extends 'djaesy/base.html' %}
+{% load static %}
+
+{% block extra_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script>
+    <script>
+
+        let splitobj = null;
+        let toggle_area = function() {};
+
+        $(document).ready(function() {
+            let area_icon = $('#area-toggle-icon');
+
+            let split_sizes = localStorage.getItem('splitSizes');
+            if(!split_sizes) {
+                split_sizes = '[100,0]';
+            }
+
+            splitobj = Split(["#top-area","#bottom-area"], {
+                gutterStyle: function (dimension, gutterSize) { return {'width': '100%', 'height': `${gutterSize}px`} },
+                sizes: JSON.parse(split_sizes),
+                minSize: [190, 56],
+                cursor: 'row-resize',
+                direction: "vertical",
+                gutterSize: 20,
+                onDragEnd: function(sizes) {
+                    $(document).trigger('app-panel:slider-drag-end');
+                    localStorage.setItem('splitSizes', JSON.stringify(sizes));
+                    toggle_area(null, true);
+                },
+            });
+
+            $(document).trigger('app-panel:slider-drag-end');
+
+            $(window).on('resize', function() {
+                toggle_area(null, false, true);
+                $(document).trigger('app-panel:slider-drag-end');
+            });
+
+            toggle_area = function(e, adjust_icon=false, to_open=false) {
+                let sizes = splitobj.getSizes();
+                if(!adjust_icon) {
+                    if(to_open) {
+                        if (sizes[0] > sizes[1]) {
+                            sizes[0] = 35; sizes[1] = 65;
+                        }
+                    } else {
+                        if(sizes[0] > sizes[1]) {
+                            sizes[0] = 35; sizes[1] = 65;
+                        } else {
+                            sizes[0] = 100; sizes[1] = 0;
+                        }
+                    }
+                    localStorage.setItem('splitSizes', JSON.stringify(sizes));
+                    splitobj.setSizes(sizes);
+                    $(document).trigger('app-panel:slider-drag-end');
+                }
+
+                if(sizes[0] > sizes[1]) {
+                    area_icon.addClass('close-icon');
+                } else {
+                    area_icon.removeClass('close-icon');
+                }
+            }
+            $('.gutter').on('dblclick', toggle_area);
+            $('#area-toggle-button').on('click', toggle_area);
+        });
+    </script>
+{% endblock %}
+
+{% block page_content %}
+    <div id="split-container" class="row no-gutters">
+      <div id="top-area" class="col-12">
+        <div id="top-area-container">
+          {% block split-top-area %}
+              BLOCK split-top-area
+          {% endblock %}
+        </div>
+      </div>
+      <div id="bottom-area" class="col-12">
+          <div id="data-controls" class="row no-gutters justify-content-between align-items-top flex-nowrap">
+              {% block split-control-area %}
+                  BLOCK split-control-area
+              {% endblock %}
+              <div class="col-auto ml-4 pull-right">
+                  <a id="area-toggle-button" class="btn btn-mdi btn-sm btn-flat">
+                      <i id="area-toggle-icon" class="mdi mdi-36px mdi-arrow-expand-down text-primary close-icon"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="row no-gutters" id="data-scroll-area" data-simplebar>
+              {% block split-data-area %}
+                  BLOCK split-data-area
+              {% endblock %}
+          </div>
+      </div>
+    </div>
+{% endblock %}

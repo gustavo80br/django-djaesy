@@ -1,0 +1,20 @@
+{% extends 'djaesy/login/login-base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{%  block content %}
+    {% trans 'Esqueceu sua senha?' as forgot_password_txt %}
+    {% trans 'Entrar' as login_button_txt %}
+    {% trans 'Email' as email_placeholder_txt %}
+    {% trans 'Senha' as password_placeholder_txt %}
+    {% crispy form %}
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <p class="text-muted">
+                <a href="{% url 'login_reset_password' %}" class="text-muted">{{ forgot_password_txt }}</a>
+            </p>
+            <!-- <p class="text-muted mb-0">Don't have an account? <a href="auth-register.html" class="text-muted font-weight-medium ml-1"><b>Sign Up</b></a></p> -->
+        </div> <!-- end col -->
+    </div>
+{% endblock %}

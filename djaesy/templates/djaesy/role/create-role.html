@@ -1,0 +1,45 @@
+{% extends 'djaesy/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block main_content_start %}
+    <form action="" method="post" enctype="multipart/form-data">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        {% include 'djaesy/includes/render_form.html' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+    {{ form.media }}
+{% endblock %}
+
+{% block footer %}
+    <div class="float-left">
+        {% if back_url_name %}
+            <a href="{% url back_url_name %}" class="btn btn-mdi btn-secondary">
+                <i class="mdi mdi-arrow-left"></i>
+                {% trans 'Voltar' %}
+            </a>
+        {% endif %}
+    </div>
+    <div class="float-right">
+        <button type="submit" name="new_action" value="1" id="new_action" class="btn btn-mdi btn-outline-secondary">
+            <i class="mdi mdi mdi-plus-circle-outline"></i>
+            {% trans 'Salvar e criar outro' %}
+        </button>
+        <button type="submit" name="list_action" value="1" id="list_action" class="btn btn-mdi btn-primary">
+            <i class="mdi mdi-upload"></i>
+            {% trans 'Salvar' %}
+        </button>
+    </div>
+{% endblock %}
+
+{% block main_content_end %}
+    </form>
+{% endblock %}
+

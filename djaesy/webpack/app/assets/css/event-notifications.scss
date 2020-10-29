@@ -1,0 +1,53 @@
+﻿#event_notification,
+#vehicle_event {
+
+    .event-row,
+    .notification-row {
+        border-bottom: 1px #EEE solid !important;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        .row-checkbox i:before {
+            content: "\F131" !important;
+            transform: rotate(90deg) !important;
+            transition: .3s ease-in-out;
+            color: var(--gray);
+            background-color: transparent !important;
+        }
+    }
+
+    .event-row.selected,
+    .notification-row.selected {
+        .row-checkbox i:before {
+            content: "\F12C" !important;
+            color: var(--success) !important;
+            transform: rotate(0deg) !important;
+            background-color: transparent !important;
+        }
+    }
+}
+
+.ring {
+  animation: ring_animation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes ring_animation {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

@@ -1,0 +1,1469 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-12 04:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\accounts\menus.py:8 .\accounts\menus.py:10 .\app_panel\menus.py:13
+#: .\app_panel\menus.py:15 .\app_panel\models.py:85
+msgid "Usuários"
+msgstr "Usuários"
+
+#: .\accounts\menus.py:11 .\app_panel\menus.py:16
+msgid "Perfis"
+msgstr "Perfis"
+
+#: .\accounts\models.py:24
+msgid "CPF"
+msgstr "CPF"
+
+#: .\accounts\models.py:25 .\clients\models.py:99 .\trackers\models.py:47
+msgid "Estado"
+msgstr "Estado"
+
+#: .\accounts\models.py:26 .\clients\models.py:98
+msgid "CEP"
+msgstr "CEP"
+
+#: .\accounts\models.py:43 .\alerts\models.py:68 .\alerts\models.py:144
+#: .\alerts\models.py:225 .\app_panel\models.py:70 .\clients\models.py:514
+#: .\maintenance\models.py:41 .\trackers\models.py:248 .\trackers\models.py:258
+msgid "Nome"
+msgstr "Nome"
+
+#: .\accounts\models.py:74
+msgid "O Nome informado já está em uso, escolha outro nome."
+msgstr "O Nome informado já está em uso, escolha outro nome."
+
+#: .\alerts\alerts.py:6 .\trackers\models.py:24
+msgid "Atraso de Transmissão"
+msgstr "Atraso de Transmissão"
+
+#: .\alerts\alerts.py:11
+msgid "Bloqueio"
+msgstr "Bloqueio"
+
+#: .\alerts\alerts.py:15 .\alerts\models.py:69 .\alerts\models.py:79
+#: .\alerts\models.py:238
+msgid "Cerca"
+msgstr "Cerca"
+
+#: .\alerts\alerts.py:20
+msgid "Falha de Alimentação"
+msgstr "Falha de Alimentação"
+
+#: .\alerts\alerts.py:28
+msgid "Pânico"
+msgstr "Pânico"
+
+#: .\alerts\forms.py:68 .\clients\forms.py:420 .\clients\forms.py:550
+#: .\clients\views.py:166 .\clients\views.py:177 .\clients\views.py:253
+#: .\clients\views.py:264 .\maintenance\forms.py:23
+msgid "Pesquisar"
+msgstr "Pesquisar"
+
+#: .\alerts\menus.py:10 .\alerts\models.py:262
+#: .\monitoring\templates\monitoring\vehicle.html:159
+msgid "Alertas"
+msgstr "Alertas"
+
+#: .\alerts\models.py:21
+msgid "🔺 Crítica"
+msgstr "🔺 Crítica"
+
+#: .\alerts\models.py:22
+msgid "🟠 Alta"
+msgstr "🟠 Alta"
+
+#: .\alerts\models.py:23
+msgid "🟡 Média"
+msgstr "🟡 Média"
+
+#: .\alerts\models.py:24
+msgid "🟢 Baixa"
+msgstr "🟢 Baixa"
+
+#: .\alerts\models.py:47
+#, python-brace-format
+msgid "Variável {o}{var}{c} não é uma opção disponível"
+msgstr "Variável {o}{var}{c} não é uma opção disponível"
+
+#: .\alerts\models.py:54
+msgid "Telefone {val.strip()} inválido"
+msgstr "Telefone {val.strip()} inválido"
+
+#: .\alerts\models.py:63
+msgid "Email {val.strip()} inválido"
+msgstr "Email {val.strip()} inválido"
+
+#: .\alerts\models.py:80
+msgid "Cercas"
+msgstr "Cercas"
+
+#: .\alerts\models.py:94 .\commands\models.py:10 .\commands\models.py:33
+msgid "ID"
+msgstr "ID"
+
+#: .\alerts\models.py:95
+msgid "Slug"
+msgstr "Slug"
+
+#: .\alerts\models.py:99
+msgid "Tipo de Alerta"
+msgstr "Tipo de Alerta"
+
+#: .\alerts\models.py:100
+msgid "Tipos de Alerta"
+msgstr "Tipos de Alerta"
+
+#: .\alerts\models.py:147
+msgid "Endereços de E-mail"
+msgstr "Endereços de E-mail"
+
+#: .\alerts\models.py:148
+msgid "Separe os endereços por vírgula"
+msgstr "Separe os endereços por vírgula"
+
+#: .\alerts\models.py:153
+msgid "Telefones"
+msgstr "Telefones"
+
+#: .\alerts\models.py:154
+msgid ""
+"Separe os telefones por vírgula. Utilize somente números e o sinal + para "
+"código internacional."
+msgstr ""
+"Separe os telefones por vírgula. Utilize somente números e o sinal + para "
+"código internacional."
+
+#: .\alerts\models.py:159
+msgid "Assunto do E-mail"
+msgstr "Assunto do E-mail"
+
+#: .\alerts\models.py:167
+msgid "Corpo do E-mail"
+msgstr "Corpo do E-mail"
+
+#: .\alerts\models.py:174
+msgid "Mensagem SMS"
+msgstr "Mensagem SMS"
+
+#: .\alerts\models.py:180 .\alerts\models.py:234 .\trackers\models.py:109
+#: .\trackers\models.py:265 .\trackers\models.py:271
+msgid "Ativo"
+msgstr "Ativo"
+
+#: .\alerts\models.py:190
+msgid "Notificação"
+msgstr "Notificação"
+
+#: .\alerts\models.py:191 .\alerts\models.py:232
+msgid "Notificações"
+msgstr "Notificações"
+
+#: .\alerts\models.py:226
+msgid "Severidade"
+msgstr "Severidade"
+
+#: .\alerts\models.py:227 .\monitoring\views.py:109 .\trackers\models.py:69
+#: .\trackers\models.py:88 .\trackers\views.py:120 .\trackobj\views.py:267
+msgid "Tipo"
+msgstr "Tipo"
+
+#: .\alerts\models.py:229
+msgid "Aplicar para todos os Veículos"
+msgstr "Aplicar para todos os Veículos"
+
+#: .\alerts\models.py:230 .\clients\views.py:46 .\clients\views.py:126
+#: .\clients\views.py:210 .\clients\views.py:301 .\clients\views.py:391
+#: .\clients\views.py:479 .\i3track\permissions.py:26 .\monitoring\views.py:292
+#: .\monitoring\views.py:315 .\monitoring\views.py:337 .\trackers\views.py:71
+#: .\trackers\views.py:122 .\trackobj\menus.py:11 .\trackobj\models.py:154
+#: .\trackobj\views.py:88 .\trackobj\views.py:146 .\trackobj\views.py:193
+#: .\trackobj\views.py:244
+msgid "Veículos"
+msgstr "Veículos"
+
+#: .\alerts\models.py:239
+msgid "Atraso máximo de transmissão em minutos"
+msgstr "Atraso máximo de transmissão em minutos"
+
+#: .\alerts\models.py:261
+msgid "Alerta"
+msgstr "Alerta"
+
+#: .\alerts\models.py:370 .\trackers\models.py:235
+msgid "Houve um erro de sistema, contate o administrador: "
+msgstr "Houve um erro de sistema, contate o administrador: "
+
+#: .\app_panel\base_models.py:13
+msgid "Criado em"
+msgstr "Criado em"
+
+#: .\app_panel\base_models.py:16
+msgid "Criado por"
+msgstr "Criado por"
+
+#: .\app_panel\base_models.py:25
+msgid "Última alteração"
+msgstr "Última alteração"
+
+#: .\app_panel\base_models.py:28
+msgid "Alterado por"
+msgstr "Alterado por"
+
+#: .\app_panel\base_models.py:60
+msgid "Atualizar o valor do campo Criado Por não é permitido."
+msgstr "Atualizar o valor do campo Criado Por não é permitido."
+
+#: .\app_panel\base_views.py:237
+msgid "Saiba mais"
+msgstr "Saiba mais"
+
+#: .\app_panel\base_views.py:323 .\app_panel\base_views.py:707
+#: .\app_panel\base_views.py:722 .\i3track\permissions.py:10
+#: .\i3track\permissions.py:20 .\i3track\permissions.py:30
+#: .\i3track\permissions.py:41 .\i3track\permissions.py:52
+#: .\i3track\permissions.py:63 .\i3track\permissions.py:74
+#: .\i3track\permissions.py:85 .\i3track\permissions.py:96
+#: .\i3track\permissions.py:107 .\i3track\permissions.py:118
+#: .\i3track\permissions.py:129 .\i3track\permissions.py:140
+#: .\i3track\permissions.py:151
+msgid "Remover"
+msgstr "Remover"
+
+#: .\app_panel\base_views.py:462
+msgid "Ação executada com sucesso."
+msgstr "Ação executada com sucesso."
+
+#: .\app_panel\base_views.py:468
+msgid ""
+"Erro na execução da ação. Entre em contao to com o admistrador do sistema."
+msgstr ""
+"Erro na execução da ação. Entre em contao to com o admistrador do sistema."
+
+#: .\app_panel\base_views.py:482
+msgid "Sem permissão: {action[\"permission\"]}."
+msgstr "Sem permissão: {action[\"permission\"]}."
+
+#: .\app_panel\base_views.py:498
+msgid "Não foi possível por PROTECT."
+msgstr "Não foi possível por PROTECT."
+
+#: .\app_panel\base_views.py:679
+msgid "Filtros"
+msgstr "Filtros"
+
+#: .\app_panel\base_views.py:711
+msgid "Excel"
+msgstr "Excel"
+
+#: .\app_panel\base_views.py:715
+msgid "CSV"
+msgstr "CSV"
+
+#: .\app_panel\base_views.py:937
+#: .\app_panel\templates\app_panel\crud\list.html:82
+#: .\app_panel\templates\app_panel\crud\list.html:295
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:247
+msgid "Criar"
+msgstr "Criar"
+
+#: .\app_panel\base_views.py:975
+msgid "Item criado com sucesso"
+msgstr "Item criado com sucesso"
+
+#: .\app_panel\base_views.py:982
+msgid "Selecione a área da imagem"
+msgstr "Selecione a área da imagem"
+
+#: .\app_panel\base_views.py:992 .\i3track\permissions.py:9
+#: .\i3track\permissions.py:19 .\i3track\permissions.py:29
+#: .\i3track\permissions.py:40 .\i3track\permissions.py:51
+#: .\i3track\permissions.py:62 .\i3track\permissions.py:73
+#: .\i3track\permissions.py:84 .\i3track\permissions.py:95
+#: .\i3track\permissions.py:106 .\i3track\permissions.py:117
+#: .\i3track\permissions.py:128 .\i3track\permissions.py:139
+#: .\i3track\permissions.py:150
+msgid "Editar"
+msgstr "Editar"
+
+#: .\app_panel\base_views.py:1243
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "Empty list and “%(class_name)s.allow_empty” is False."
+
+#: .\app_panel\fields.py:18
+msgid "Enter a postal code in the format 00000-000."
+msgstr "Enter a postal code in the format 00000-000."
+
+#: .\app_panel\fields.py:19
+msgid "Invalid Postal Code"
+msgstr "Invalid Postal Code"
+
+#: .\app_panel\fields.py:30
+msgid "Postal Code"
+msgstr "Postal Code"
+
+#: .\app_panel\login_views.py:23
+msgid "Login Inválido"
+msgstr "Login Inválido"
+
+#: .\app_panel\login_views.py:31 .\app_panel\login_views.py:65
+#: .\app_panel\models.py:69 .\app_panel\templates\app_panel\login.html:9
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:9
+#: .\trackers\models.py:251
+msgid "Email"
+msgstr "Email"
+
+#: .\app_panel\login_views.py:34 .\app_panel\templates\app_panel\login.html:10
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:10
+#: .\app_panel\user_forms.py:12
+msgid "Senha"
+msgstr "Senha"
+
+#: .\app_panel\login_views.py:36 .\app_panel\templates\app_panel\login.html:8
+#: .\app_panel\templates\app_panel\reset-password-complete.html:8
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:8
+#: .\app_panel\templates\app_panel\reset-password-done.html:8
+#: .\app_panel\templates\app_panel\reset-password.html:8
+msgid "Entrar"
+msgstr "Entrar"
+
+#: .\app_panel\login_views.py:68 .\app_panel\login_views.py:111
+msgid "Redefinir Senha"
+msgstr "Redefinir Senha"
+
+#: .\app_panel\login_views.py:97
+msgid "Nova senha"
+msgstr "Nova senha"
+
+#: .\app_panel\login_views.py:105
+msgid "Repita a nova senha"
+msgstr "Repita a nova senha"
+
+#: .\app_panel\login_views.py:118
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: .\app_panel\login_views.py:128 .\app_panel\login_views.py:129
+#: .\app_panel\templates\app_panel\base.html:144
+#: .\app_panel\templates\app_panel\user\user-change-password.html:13
+msgid "Mudar Senha"
+msgstr "Mudar Senha"
+
+#: .\app_panel\login_views.py:151
+msgid "Senha Alterada"
+msgstr "Senha Alterada"
+
+#: .\app_panel\login_views.py:152
+msgid "Senha Alterada com Sucesso!"
+msgstr "Senha Alterada com Sucesso!"
+
+#: .\app_panel\models.py:24 .\app_panel\models.py:73
+msgid "Perfil de Acesso"
+msgstr "Perfil de Acesso"
+
+#: .\app_panel\models.py:25
+msgid "Perfís de Acesso"
+msgstr "Perfís de Acesso"
+
+#: .\app_panel\models.py:84
+msgid "Usuário"
+msgstr "Usuário"
+
+#: .\app_panel\templates\app_panel\base.html:85
+msgid "Alertas Ativos"
+msgstr "Alertas Ativos"
+
+#: .\app_panel\templates\app_panel\base.html:107
+msgid "Tradução"
+msgstr "Tradução"
+
+#: .\app_panel\templates\app_panel\base.html:129
+msgid "Tela Cheia"
+msgstr "Tela Cheia"
+
+#: .\app_panel\templates\app_panel\base.html:147
+msgid "Sair"
+msgstr "Sair"
+
+#: .\app_panel\templates\app_panel\base.html:342
+msgid "Filtrar lista..."
+msgstr "Filtrar lista..."
+
+#: .\app_panel\templates\app_panel\base.html:345
+msgid "Nenhum item selecionado!"
+msgstr "Nenhum item selecionado!"
+
+#: .\app_panel\templates\app_panel\base.html:346
+msgid "Selecione ao menos um item para executar a ação."
+msgstr "Selecione ao menos um item para executar a ação."
+
+#: .\app_panel\templates\app_panel\base.html:348
+msgid "Muitos itens selecionados!"
+msgstr "Muitos itens selecionados!"
+
+#: .\app_panel\templates\app_panel\base.html:349
+msgid "Esta ação deve ser executada em um item por vez."
+msgstr "Esta ação deve ser executada em um item por vez."
+
+#: .\app_panel\templates\app_panel\base.html:350
+msgid "Limite de itens selecionados para executar a ação foi atingido."
+msgstr "Limite de itens selecionados para executar a ação foi atingido."
+
+#: .\app_panel\templates\app_panel\crud\create.html:9
+#: .\app_panel\templates\app_panel\crud\form.html:112
+#: .\app_panel\templates\app_panel\crud\list.html:406
+#: .\app_panel\templates\app_panel\crud\update.html:9
+#: .\app_panel\templates\app_panel\role\create-role.html:26
+#: .\app_panel\templates\app_panel\test_form.html:40
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:372
+msgid "Voltar"
+msgstr "Voltar"
+
+#: .\app_panel\templates\app_panel\crud\create.html:16
+#: .\app_panel\templates\app_panel\crud\form.html:119
+#: .\app_panel\templates\app_panel\role\create-role.html:33
+#: .\app_panel\templates\app_panel\test_form.html:47
+msgid "Salvar e criar outro"
+msgstr "Salvar e criar outro"
+
+#: .\app_panel\templates\app_panel\crud\create.html:20
+#: .\app_panel\templates\app_panel\crud\form.html:123
+#: .\app_panel\templates\app_panel\crud\update.html:20
+#: .\app_panel\templates\app_panel\role\create-role.html:37
+#: .\app_panel\templates\app_panel\test_form.html:51
+msgid "Salvar"
+msgstr "Salvar"
+
+#: .\app_panel\templates\app_panel\crud\list.html:30
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:30
+msgid "de"
+msgstr "de"
+
+#: .\app_panel\templates\app_panel\crud\list.html:31
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:31
+msgid "Limpar Filtro"
+msgstr "Limpar Filtro"
+
+#: .\app_panel\templates\app_panel\crud\list.html:56
+#: .\app_panel\templates\app_panel\crud\list.html:178
+#: .\monitoring\templates\monitoring\vehicle.html:213
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:56
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:154
+msgid "Ações"
+msgstr "Ações"
+
+#: .\app_panel\templates\app_panel\crud\list.html:288
+#, python-format
+msgid "Nenhum %(verbose_name)s existente."
+msgstr "Nenhum %(verbose_name)s existente."
+
+#: .\app_panel\templates\app_panel\crud\list.html:320
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:272
+msgid "Itens por Página"
+msgstr "Itens por Página"
+
+#: .\app_panel\templates\app_panel\crud\list.html:333
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:285
+msgid "Página 1"
+msgstr "Página 1"
+
+#: .\app_panel\templates\app_panel\crud\list.html:349
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:301
+msgid "Página"
+msgstr "Página"
+
+#: .\app_panel\templates\app_panel\crud\list.html:361
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:313
+msgid "Ir para página"
+msgstr "Ir para página"
+
+#: .\app_panel\templates\app_panel\crud\list.html:407
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:373
+msgid "Continuar"
+msgstr "Continuar"
+
+#: .\app_panel\templates\app_panel\crud\update.html:16
+msgid "Salvar e continuar editando"
+msgstr "Salvar e continuar editando"
+
+#: .\app_panel\templates\app_panel\includes\filter.html:7
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:328
+msgid "Filtrar"
+msgstr "Filtrar"
+
+#: .\app_panel\templates\app_panel\includes\filter.html:9
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:330
+msgid "Limpar"
+msgstr "Limpar"
+
+#: .\app_panel\templates\app_panel\login.html:7
+#: .\app_panel\templates\app_panel\reset-password-confirm.html:7
+msgid "Esqueceu sua senha?"
+msgstr "Esqueceu sua senha?"
+
+#: .\app_panel\templates\app_panel\reset-password-complete.html:9
+msgid "Senha alterada!"
+msgstr "Senha alterada!"
+
+#: .\app_panel\templates\app_panel\reset-password-complete.html:15
+msgid ""
+"Sua senha foi definida. Você pode prosseguir e se autenticar agora. Clique "
+"em Entrar!"
+msgstr ""
+"Sua senha foi definida. Você pode prosseguir e se autenticar agora. Clique "
+"em Entrar!"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:9
+msgid "Verifique seu Email"
+msgstr "Verifique seu Email"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:10
+msgid "Tentar Novamente"
+msgstr "Tentar Novamente"
+
+#: .\app_panel\templates\app_panel\reset-password-done.html:15
+msgid ""
+"Se o endereço enviado for válido, você receberá um email com um link para "
+"redefinir sua senha. Caso não tenha recebido o email, verifique sua caixa de "
+"span ou se inseriu seu endereço de email corretamente."
+msgstr ""
+"Se o endereço enviado for válido, você receberá um email com um link para "
+"redefinir sua senha. Caso não tenha recebido o email, verifique sua caixa de "
+"span ou se inseriu seu endereço de email corretamente."
+
+#: .\app_panel\templates\app_panel\reset-password.html:9
+msgid "Informe seu Email cadastrado"
+msgstr "Informe seu Email cadastrado"
+
+#: .\app_panel\user_forms.py:9 .\app_panel\user_forms.py:68
+msgid "The two password fields didn’t match."
+msgstr "The two password fields didn’t match."
+
+#: .\app_panel\user_forms.py:17
+msgid "Confirme a Senha"
+msgstr "Confirme a Senha"
+
+#: .\app_panel\user_forms.py:20 .\app_panel\user_forms.py:81
+msgid "Enter the same password as before, for verification."
+msgstr "Enter the same password as before, for verification."
+
+#: .\app_panel\user_forms.py:71
+msgid "Password"
+msgstr "Password"
+
+#: .\app_panel\user_forms.py:78
+msgid "Password confirmation"
+msgstr "Password confirmation"
+
+#: .\app_panel\views.py:94
+msgid ""
+"\n"
+"    <p>Sua senha é de uso pessoal e exclusivo, deve seguir algumas regras:\n"
+"    <ul>\n"
+"        <li>Conter pelo menos 8 caracteres.</li>\n"
+"        <li>Não ser inteiramente numérica</li>\n"
+"        <li>Não ser similar às suas informações pessoais.</li>\n"
+"        <li>Não ser uma senha muito comunmente usada.</li>\n"
+"    </ul>\n"
+"    "
+msgstr ""
+"\n"
+"    <p>Sua senha é de uso pessoal e exclusivo, deve seguir algumas regras:\n"
+"    <ul>\n"
+"        <li>Conter pelo menos 8 caracteres.</li>\n"
+"        <li>Não ser inteiramente numérica</li>\n"
+"        <li>Não ser similar às suas informações pessoais.</li>\n"
+"        <li>Não ser uma senha muito comunmente usada.</li>\n"
+"    </ul>\n"
+"    "
+
+#: .\clients\forms.py:246 .\clients\models.py:105 .\trackers\models.py:249
+msgid "Contato"
+msgstr "Contato"
+
+#: .\clients\forms.py:247 .\clients\models.py:106
+msgid "Telefone de Contato"
+msgstr "Telefone de Contato"
+
+#: .\clients\forms.py:248 .\clients\models.py:107
+msgid "Email de contato"
+msgstr "Email de contato"
+
+#: .\clients\forms.py:249 .\clients\models.py:108
+msgid "Comentário"
+msgstr "Comentário"
+
+#: .\clients\forms.py:335 .\clients\models.py:146 .\clients\views.py:299
+#: .\clients\views.py:389 .\clients\views.py:478
+msgid "CNPJ/CPF"
+msgstr "CNPJ/CPF"
+
+#: .\clients\forms.py:337 .\clients\models.py:144
+msgid "Tipo de Cliente"
+msgstr "Tipo de Cliente"
+
+#: .\clients\menus.py:15 .\clients\models.py:285 .\clients\models.py:309
+msgid "Empresas"
+msgstr "Empresas"
+
+#: .\clients\models.py:49 .\clients\models.py:56
+msgid "O valor informado não é um CPF ou CNPJ válido."
+msgstr "O valor informado não é um CPF ou CNPJ válido."
+
+#: .\clients\models.py:63
+msgid "Informe um Tipo de Cliente válido."
+msgstr "Informe um Tipo de Cliente válido."
+
+#: .\clients\models.py:68
+msgid "Informe um CNPJ válido para Pessoa Jurídica"
+msgstr "Informe um CNPJ válido para Pessoa Jurídica"
+
+#: .\clients\models.py:70
+msgid "Informe um CPF válido para Pessoa Física"
+msgstr "Informe um CPF válido para Pessoa Física"
+
+#: .\clients\models.py:95
+msgid "Razão Social"
+msgstr "Razão Social"
+
+#: .\clients\models.py:96
+msgid "Nome Fantasia"
+msgstr "Nome Fantasia"
+
+#: .\clients\models.py:100
+msgid "Endereço"
+msgstr "Endereço"
+
+#: .\clients\models.py:101 .\trackers\models.py:48
+msgid "Cidade"
+msgstr "Cidade"
+
+#: .\clients\models.py:102
+msgid "Bairro"
+msgstr "Bairro"
+
+#: .\clients\models.py:103 .\trackers\models.py:46
+msgid "País"
+msgstr "País"
+
+#: .\clients\models.py:124
+msgid "CNPJ"
+msgstr "CNPJ"
+
+#: .\clients\models.py:140
+msgid "Pessoa Jurídica"
+msgstr "Pessoa Jurídica"
+
+#: .\clients\models.py:141
+msgid "Pessoa Física"
+msgstr "Pessoa Física"
+
+#: .\clients\models.py:173 .\clients\models.py:320 .\clients\models.py:372
+#: .\clients\models.py:395 .\clients\models.py:464 .\clients\models.py:492
+#: .\monitoring\views.py:121
+msgid "Representante"
+msgstr "Representante"
+
+#: .\clients\models.py:174 .\clients\models.py:272 .\clients\models.py:321
+msgid "Representantes"
+msgstr "Representantes"
+
+#: .\clients\models.py:202 .\clients\models.py:237 .\clients\models.py:345
+#: .\clients\models.py:373 .\clients\models.py:403 .\clients\models.py:472
+#: .\clients\models.py:500 .\monitoring\views.py:123
+msgid "Cliente"
+msgstr "Cliente"
+
+#: .\clients\models.py:203 .\clients\models.py:238 .\clients\models.py:279
+#: .\clients\models.py:316 .\clients\models.py:346
+msgid "Clientes"
+msgstr "Clientes"
+
+#: .\clients\models.py:284 .\clients\models.py:371 .\clients\models.py:387
+#: .\clients\models.py:458 .\clients\models.py:486 .\monitoring\views.py:119
+msgid "Empresa"
+msgstr "Empresa"
+
+#: .\clients\models.py:370
+msgid "Sistema"
+msgstr "Sistema"
+
+#: .\clients\models.py:383
+msgid "Vínculo"
+msgstr "Vínculo"
+
+#: .\clients\models.py:436
+msgid "Itens de sistema não podem ter vínculo com uma entidade."
+msgstr "Itens de sistema não podem ter vínculo com uma entidade."
+
+#: .\clients\models.py:440
+msgid "Especifique o vínculo correto."
+msgstr "Especifique o vínculo correto."
+
+#: .\clients\models.py:515 .\trackers\models.py:83 .\trackers\views.py:119
+msgid "Código"
+msgstr "Código"
+
+#: .\clients\models.py:526 .\i3track\permissions.py:102
+msgid "Centro de Custo"
+msgstr "Centro de Custo"
+
+#: .\clients\models.py:527
+msgid "Centros de Custo"
+msgstr "Centros de Custo"
+
+#: .\clients\views.py:47 .\clients\views.py:127 .\clients\views.py:211
+#: .\clients\views.py:300 .\clients\views.py:390 .\i3track\permissions.py:113
+#: .\trackers\menus.py:11 .\trackers\models.py:136 .\trackers\views.py:28
+#: .\trackers\views.py:69 .\trackers\views.py:121 .\trackobj\views.py:269
+msgid "Módulos"
+msgstr "Módulos"
+
+#: .\clients\views.py:84 .\clients\views.py:93 .\clients\views.py:344
+#: .\clients\views.py:357
+msgid "Busque por Razão Social ou CNPJ"
+msgstr "Busque por Razão Social ou CNPJ"
+
+#: .\commands\models.py:11 .\commands\models.py:20 .\commands\models.py:35
+msgid "Comando"
+msgstr "Comando"
+
+#: .\commands\models.py:12
+msgid "String de Configuração"
+msgstr "String de Configuração"
+
+#: .\commands\models.py:13 .\maintenance\models.py:30
+#: .\maintenance\models.py:42 .\trackers\models.py:70 .\trackobj\models.py:41
+#: .\trackobj\views.py:192
+msgid "Descrição"
+msgstr "Descrição"
+
+#: .\commands\models.py:14
+msgid "Módulos Habilitados"
+msgstr "Módulos Habilitados"
+
+#: .\commands\models.py:21 .\commands\views.py:12
+msgid "Comandos"
+msgstr "Comandos"
+
+#: .\commands\models.py:27
+msgid "Enviando"
+msgstr "Enviando"
+
+#: .\commands\models.py:28
+msgid "Sucesso"
+msgstr "Sucesso"
+
+#: .\commands\models.py:29
+msgid "Error"
+msgstr "Error"
+
+#: .\commands\models.py:30
+msgid "Expirado"
+msgstr "Expirado"
+
+#: .\commands\models.py:34 .\monitoring\views.py:116 .\trackers\models.py:135
+#: .\trackobj\models.py:43
+msgid "Módulo"
+msgstr "Módulo"
+
+#: .\commands\models.py:36 .\commands\models.py:38
+msgid "Dados do Comando"
+msgstr "Dados do Comando"
+
+#: .\commands\models.py:37 .\monitoring\views.py:113
+msgid "Status"
+msgstr "Status"
+
+#: .\commands\models.py:44
+msgid "Comando Enviado"
+msgstr "Comando Enviado"
+
+#: .\commands\models.py:45 .\commands\views.py:64 .\commands\views.py:65
+msgid "Comandos Enviados"
+msgstr "Comandos Enviados"
+
+#: .\i3track\permissions.py:6
+msgid "Usuários e Perfís"
+msgstr "Usuários e Perfís"
+
+#: .\i3track\permissions.py:8 .\i3track\permissions.py:18
+#: .\i3track\permissions.py:28 .\i3track\permissions.py:39
+#: .\i3track\permissions.py:50 .\i3track\permissions.py:61
+#: .\i3track\permissions.py:72 .\i3track\permissions.py:83
+#: .\i3track\permissions.py:94 .\i3track\permissions.py:105
+#: .\i3track\permissions.py:116 .\i3track\permissions.py:127
+#: .\i3track\permissions.py:138 .\i3track\permissions.py:149
+msgid "Adicionar"
+msgstr "Adicionar"
+
+#: .\i3track\permissions.py:11 .\i3track\permissions.py:21
+#: .\i3track\permissions.py:31 .\i3track\permissions.py:42
+#: .\i3track\permissions.py:53 .\i3track\permissions.py:64
+#: .\i3track\permissions.py:75 .\i3track\permissions.py:86
+#: .\i3track\permissions.py:97 .\i3track\permissions.py:108
+#: .\i3track\permissions.py:119 .\i3track\permissions.py:130
+#: .\i3track\permissions.py:141 .\i3track\permissions.py:152
+msgid "Visualizar"
+msgstr "Visualizar"
+
+#: .\i3track\permissions.py:12 .\i3track\permissions.py:22
+#: .\i3track\permissions.py:32 .\i3track\permissions.py:43
+#: .\i3track\permissions.py:54 .\i3track\permissions.py:65
+#: .\i3track\permissions.py:76 .\i3track\permissions.py:87
+#: .\i3track\permissions.py:98 .\i3track\permissions.py:109
+#: .\i3track\permissions.py:120 .\i3track\permissions.py:131
+#: .\i3track\permissions.py:142 .\i3track\permissions.py:153
+msgid "Exportar"
+msgstr "Exportar"
+
+#: .\i3track\permissions.py:16
+msgid "Perfís de Usuários"
+msgstr "Perfís de Usuários"
+
+#: .\i3track\permissions.py:36
+msgid "Administrar Clientes"
+msgstr "Administrar Clientes"
+
+#: .\i3track\permissions.py:47
+msgid "Clientes de Empresas"
+msgstr "Clientes de Empresas"
+
+#: .\i3track\permissions.py:58
+msgid "Clientes de Representates"
+msgstr "Clientes de Representates"
+
+#: .\i3track\permissions.py:69
+msgid "Administrar Empresas"
+msgstr "Administrar Empresas"
+
+#: .\i3track\permissions.py:80
+msgid "Administrar Representantes"
+msgstr "Administrar Representantes"
+
+#: .\i3track\permissions.py:91
+msgid "Representantes de Empresas"
+msgstr "Representantes de Empresas"
+
+#: .\i3track\permissions.py:124
+msgid "Tipo de Módulos"
+msgstr "Tipo de Módulos"
+
+#: .\i3track\permissions.py:135 .\trackers\models.py:61
+msgid "Fabricantes de Módulo"
+msgstr "Fabricantes de Módulo"
+
+#: .\i3track\permissions.py:146 .\trackers\models.py:93
+msgid "Modelos de Módulo"
+msgstr "Modelos de Módulo"
+
+#: .\i3track\permissions.py:167 .\monitoring\menus.py:7
+#: .\monitoring\menus.py:10 .\monitoring\views.py:63 .\monitoring\views.py:64
+msgid "Monitoramento"
+msgstr "Monitoramento"
+
+#: .\i3track\permissions.py:169
+msgid "Acessar mapa de monitoramento"
+msgstr "Acessar mapa de monitoramento"
+
+#: .\i3track\permissions.py:170
+msgid "Acessar tabela de monitoramento"
+msgstr "Acessar tabela de monitoramento"
+
+#: .\i3track\settings.py:186
+msgid "Português"
+msgstr "Português"
+
+#: .\i3track\settings.py:187
+msgid "English"
+msgstr "English"
+
+#: .\i3track\settings.py:188
+msgid "简体中文"
+msgstr "简体中文"
+
+#: .\maintenance\menus.py:10
+msgid "Manutenção"
+msgstr "Manutenção"
+
+#: .\maintenance\models.py:18
+msgid "Item de Manutenção"
+msgstr "Item de Manutenção"
+
+#: .\maintenance\models.py:19 .\maintenance\models.py:44
+msgid "Itens de Manutenção"
+msgstr "Itens de Manutenção"
+
+#: .\maintenance\models.py:27
+msgid "Item"
+msgstr "Item"
+
+#: .\maintenance\models.py:28
+msgid "Plano"
+msgstr "Plano"
+
+#: .\maintenance\models.py:32
+msgid "Intervalo em Tempo"
+msgstr "Intervalo em Tempo"
+
+#: .\maintenance\models.py:33
+msgid "Intervalo em Km"
+msgstr "Intervalo em Km"
+
+#: .\maintenance\models.py:34
+msgid "Intervalo em Horas"
+msgstr "Intervalo em Horas"
+
+#: .\maintenance\models.py:36
+msgid "Margem de Alerta %"
+msgstr "Margem de Alerta %"
+
+#: .\maintenance\models.py:45 .\trackobj\models.py:57
+msgid "Tipos de Veículo"
+msgstr "Tipos de Veículo"
+
+#: .\maintenance\models.py:46
+msgid "Modelos de Veículos"
+msgstr "Modelos de Veículos"
+
+#: .\maintenance\models.py:56
+msgid "Plano de Manutenção"
+msgstr "Plano de Manutenção"
+
+#: .\maintenance\models.py:57
+msgid "Planos de Manutenção"
+msgstr "Planos de Manutenção"
+
+#: .\monitoring\forms.py:36
+msgid "Preencha ao menos um dos campos de pesquisa."
+msgstr "Preencha ao menos um dos campos de pesquisa."
+
+#: .\monitoring\forms.py:43
+msgid "Insira uma data de inicio menor do que a data final."
+msgstr "Insira uma data de inicio menor do que a data final."
+
+#: .\monitoring\models.py:10
+msgid "15 minutos"
+msgstr "15 minutos"
+
+#: .\monitoring\models.py:11
+msgid "30 minutos"
+msgstr "30 minutos"
+
+#: .\monitoring\models.py:12
+msgid "1 hora"
+msgstr "1 hora"
+
+#: .\monitoring\models.py:13
+msgid "3 horas"
+msgstr "3 horas"
+
+#: .\monitoring\models.py:14
+msgid "6 horas"
+msgstr "6 horas"
+
+#: .\monitoring\models.py:15
+msgid "12 horas"
+msgstr "12 horas"
+
+#: .\monitoring\models.py:16
+msgid "24 horas"
+msgstr "24 horas"
+
+#: .\monitoring\models.py:17
+msgid "1 semana"
+msgstr "1 semana"
+
+#: .\monitoring\models.py:18
+msgid "1 mês"
+msgstr "1 mês"
+
+#: .\monitoring\templates\monitoring\dashboard.html:361
+msgid "Atraso máximo de comunicação:"
+msgstr "Atraso máximo de comunicação:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:370
+msgid "Total de Veículos:"
+msgstr "Total de Veículos:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:373
+msgid "Transmitindo:"
+msgstr "Transmitindo:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:376
+msgid "Em Atraso:"
+msgstr "Em Atraso:"
+
+#: .\monitoring\templates\monitoring\dashboard.html:471
+msgid "Comunicação"
+msgstr "Comunicação"
+
+#: .\monitoring\templates\monitoring\dashboard.html:476
+msgid "Transmitindo"
+msgstr "Transmitindo"
+
+#: .\monitoring\templates\monitoring\dashboard.html:480
+#: .\monitoring\views.py:289
+msgid "Sinal Forte"
+msgstr "Sinal Forte"
+
+#: .\monitoring\templates\monitoring\dashboard.html:484
+#: .\monitoring\views.py:288
+msgid "Sinal Fraco"
+msgstr "Sinal Fraco"
+
+#: .\monitoring\templates\monitoring\dashboard.html:488
+#: .\monitoring\views.py:287
+msgid "Em Atraso"
+msgstr "Em Atraso"
+
+#: .\monitoring\templates\monitoring\map-tooltip.html:37
+msgid "Última transmissão há"
+msgstr "Última transmissão há"
+
+#: .\monitoring\templates\monitoring\vehicle.html:154
+msgid "Histórico"
+msgstr "Histórico"
+
+#: .\monitoring\templates\monitoring\vehicle.html:166
+msgid "Manutenções"
+msgstr "Manutenções"
+
+#: .\monitoring\templates\monitoring\vehicle.html:732
+msgid "Clique para ver o histórico isolado deste módulo"
+msgstr "Clique para ver o histórico isolado deste módulo"
+
+#: .\monitoring\templates\monitoring\vehicle.html:745
+msgid "Odômetro:"
+msgstr "Odômetro:"
+
+#: .\monitoring\templates\monitoring\vehicle.html:751
+msgid "Horímetro:"
+msgstr "Horímetro:"
+
+#: .\monitoring\templates\monitoring\vehicle.html:756
+msgid "Clique para ver no Mapa"
+msgstr "Clique para ver no Mapa"
+
+#: .\monitoring\templates\monitoring\vehicle.html:757
+msgid "Último endereço:"
+msgstr "Último endereço:"
+
+#: .\monitoring\templates\monitoring\vehicle.html:767
+msgid "Empresa:"
+msgstr "Empresa:"
+
+#: .\monitoring\templates\monitoring\vehicle.html:773
+msgid "Representante:"
+msgstr "Representante:"
+
+#: .\monitoring\templates\monitoring\vehicle.html:779
+msgid "Cliente:"
+msgstr "Cliente:"
+
+#: .\monitoring\templatetags\monitoring.py:44
+msgid "Dado de GPS não disponível"
+msgstr "Dado de GPS não disponível"
+
+#: .\monitoring\templatetags\monitoring.py:50
+msgid "Dado de Rede indisponível"
+msgstr "Dado de Rede indisponível"
+
+#: .\monitoring\templatetags\monitoring.py:56 .\monitoring\views.py:406
+msgid "Dado de Motor não disponível"
+msgstr "Dado de Motor não disponível"
+
+#: .\monitoring\templatetags\monitoring.py:62 .\monitoring\views.py:412
+msgid "Dado de Movimento não disponível"
+msgstr "Dado de Movimento não disponível"
+
+#: .\monitoring\templatetags\monitoring.py:68
+msgid "Dado de Energia não disponível"
+msgstr "Dado de Energia não disponível"
+
+#: .\monitoring\templatetags\monitoring.py:81
+msgid "Sem sinal GPS"
+msgstr "Sem sinal GPS"
+
+#: .\monitoring\templatetags\monitoring.py:83
+msgid "Transmitindo posição GPS"
+msgstr "Transmitindo posição GPS"
+
+#: .\monitoring\templatetags\monitoring.py:123 .\monitoring\views.py:425
+msgid "Motor parado"
+msgstr "Motor parado"
+
+#: .\monitoring\templatetags\monitoring.py:139 .\monitoring\views.py:442
+msgid "Veículo parado"
+msgstr "Veículo parado"
+
+#: .\monitoring\templatetags\monitoring.py:177 .\monitoring\views.py:331
+msgid "Energizado"
+msgstr "Energizado"
+
+#: .\monitoring\views.py:108 .\trackers\views.py:183 .\trackobj\models.py:153
+msgid "Veículo"
+msgstr "Veículo"
+
+#: .\monitoring\views.py:110 .\trackers\models.py:82 .\trackers\views.py:118
+#: .\trackers\views.py:181 .\trackobj\models.py:119
+msgid "Modelo"
+msgstr "Modelo"
+
+#: .\monitoring\views.py:111
+msgid "Módulo ID"
+msgstr "Módulo ID"
+
+#: .\monitoring\views.py:112
+msgid "Última Atualização"
+msgstr "Última Atualização"
+
+#: .\monitoring\views.py:114 .\monitoring\views.py:501 .\trackers\models.py:36
+msgid "Horímetro"
+msgstr "Horímetro"
+
+#: .\monitoring\views.py:115 .\monitoring\views.py:502 .\trackers\models.py:37
+msgid "Odômetro"
+msgstr "Odômetro"
+
+#: .\monitoring\views.py:117 .\trackers\models.py:275 .\trackobj\models.py:102
+msgid "Estoque"
+msgstr "Estoque"
+
+#: .\monitoring\views.py:118
+msgid "Empresa CNPJ"
+msgstr "Empresa CNPJ"
+
+#: .\monitoring\views.py:120
+msgid "Representante CNPJ"
+msgstr "Representante CNPJ"
+
+#: .\monitoring\views.py:122
+msgid "Cliente CNPJ"
+msgstr "Cliente CNPJ"
+
+#: .\monitoring\views.py:178 .\monitoring\views.py:179
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\monitoring\views.py:310
+msgid "Motor Ligado"
+msgstr "Motor Ligado"
+
+#: .\monitoring\views.py:311
+msgid "Motor Desligado"
+msgstr "Motor Desligado"
+
+#: .\monitoring\views.py:312
+msgid "Em Viagem"
+msgstr "Em Viagem"
+
+#: .\monitoring\views.py:332
+msgid "Em Bateria"
+msgstr "Em Bateria"
+
+#: .\monitoring\views.py:333
+msgid "Bateria Fraca"
+msgstr "Bateria Fraca"
+
+#: .\monitoring\views.py:334
+msgid "Não Informado"
+msgstr "Não Informado"
+
+#: .\monitoring\views.py:497
+msgid "Início"
+msgstr "Início"
+
+#: .\monitoring\views.py:498
+msgid "Fim"
+msgstr "Fim"
+
+#: .\monitoring\views.py:499
+msgid "Duração"
+msgstr "Duração"
+
+#: .\monitoring\views.py:500
+msgid "Estado no Período"
+msgstr "Estado no Período"
+
+#: .\monitoring\views.py:739
+msgid ""
+"Houve um problema técnico para obter os dados deste veículo. Estamos "
+"trabalhando para resolvê-lo! Desculpe o transtorno."
+msgstr ""
+"Houve um problema técnico para obter os dados deste veículo. Estamos "
+"trabalhando para resolvê-lo! Desculpe o transtorno."
+
+#: .\monitoring\views.py:747
+msgid ""
+"Não encontramos dados para o período selecionado. Estamos apresentando os "
+"dados mais recentes em nossa base de dados."
+msgstr ""
+"Não encontramos dados para o período selecionado. Estamos apresentando os "
+"dados mais recentes em nossa base de dados."
+
+#: .\monitoring\views.py:787
+msgid "Não foram encontrados dados para este veículo."
+msgstr "Não foram encontrados dados para este veículo."
+
+#: .\trackers\models.py:23
+msgid "Última Transmissão"
+msgstr "Última Transmissão"
+
+#: .\trackers\models.py:25
+msgid "Atraso de Transmissão em Minutos"
+msgstr "Atraso de Transmissão em Minutos"
+
+#: .\trackers\models.py:31
+msgid "Qualidade GPS"
+msgstr "Qualidade GPS"
+
+#: .\trackers\models.py:41
+msgid "Alimentação"
+msgstr "Alimentação"
+
+#: .\trackers\models.py:43
+msgid "Timer do Motor"
+msgstr "Timer do Motor"
+
+#: .\trackers\models.py:44
+msgid "Velocidade"
+msgstr "Velocidade"
+
+#: .\trackers\models.py:56
+msgid "ID do Fabricante"
+msgstr "ID do Fabricante"
+
+#: .\trackers\models.py:57 .\trackers\models.py:85 .\trackers\views.py:179
+#: .\trackobj\models.py:88 .\trackobj\views.py:268
+msgid "Fabricante"
+msgstr "Fabricante"
+
+#: .\trackers\models.py:60
+msgid "Fabricante de Módulo"
+msgstr "Fabricante de Módulo"
+
+#: .\trackers\models.py:73
+msgid "Tipo de Módulo"
+msgstr "Tipo de Módulo"
+
+#: .\trackers\models.py:74
+msgid "Tipos de Módulo"
+msgstr "Tipos de Módulo"
+
+#: .\trackers\models.py:92 .\trackers\models.py:106
+msgid "Modelo de Módulo"
+msgstr "Modelo de Módulo"
+
+#: .\trackers\models.py:104
+msgid "Unique ID"
+msgstr "Unique ID"
+
+#: .\trackers\models.py:107
+msgid "Número Serial"
+msgstr "Número Serial"
+
+#: .\trackers\models.py:110 .\trackers\models.py:282
+msgid "Data de Ativação"
+msgstr "Data de Ativação"
+
+#: .\trackers\models.py:111
+msgid "Ativado até"
+msgstr "Ativado até"
+
+#: .\trackers\models.py:112
+msgid "Ativado para Países"
+msgstr "Ativado para Países"
+
+#: .\trackers\models.py:115
+msgid "Veículo Associado"
+msgstr "Veículo Associado"
+
+#: .\trackers\models.py:228
+msgid "Já existe um Módulo com o mesmo Serial ID para este fabricante"
+msgstr "Já existe um Módulo com o mesmo Serial ID para este fabricante"
+
+#: .\trackers\models.py:250
+msgid "Telefone"
+msgstr "Telefone"
+
+#: .\trackers\models.py:256
+msgid "Operadora"
+msgstr "Operadora"
+
+#: .\trackers\models.py:259
+msgid "Número do Contrato"
+msgstr "Número do Contrato"
+
+#: .\trackers\models.py:260
+msgid "Início do Contrato"
+msgstr "Início do Contrato"
+
+#: .\trackers\models.py:261
+msgid "Fidelidade em Meses"
+msgstr "Fidelidade em Meses"
+
+#: .\trackers\models.py:264
+msgid "Quota de MBytes por Mês"
+msgstr "Quota de MBytes por Mês"
+
+#: .\trackers\models.py:272
+msgid "Bloqueado"
+msgstr "Bloqueado"
+
+#: .\trackers\models.py:273
+msgid "Cancelado"
+msgstr "Cancelado"
+
+#: .\trackers\models.py:274
+msgid "Suspenso"
+msgstr "Suspenso"
+
+#: .\trackers\models.py:278 .\trackers\models.py:279
+msgid "ICCID"
+msgstr "ICCID"
+
+#: .\trackers\models.py:280
+msgid "Situação"
+msgstr "Situação"
+
+#: .\trackers\models.py:283
+msgid "Prazo de Fidelidade"
+msgstr "Prazo de Fidelidade"
+
+#: .\trackers\views.py:18 .\trackobj\views.py:131
+msgid "Fabricantes"
+msgstr "Fabricantes"
+
+#: .\trackers\views.py:29 .\trackers\views.py:70 .\trackers\views.py:100
+#: .\trackobj\views.py:89 .\trackobj\views.py:145 .\trackobj\views.py:184
+msgid "Modelos"
+msgstr "Modelos"
+
+#: .\trackers\views.py:52 .\trackobj\views.py:75 .\trackobj\views.py:144
+msgid "Tipos"
+msgstr "Tipos"
+
+#: .\trackers\views.py:180
+msgid "Serial"
+msgstr "Serial"
+
+#: .\trackers\views.py:182
+msgid "Ativação"
+msgstr "Ativação"
+
+#: .\trackobj\models.py:38
+msgid "Tempo de Monitoramento"
+msgstr "Tempo de Monitoramento"
+
+#: .\trackobj\models.py:38
+msgid "Em meses"
+msgstr "Em meses"
+
+#: .\trackobj\models.py:40
+msgid "Identificador"
+msgstr "Identificador"
+
+#: .\trackobj\models.py:50 .\trackobj\models.py:56 .\trackobj\models.py:85
+#: .\trackobj\views.py:194
+msgid "Tipo de Veículo"
+msgstr "Tipo de Veículo"
+
+#: .\trackobj\models.py:52 .\trackobj\models.py:66 .\trackobj\models.py:81
+#: .\trackobj\models.py:127
+msgid "Imagem"
+msgstr "Imagem"
+
+#: .\trackobj\models.py:64 .\trackobj\models.py:70
+msgid "Fabricante de Veículo"
+msgstr "Fabricante de Veículo"
+
+#: .\trackobj\models.py:67 .\trackobj\models.py:82 .\trackobj\models.py:128
+msgid "Ajuste de Imagem"
+msgstr "Ajuste de Imagem"
+
+#: .\trackobj\models.py:71
+msgid "Fabricantes de Veículo"
+msgstr "Fabricantes de Veículo"
+
+#: .\trackobj\models.py:78 .\trackobj\models.py:92
+msgid "Modelo de Veículo"
+msgstr "Modelo de Veículo"
+
+#: .\trackobj\models.py:79
+msgid "Código do Modelo"
+msgstr "Código do Modelo"
+
+#: .\trackobj\models.py:93
+msgid "Modelos de Veículo"
+msgstr "Modelos de Veículo"
+
+#: .\trackobj\models.py:103
+msgid "Vendido"
+msgstr "Vendido"
+
+#: .\trackobj\models.py:104
+msgid "Revenda"
+msgstr "Revenda"
+
+#: .\trackobj\models.py:108
+msgid "Nacional"
+msgstr "Nacional"
+
+#: .\trackobj\models.py:109
+msgid "Importado"
+msgstr "Importado"
+
+#: .\trackobj\models.py:117
+msgid "Comercial"
+msgstr "Comercial"
+
+#: .\trackobj\models.py:121
+msgid "Ano/Modelo"
+msgstr "Ano/Modelo"
+
+#: .\trackobj\models.py:122
+msgid "Data de Venda"
+msgstr "Data de Venda"
+
+#: .\trackobj\models.py:123
+msgid "Nota Fiscal"
+msgstr "Nota Fiscal"
+
+#: .\trackobj\models.py:124
+msgid "Fabricação"
+msgstr "Fabricação"
+
+#: .\trackobj\models.py:186
+msgid "Erro"
+msgstr "Erro"
+
+#: .\trackobj\templates\trackobj\monitoring\monitor_list.html:240
+#, python-format
+msgid ""
+"\n"
+"                                                Nenhum %(verbose_name)s "
+"existente.\n"
+"                                            "
+msgstr ""
+"\n"
+"                                                Nenhum %(verbose_name)s "
+"existente.\n"
+"                                            "

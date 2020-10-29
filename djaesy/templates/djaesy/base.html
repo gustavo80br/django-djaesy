@@ -1,0 +1,324 @@
+{% load static %}
+{% load i18n %}
+{% load menu %}
+
+{% generate_menu %}
+
+<!doctype  html>
+<html lang="{{ page_lang|default:'pt-BR' }}"> <!-- lang="{{ page_lang|default:'pt-BR' }}" -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ page_title|default:'page_title context variable' }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App -->
+{#    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}"/>#}
+    <link rel="stylesheet" type="text/css" href="{%  static 'main.css' %}"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'site.webmanifest'%}">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <style>
+        :root {
+            --control-open-size: {{ options.sidebar_size }};
+            --control-open-size-negative: -{{ options.sidebar_size }};
+            --control-bar-bg-color: {{ options.sidebar_color }};
+            --footer-height: {{ options.footer_height }};
+        }
+    </style>
+
+    <script>
+        window.djaesy_page_title_prefix = '{{ options.page_title_prefix }}';
+        window.djaesy_page_title_sufix = '{{ options.page_title_suffix }}';
+        window.djaesy_page_tile = '{{ page_title }}';
+        window.djaesy_page_icon = '{{ page_icon }}';
+        window.djaesy_tab_url = '{{ tab_url|safe }}';
+        let djaesy_no_tab = true;
+    </script>
+
+    {% block extra_css %}
+    {% endblock %}
+</head>
+
+<body class="{{ body_class }}">
+
+    <div id="djaesy-main">
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg" style="display:none">
+            <defs>
+                <filter id="blur-filter">
+                    <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="load-overlay">
+            <div id="loader" class="spinner-border avatar-xl text-primary" role="status"></div>
+        </div>
+
+        <!-- Begin page -->
+        <div class="wrapper blur">
+
+            <!-- ============================================================== -->
+            <!-- Start MAIN Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content content-wrapper inner-content" {% if options.simplebar_scroller %}data-simplebar{% endif %}>
+
+                {% block main_content_start %}
+                {% endblock %}
+
+                {% block page_content %}
+                <!-- Start page_content block -->
+
+                <div class="page-content">
+                    {% block content_container %}
+                    <!-- Start content_container block -->
+                    <div class="{% if options.fluid_layout %}container-fluid{% else %}container{% endif %}">
+                        {% block content_title %}
+                        <!-- start page title -->
+                        <div class="row page-title-box justify-content-center">
+                            <div class="col-sm-{% if options.sm_layout_size %}{{ options.sm_layout_size }}{% else %}12{% endif %} col-md-{% if options.md_layout_size %}{{ options.md_layout_size }}{% else %}12{% endif %} col-lg-{% if options.lg_layout_size %}{{ options.lg_layout_size }}{% else %}12{% endif %} col-xl-{% if options.xl_layout_size %}{{ options.xl_layout_size }}{% else %}12{% endif %}">
+                            <div class="col col-auto p-0">
+                                  <h2 class="mb-0">
+                                      {% if page_icon %}
+                                        <i class="{{ page_icon }} header-icon"></i>
+                                      {% endif %}
+                                      {{ content_title|default:'content_title context variable' }}
+                                      {% block content_subtitle %}
+                                      {% if content_subtitle %}<small>{{ content_subtitle }}</small>{% endif %}
+                                      {% endblock %}
+                                      {% block content_actions %}
+                                      {% endblock %}
+                                  </h2>
+                                </div>
+                                <div class="col col-auto">
+                                  {% block header_middle %}{% endblock %}
+                                </div>
+
+                                <div class="col col-auto">
+                                {% block header_right %}
+                                  {%  include 'djaesy/menus/breadcrumb.html' with item=selected_menu %}
+                                {% endblock %}
+                                </div>
+                            </div>
+                            </div>
+                        <!-- end page title -->
+                        {% endblock %}
+
+                        {% block content_grid %}
+                        <!-- start content_grid -->
+
+                        <div class="row justify-content-center">
+                            <div class="col-{% if options.xs_layout_size %}{{ options.xs_layout_size }}{% else %}12{% endif %} col-sm-{% if options.sm_layout_size %}{{ options.sm_layout_size }}{% else %}12{% endif %} col-md-{% if options.md_layout_size %}{{ options.md_layout_size }}{% else %}12{% endif %} col-lg-{% if options.lg_layout_size %}{{ options.lg_layout_size }}{% else %}12{% endif %} col-xl-{% if options.xl_layout_size %}{{ options.xl_layout_size }}{% else %}12{% endif %}">
+                                <!-- start content-->
+
+                                {% block content %}
+
+                                    <pre>
+    --> <strong>page_content</strong> block: the entire area, without margings or paddings
+    ------> <strong>content_container</strong> block: a div with lateral and top spacing, to place content
+    ------------> <strong>content_title</strong> block: a grid row containing the page title and breadcrumb
+    ------------> <strong>content_grid</strong> block: a place inside the grid, below the content_title row
+    ------------------> <strong>content</strong> block: a 12 wide grid column to insert content (this content as example)
+
+    <strong>AppPanel options:</strong> {{ options }}
+
+                                    </pre>
+
+    <div class="md-form">
+      <input mdbInput type="text" id="form1" class="form-control">
+      <label for="form1" class="">Example label</label>
+    </div>
+
+                                {% endblock %}
+                                <!-- end content -->
+                            </div>
+                        </div>
+                        <!-- end content_grid -->
+                        {% endblock %}
+                    </div>
+                    <!-- End content_container block -->
+                    {% endblock %}
+                </div>
+                <!-- End page_content block -->
+                {% endblock %}
+
+                <footer id="footer" class="footer" {% if options.in_fullscreen %}style="display: none;"{% endif %}>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% block footer %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                {% block main_content_end %}
+                {% endblock %}
+
+                {% if options.sidebar and options.sidebar_toggle %}
+                <!-- Control Sidebar Toggle-->
+                <button type="button" id="control-sidebar-toggle" v-on:click="toggleControlSidebar()" class="{% if not options.sidebar_toggle and options.sidebar_open %}d-block d-md-none {% endif %}btn btn-lg waves-effect waves-light {% if options.sidebar_open %}control-sidebar-open{% endif %}">
+                    <i class="{{ options.sidebar_icon }}"></i>
+                </button>
+                {% endif %}
+
+                {% if options.sidebar %}
+                <aside class="control-sidebar" data-simplebar>
+                  <!-- Start control_sidebar -->
+                  {% if options.sidebar_title %}
+                      <h4 class="mb-4">{{ options.sidebar_title }}</h4>
+                  {% endif %}
+
+                  {% block control_sidebar %}
+                  {% endblock %}
+
+                  {% block side_help %}
+                      {% if side_help %}
+                          <h4>
+                            <i class="{{ options.side_help_icon }}"></i>
+                            {{ side_help_title }}
+                          </h4>
+                          {{ side_help|safe }}
+                      {% endif %}
+                  {% endblock %}
+                  <!-- End control_sidebar -->
+                </aside>
+                {% endif %}
+
+
+            </div>
+            <!-- end main content-->
+
+            {% if options.fullscreen_toggle %}
+            <!-- Toggle Full Screen -->
+            <button type="button" id="fullscreen-toggle" v-on:click="toggleFullScreen()" class="btn btn-secondary btn-lg waves-effect waves-light" title="Tela Cheia">
+                <i class="mdi mdi-monitor-screenshot mdi-18px"></i>
+            </button>
+            {% endif %}
+
+<!-- control-sidebar -->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Overlay-->
+        <div class="sidebar-overlay" data-toggle="push-menu"></div>
+        <div class="control-sidebar-overlay" data-toggle="control-sidebar"></div>
+
+    </div>
+
+    {% block modal_content %}{% endblock %}
+
+    {% csrf_token %}
+
+
+    <script type="application/javascript">
+
+        let SET_LANGUAGE_URL = '{% url 'set_language' %}';
+
+        let DATATABLES_SEARCH_PLACEHOLDER = "{% trans 'Filtrar lista...' %}";
+        let LAYOUT_IN_FULLSCREEN = {% if options.in_fullscreen %}true{% else %}false{% endif %};
+
+        let TRANS_NO_ITEM_SELECTED = "{% trans 'Nenhum item selecionado!' %}";
+        let TRANS_SELECT_AT_LEAST_ONE = "{% trans 'Selecione ao menos um item para executar a ação.' %}";
+
+        let TRANS_MULTIPLE_SELECTED = "{% trans 'Muitos itens selecionados!' %}";
+        let TRANS_SELECT_ONLY_ONE = "{% trans 'Esta ação deve ser executada em um item por vez.' %}";
+        let TRANS_SELECT_LIMIT_EXCEEDED = "{% trans 'Limite de itens selecionados para executar a ação foi atingido.' %}"
+
+        let DATETIME_FORMAT = 'DD/MM/YY HH:mm';
+        let DATEPIKCER_APPLY_LABEL = "Selecionar";
+        let DATEPICKER_CANCEL_LABEL = "Cancelar";
+        let DATEPICKER_FROM_LABEL = "De";
+        let DATEPICKER_TO_LABEL = "Para";
+        let DATEPICKER_RANGE_LABEL = "Especificar";
+        let DATEPICKER_DAYS_OF_WEEK = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+        let DATEPICKER_MONTH_NAMES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let DATEPICKER_FIRST_WEEK_DAY = 1;
+        let DATEPICKER_ANY_DATE = 'Qualquer Data';
+        let DATEPICKER_TODAY = 'Hoje';
+        let DATEPICKER_YESTERDAY = 'Ontem';
+        let DATEPICKER_THIS_WEEK = 'Esta semana';
+        let DATEPICKER_LAST_WEEK = 'Semana passada';
+        let DATEPICKER_THIS_MONTH = 'Este Mês';
+        let DATEPICKER_LAST_MONTH = 'Mês Passado';
+
+        let MULTIBOX_HELP_TEXT = '';
+        let MULTIBOX_SELECTED_SINGLE = 'Item Selecionado';
+        let MULTIBOX_SELECTED_PLURAL = 'Itens Selecionados';
+        let MULTIBOX_SELECT_BUTTON = 'Selecionar';
+        let MULTIBOX_CLEAR_BUTTON = 'Limpar';
+
+        let MAP_SEARCH_PLACEHOLDER = '{% trans "Pesquise pelo identificador do veículo"  %}';
+
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+
+        let MESSAGES = [];
+        {% if messages %}
+            {% for message in messages %}
+                MESSAGES.push({'type': '{{ message.extra_tags }}', 'title': '{{ message.tag|upper }}', 'text': '{{ message }}' });
+            {% endfor %}
+        {% endif %}
+
+    </script>
+
+    {% block extra_script %}
+        <script type="application/javascript">
+        </script>
+    {% endblock %}
+
+    <!-- jQuery  -->
+    <script src="{%  static 'djaesy.js' %}"></script>
+
+    <script type="application/javascript">
+        let yl = {jQuery: jQuery};
+    </script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <script type="application/javascript">
+
+        {% if cascade_clear %}
+            let CASCADE_CLEAR_FIELDS = {{ cascade_clear|safe }};
+        {% else %}
+            let CASCADE_CLEAR_FIELDS = null;
+        {% endif %}
+
+        {% if cascade_disable %}
+            let CASCADE_DISABLE_FIELDS = {{ cascade_disable|safe }};
+        {% else %}
+            let CASCADE_DISABLE_FIELDS = null;
+        {% endif %}
+
+        {% if cascade_hide %}
+            let CASCADE_HIDE_FIELDS = {{ cascade_hide|safe }};
+        {% else %}
+            let CASCADE_HIDE_FIELDS = null;
+        {% endif %}
+
+
+
+    </script>
+
+{#    {% if options.in_fullscreen and options.fullscreen_toggle %}#}
+{#    <script type="application/javascript">#}
+{#        console.log($('body').layout);#}
+{#    </script>#}
+{#    {% endif %}#}
+
+
+</body>
+</html>

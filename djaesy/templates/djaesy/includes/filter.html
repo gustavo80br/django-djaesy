@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+<form action="" method="get">
+    {{ filterset.form|crispy }}
+    <div class="form-group">
+        <button type="submit" class="btn btn-md btn-mdi btn-primary"><i
+                class="mdi mdi-magnify"></i> {% trans 'Filtrar' %}</button>
+        <a href="{% url request.resolver_match.url_name %}" class="btn btn-md btn-mdi btn-outline-secondary"><i
+                class="mdi mdi-close"></i> {% trans 'Limpar' %}</a>
+    </div>
+    <div class="form-group">
+        {% if is_filtered %}
+            {{ filtered_count }} de {{ total_count }}
+            {% if total_count > 1 %}{{ verbose_name_plural }}{% else %}{{ verbose_name }}{% endif %}
+        {% endif %}
+    </div>
+</form>

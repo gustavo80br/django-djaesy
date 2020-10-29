@@ -1,0 +1,565 @@
+{% load static %}
+{% load i18n %}
+{% load menu %}
+
+{% generate_menu %}
+
+<!doctype  html>
+<html lang="{{ page_lang|default:'pt-BR' }}"> <!-- lang="{{ page_lang|default:'pt-BR' }}" -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ page_title|default:'page_title context variable' }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App -->
+{#    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}"/>#}
+    <link rel="stylesheet" type="text/css" href="{%  static 'main.css' %}"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'site.webmanifest'%}">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <style>
+        :root {
+            --control-open-size: {{ options.sidebar_size }};
+            --control-open-size-negative: -{{ options.sidebar_size }};
+            --control-bar-bg-color: {{ options.sidebar_color }};
+            --footer-height: {{ options.footer_height }};
+        }
+    </style>
+
+    <script>
+        window.djaesy_page_title_prefix = '{{ options.page_title_prefix }}';
+        window.djaesy_page_title_sufix = '{{ options.page_title_suffix }}';
+        window.djaesy_page_tile = '{{ page_title }}';
+        window.djaesy_page_icon = '{{ page_icon }}';
+        window.djaesy_tab_url = '{{ tab_url|safe }}';
+        window.djaesy_app_pathname = '/app';
+        let djaesy_no_tab = false;
+    </script>
+
+    {% block extra_css %}
+    {% endblock %}
+</head>
+
+<body class="{{ body_class }}">
+
+    <div id="djaesy-main">
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg" style="display:none">
+            <defs>
+                <filter id="blur-filter">
+                    <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="load-overlay">
+            <div id="loader" class="spinner-border avatar-xl text-primary" role="status"></div>
+        </div>
+
+        <!-- Begin page -->
+        <div class="wrapper blur">
+
+            <div id="event_notification">
+                <!-- Control Elements -->
+                <div id="ownerId" data-owner="{{ user.owner_id }}"></div>
+                <!--<div id="alertsModal" class="modal fade" role="dialog" aria-labelledby="alertsModalLabel" aria-hidden="true">-->
+                    <!--<div class="modal-dialog modal-lg" role="document">-->
+                        <!--<div class="modal-content">-->
+                            <!--<div v-if="totalNotifications > 0" class="modal-header">-->
+                            <!--<button type="button" class="btn header-item waves-effect waves-light" @click="toggleSelectAll">-->
+                              <!--<i class="mdi mdi-24px mdi-check-all"></i>-->
+                            <!--</button>-->
+                            <!--<button @click="setFilter()" type="button" style="font-size: 1rem;" class="btn header-item waves-effect waves-light">-->
+                                <!--{[ totalNotifications ]} Alertas-->
+                            <!--</button>-->
+                            <!--<div v-for="(totals, key) in severitiesAvailable">-->
+                                <!--<button type="button" style="font-size: 1rem;" class="btn header-item waves-effect waves-light" @click="setFilter(key)">-->
+                                    <!--{[ severity_description[key] ]} ({[ totals ]})-->
+                                <!--</button>-->
+                            <!--</div>-->
+                            <!--<button v-show="totalSelected" type="button" style="font-size: 1rem;" class="btn header-item waves-effect waves-light" @click="silenceSelectedAlert()">-->
+                               <!--<i class="mdi mdi-18px mdi mdi-bell-off-outline"></i> Silenciar {[ totalSelected ]}-->
+                            <!--</button>-->
+                            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                              <!--<span aria-hidden="true">&times;</span>-->
+                            <!--</button>-->
+                            <!--</div>-->
+                            <!--<div class="modal-body">-->
+                                <!--<div class="container p-0">-->
+                                    <!--<div class="col-12 p-0" v-for="notification in notificationsToShow">-->
+                                        <!--<div class="row notification-row align-items-center" v-bind:class="{ 'selected': notification.selected }">-->
+                                            <!--<div class="col col-1 p-0 ml-2 mr-3 text-center">-->
+                                                <!--<div class="col col-auto p-0 mb-2">-->
+                                                    <!--<a class="action-icon-button row-checkbox" @click="selectNotification(notification.id)"><i class="mdi mdi-24px mdi-checkbox-blank-outline"></i></a>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="col col-1 p-0 ml-2 mr-3 text-center">-->
+                                                <!--<div class="col col-auto p-0 mb-2">-->
+                                                    <!--<img width="48" v-bind:src="notification.vehicle_image">-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="col col-1 p-0 ml-2 mr-3 text-center">-->
+                                                <!--<h4 class="pt-3">{[ notification.severity_icon ]}</h4>-->
+                                                <!--<p class="pt-1">{[ notification.severity_description ]}</p>-->
+                                            <!--</div>-->
+                                            <!--<div class="col ml-2">-->
+                                                <!--<div class="row mb-0 mt-2 align-items-center">-->
+                                                    <!--<div class="col col-12 mb-1 p-0 h5 h5-responsive">-->
+                                                        <!--{[ notification.title ]}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="col col-12 p-0 mb-0">-->
+                                                        <!--{[ notification.vehicle_id ]} - {[ notification.vehicle_model ]}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="col col-12 p-0">-->
+                                                        <!--<i class="mdi mdi-calendar-clock"></i>&nbsp;{[ notification.date ]}-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="col col-1 p-0 ml-2 text-center">-->
+                                                <!--<a v-bind:href="notification.map_link" class="btn header-item waves-effect waves-light" title="{% trans 'Ver alerta no mapa' %}">-->
+                                                    <!--<i class="mdi mdi-map-search-outline mdi-24px"></i>-->
+                                                    <!--<p class="mt-2">{% trans 'Mapa' %}</p>-->
+                                                <!--</a>-->
+                                            <!--</div>-->
+                                            <!--<div class="col col-1 p-0 ml-2 mr-4 text-center">-->
+                                                <!--<button v-on:click="silenceAlert(notification.id)" type="button" class="btn header-item waves-effect waves-light" title="{% trans 'Silenciar Alerta' %}">-->
+                                                    <!--<i class="mdi mdi-bell-off-outline mdi-24px"></i>-->
+                                                    <!--<p class="mt-2">{% trans 'Silenciar' %}</p>-->
+                                                <!--</button>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-12 p-0 text-center" v-if="totalNotifications === 0">-->
+                                        <!--<p class="h2-responsive lead mt-4"><i class="mdi mdi-thumb-up-outline"></i>&nbsp; {% trans 'Não há novos alertas!' %}</p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                          <!--<div class="modal-footer">-->
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Fechar' %}</button>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="alertsSilenceModal" class="modal fade" role="dialog" aria-labelledby="alertsSilenceModalLabel" aria-hidden="true">-->
+                    <!--<div class="modal-dialog modal-dialog-centered modal-lg" role="document">-->
+                        <!--<div class="modal-content">-->
+                            <!--<form id="rendered-form" @submit="silenceRequest">-->
+                                <!--<div class="modal-header">-->
+                                    <!--<h5 class="modal-title" id="exampleModalLabel">-->
+                                        <!--<span v-if="silence_form_multiple">-->
+                                            <!--{% trans 'Silenciar' %} {[ totalSelected ]} {% trans 'Alertas' %}-->
+                                         <!--</span>-->
+                                        <!--<span v-else>-->
+                                            <!--{% trans 'Silenciar Alerta' %}-->
+                                        <!--</span>-->
+                                    <!--</h5>-->
+                                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                                      <!--<span aria-hidden="true">&times;</span>-->
+                                    <!--</button>-->
+                                <!--</div>-->
+                                <!--<div class="modal-body">-->
+                                    <!--<div class="container">-->
+                                        <!--<div class="col-12 mt-2">-->
+                                            <!--<div class="rendered-form">-->
+                                                <!--<div class="formbuilder-textarea form-group">-->
+                                                    <!--<label for="silence_comment" class="h5">-->
+                                                        <!--{% trans 'Digite um comentário' %} <span class="formbuilder-required">*</span>-->
+                                                    <!--</label>-->
+                                                    <!--<textarea v-model="silence_form_comment" type="textarea" class="form-control" name="silence_comment" access="false" id="silence_comment" required="required" aria-required="true">-->
+                                                    <!--</textarea>-->
+                                                <!--</div>-->
+                                                <!--<div class="form-group text-right">-->
+                                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal" @click="cancelSilence">{% trans 'Cancelar' %}</button>-->
+                                                    <!--<button type="submit" class="btn btn-primary"><i v-show="silence_form_sending" class="mdi mdi-spin mdi-loading"></i>&nbsp;&nbsp;{% trans 'Silenciar' %}</button>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-12">-->
+                                            <!--<div class="row notification-row align-items-center" v-for="notification in notificationsSelected">-->
+                                                <!--<div class="col col-1 p-0 ml-2 mr-3 text-center">-->
+                                                    <!--<div class="col col-auto p-0 mb-2">-->
+                                                        <!--<a v-bind:href="notification.vehicle_link">-->
+                                                            <!--<img width="48" v-bind:src="notification.vehicle_image">-->
+                                                        <!--</a>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="col col-1 p-0 ml-2 mr-3 text-center">-->
+                                                    <!--<h4 class="pt-3">{[ notification.severity_icon ]}</h4>-->
+                                                    <!--<p class="pt-1">{[ notification.severity_description ]}</p>-->
+                                                <!--</div>-->
+                                                <!--<div class="col ml-2">-->
+                                                    <!--<div class="row mb-0 mt-2 align-items-center">-->
+                                                        <!--<div class="col col-12 mb-1 p-0 h5 h5-responsive">-->
+                                                            <!--{[ notification.title ]}-->
+                                                        <!--</div>-->
+                                                        <!--<div class="col col-12 p-0 mb-0">-->
+                                                            <!--{[ notification.vehicle_id ]} - {[ notification.vehicle_model ]}-->
+                                                        <!--</div>-->
+                                                        <!--<div class="col col-12 p-0">-->
+                                                            <!--<i class="mdi mdi-calendar-clock"></i>&nbsp;{[ notification.date ]}-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="col col-1 p-0 ml-2 text-center">-->
+                                                    <!--<a v-bind:href="notification.map_link" class="btn header-item waves-effect waves-light" title="{% trans 'Ver alerta no mapa' %}">-->
+                                                        <!--<i class="mdi mdi-map-search-outline mdi-24px"></i>-->
+                                                        <!--<p>{% trans 'Mapa' %}</p>-->
+                                                    <!--</a>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!-- End Control Elements -->
+                <!-- Top Navbar -->
+                <header id="page-topbar" {% if options.in_fullscreen %}style="display: none;"{% endif %}>
+                    <nav class="navbar navbar-static-top navbar-header" role="navigation">
+
+                        <div class="main-app-sections">
+                            {% if options.sidebar_toggle %}
+                            <button type="button" v-on:click="toggleSidebar()" class="btn header-item noti-icon waves-effect waves-light" id="side-menu-toggle">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                            {%  endif %}
+                            <a href="#" class="btn btn-light btn-icon-split btn-sm">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-flag"></i>
+                                </span><span class="text">SISTEMA</span>
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-flag"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn-light btn-icon-split btn-sm">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-flag"></i>
+                                </span><span class="text">SISTEMA</span>
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-flag"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Right Side Navbar Menu -->
+                        <div class="d-flex align-items-center">
+                            <!-- Logo -->
+                            {% if options.navbar_logo %}
+                            <span><img class="d-none d-lg-block img-fluid navbar-logo pr-3" src="{%  static 'djaesy/logos/middle-logo.png' %}"></span>
+                            {% endif %}
+                            <!-- End Logo -->
+                            <!-- Notifications -->
+                            <button id="eventsIcon" type="button" class="d-none d-md-block btn header-item noti-icon waves-effect waves-light" data-toggle="modal" data-target="#alertsModal" title="{% trans 'Alertas Ativos' %}">
+                                <i class="mdi mdi-bell-ring-outline pr-3"></i>
+                                <!--<span class="badge badge-pill ml-2" v-bind:class="severity_class" v-show="notifications.length">{[ notifications.length ]}</span>-->
+                            </button>
+                            <!-- End Notifications -->
+                            <!-- Translation -->
+                            <div class="dropdown d-inline-block ml-2">
+                                <button type="button" class="d-none d-md-block btn header-item noti-icon waves-effect waves-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{% trans 'Tradução' %}">
+                                    <i class="mdi mdi-translate"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+
+                                    {% for language in languages %}
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between language-toggler" href="#" data-language="{{ language.code }}">
+                                            <span>{{ language.name_local }}</span>
+                                        </a>
+        {#                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>#}
+        {#                                    {{ language.name_local }} ({{ language.code }})#}
+        {#                                </option>#}
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                            <!-- End Translation -->
+                            <!-- Full Screen Button -->
+                            {% if options.fullscreen_toggle %}
+                            <button type="button" v-on:click="toggleFullScreen()" class="d-none d-sm-block btn header-item noti-icon waves-effect waves-light" title="{% trans 'Tela Cheia' %}">
+                                <i class="mdi mdi-monitor-screenshot"></i>
+                            </button>
+                            {% endif %}
+                            <!-- End Screen Button -->
+                            <!-- User Button -->
+                            <div class="dropdown d-inline-block ml-2">
+                                <button type="button" class="btn header-item waves-effect waves-light" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="rounded-circle header-profile-user" src="{% static 'djaesy/default-user-img.png' %}" alt="Header Avatar">
+                                    <span class="d-none d-xl-inline-block ml-1">{{ user.get_username }}</span>
+                                    <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{% url 'user_change_password' %}">
+                                        <span>{% trans 'Mudar Senha' %}</span>
+                                    </a>
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{% url 'logout' %}">
+                                        <span>{% trans 'Sair' %}</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End User Button -->
+                        </div>
+                        <!-- End Right Side Navbar Menu -->
+                    </nav>
+                </header>
+                <!-- End Top Navbar -->
+            </div>
+
+            <!-- ========== Mobile Sidebar Start ========== -->
+            <!--<div class="vertical-menu mobile-menu d-md-none">-->
+                <!--<div data-simplebar class="h-100">-->
+                    <!--&lt;!&ndash;- Sidemenu &ndash;&gt;-->
+                    <!--<div id="sidebar-menu" class="mobile-sidebar">-->
+                        <!--&lt;!&ndash; Left Menu Start &ndash;&gt;-->
+                        <!--{% include 'djaesy/menus/mobile-menu.html' with items=menus.main %}-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Sidebar &ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+            <!-- Left Sidebar End -->
+
+            <aside id="sidebar-menu" class="push-menu bg-gradient-primary" {% if options.in_fullscreen %}style="display: none;"{% endif %}>
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                    <!-- Sidebar - Brand -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                          <i class="fas fa-laugh-wink"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3 text-nowrap">SB Admin <sup>2</sup></div>
+                    </a>
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+                    <!-- Menu Items -->
+                    {% with items=menus.main %}
+                        {% for item in items %}
+                            {% if item.children %}
+                            <li class="nav-item collapsed">
+                                <a href="javascript: void(0);" class="nav-link waves-effect waves-light" data-toggle="collapse" data-target="#collapse-{{ forloop.counter }}" aria-expanded="true" aria-controls="#collapse-{{ forloop.counter }}">
+                                    <i class="{% if item.icon %}{{ item.icon }}{% else %}mdi mdi-menu{% endif %}"></i>
+                                    <span>{{ item.title }}</span>
+                                </a>
+                                {% with sub_items=item.children %}
+                                <div id="collapse-{{ forloop.counter }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                                  <div class="bg-white py-2 collapse-inner rounded">
+                                    <!--<h6 class="collapse-header">{{ item.title }}:</h6>-->
+                                      {% for sub_item in sub_items %}
+                                        <a v-on:click.stop.prevent="openTab($event, '{{ sub_item.url }}', '{{ sub_item.icon }}', '{{ sub_item.title }}')" href="{{ sub_item.url }}" class="collapse-item">
+                                            {% if sub_item.icon %}<i class="{{ sub_item.icon }}"></i>{% endif %}
+                                            {{ sub_item.title }}
+                                        </a>
+                                      {% endfor %}
+                                  </div>
+                                </div>
+                                {% endwith %}
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endwith %}
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                 </ul>
+
+
+
+                <!--<a href="/" id="sidemenu-logo">-->
+                    <!--&lt;!&ndash; mini logo for sidebar mini 50x50 pixels &ndash;&gt;-->
+                    <!--<span class="logo-mini">-->
+                        <!--<img src="{%  static 'djaesy/logos/small-logo.png' %}" class="img-fluid">-->
+                    <!--</span>-->
+                    <!--&lt;!&ndash; logo for regular state and mobile devices &ndash;&gt;-->
+                    <!--<span class="logo-lg">-->
+                        <!--<img src="{%  static 'djaesy/logos/large-logo.png' %}" class="img-fluid">-->
+                    <!--</span>-->
+                <!--</a>-->
+
+
+            </aside>
+
+
+            <!-- ============================================================== -->
+            <!-- Start MAIN Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content content-wrapper" {% if options.simplebar_scroller %}data-simplebar{% endif %}>
+
+                <header id="main-tabs">
+                    <nav class="navbar navbar-static-top navbar-header" role="navigation">
+                        <ul class="nav nav-tabs">
+                            <li v-for="tab in tabs" :key="tab.id" class="nav-item">
+                                <a v-bind:class="{active: tab.active}" class="nav-link d-inline-block" href="#" v-on:click.stop.prevent="selectTab($event, tab.id)">
+                                    <i v-bind:class="tab.icon"></i>
+                                    {[ tab.title ]}
+                                    <i class="mdi mdi-close" v-bind:class="{ disabled: !tabIsClosable }" v-on:click.stop.prevent="closeTab($event, tab.id)"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+
+                {% block main_content_start %}
+                {% endblock %}
+
+                {% block page_content %}
+                <!-- Start page_content block -->
+                <div>
+                    <div v-for="frame in tabs" :key="frame.iframe_id" class="nav-item">
+                        <div v-iframe="frame.iframe_id" v-bind:data-src="frame.url" v-bind:id="frame.iframe_id" v-show="frame.active" class="main-iframe"></div>
+                    </div>
+                </div>
+                <!-- End page_content block -->
+                {% endblock %}
+
+                <footer id="footer" class="footer" {% if options.in_fullscreen %}style="display: none;"{% endif %}>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% block footer %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                {% block main_content_end %}
+                {% endblock %}
+
+            </div>
+            <!-- end main content-->
+
+            {% if options.fullscreen_toggle %}
+            <!-- Toggle Full Screen -->
+            <button type="button" id="fullscreen-toggle" v-on:click="toggleFullScreen()" class="btn btn-secondary btn-lg waves-effect waves-light" title="Tela Cheia">
+                <i class="mdi mdi-monitor-screenshot mdi-18px"></i>
+            </button>
+            {% endif %}
+
+<!-- control-sidebar -->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Overlay-->
+        <div class="sidebar-overlay" data-toggle="push-menu"></div>
+        <div class="control-sidebar-overlay" data-toggle="control-sidebar"></div>
+
+    </div>
+
+    {% block modal_content %}{% endblock %}
+
+    {% csrf_token %}
+
+
+    <script type="application/javascript">
+
+        let SET_LANGUAGE_URL = '{% url 'set_language' %}';
+
+        let DATATABLES_SEARCH_PLACEHOLDER = "{% trans 'Filtrar lista...' %}";
+        let LAYOUT_IN_FULLSCREEN = {% if options.in_fullscreen %}true{% else %}false{% endif %};
+
+        let TRANS_NO_ITEM_SELECTED = "{% trans 'Nenhum item selecionado!' %}";
+        let TRANS_SELECT_AT_LEAST_ONE = "{% trans 'Selecione ao menos um item para executar a ação.' %}";
+
+        let TRANS_MULTIPLE_SELECTED = "{% trans 'Muitos itens selecionados!' %}";
+        let TRANS_SELECT_ONLY_ONE = "{% trans 'Esta ação deve ser executada em um item por vez.' %}";
+        let TRANS_SELECT_LIMIT_EXCEEDED = "{% trans 'Limite de itens selecionados para executar a ação foi atingido.' %}"
+
+        let DATETIME_FORMAT = 'DD/MM/YY HH:mm';
+        let DATEPIKCER_APPLY_LABEL = "Selecionar";
+        let DATEPICKER_CANCEL_LABEL = "Cancelar";
+        let DATEPICKER_FROM_LABEL = "De";
+        let DATEPICKER_TO_LABEL = "Para";
+        let DATEPICKER_RANGE_LABEL = "Especificar";
+        let DATEPICKER_DAYS_OF_WEEK = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+        let DATEPICKER_MONTH_NAMES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let DATEPICKER_FIRST_WEEK_DAY = 1;
+        let DATEPICKER_ANY_DATE = 'Qualquer Data';
+        let DATEPICKER_TODAY = 'Hoje';
+        let DATEPICKER_YESTERDAY = 'Ontem';
+        let DATEPICKER_THIS_WEEK = 'Esta semana';
+        let DATEPICKER_LAST_WEEK = 'Semana passada';
+        let DATEPICKER_THIS_MONTH = 'Este Mês';
+        let DATEPICKER_LAST_MONTH = 'Mês Passado';
+
+        let MULTIBOX_HELP_TEXT = '';
+        let MULTIBOX_SELECTED_SINGLE = 'Item Selecionado';
+        let MULTIBOX_SELECTED_PLURAL = 'Itens Selecionados';
+        let MULTIBOX_SELECT_BUTTON = 'Selecionar';
+        let MULTIBOX_CLEAR_BUTTON = 'Limpar';
+
+        let MAP_SEARCH_PLACEHOLDER = '{% trans "Pesquise pelo identificador do veículo"  %}';
+
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+
+        let MESSAGES = [];
+        {% if messages %}
+            {% for message in messages %}
+                MESSAGES.push({'type': '{{ message.extra_tags }}', 'title': '{{ message.tag|upper }}', 'text': '{{ message }}' });
+            {% endfor %}
+        {% endif %}
+
+    </script>
+
+    {% block extra_script %}
+        <script type="application/javascript">
+        </script>
+    {% endblock %}
+
+    <!-- jQuery  -->
+    <script src="{%  static 'djaesy.js' %}"></script>
+
+    <script type="application/javascript">
+        let yl = {jQuery: jQuery};
+    </script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <script type="application/javascript">
+
+        {% if cascade_clear %}
+            let CASCADE_CLEAR_FIELDS = {{ cascade_clear|safe }};
+        {% else %}
+            let CASCADE_CLEAR_FIELDS = null;
+        {% endif %}
+
+        {% if cascade_disable %}
+            let CASCADE_DISABLE_FIELDS = {{ cascade_disable|safe }};
+        {% else %}
+            let CASCADE_DISABLE_FIELDS = null;
+        {% endif %}
+
+        {% if cascade_hide %}
+            let CASCADE_HIDE_FIELDS = {{ cascade_hide|safe }};
+        {% else %}
+            let CASCADE_HIDE_FIELDS = null;
+        {% endif %}
+
+
+
+    </script>
+
+{#    {% if options.in_fullscreen and options.fullscreen_toggle %}#}
+{#    <script type="application/javascript">#}
+{#        console.log($('body').layout);#}
+{#    </script>#}
+{#    {% endif %}#}
+
+
+</body>
+</html>

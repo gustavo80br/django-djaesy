@@ -1,0 +1,13 @@
+<ul class="metismenu list-unstyled" id="side-menu">
+{% for item in items %}
+    <li>
+        <a href="{% if item.url %}{{ item.url }}{% else %}javascript: void(0);{% endif %}" class="{% if item.selected %}active {% endif %}{% if item.children %}has-arrow{% endif %}">
+            <i class="{% if item.icon %}{{ item.icon }}{% else %}mdi mdi-menu{% endif %}"></i>
+            <span>{{ item.title }}</span>
+        </a>
+        {% if item.children %}
+            {% include 'djaesy/menus/mobile-submenu.html' with items=item.children %}
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

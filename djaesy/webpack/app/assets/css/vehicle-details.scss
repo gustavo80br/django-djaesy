@@ -1,0 +1,29 @@
+.vehicle-data {
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+
+.module-info {
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+
+#top-area-container {
+  width: 100%;
+  height: 100% !important;
+  min-height: unset !important;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: transform .2s ease-out, all .2s ease-out;
+}
+
+#main-map,
+#vehicle-map {
+  width: 100%;
+  height: 100% !important;
+  min-height: unset !important;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,244 @@
+// ----------------------------------
+// Default Content Wrapper properties
+// ----------------------------------
+
+.content-wrapper {
+
+    overflow: auto;
+
+    padding-top: 0;
+    margin-top: calc(var(--top-navbar-height) + var(--top-tabs-height));
+
+    height: calc(100vh - var(--top-navbar-height));
+    min-height: calc(100vh - var(--top-navbar-height)) !important;
+
+    -webkit-transition: -webkit-transform .3s ease-in-out, margin .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out, margin .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out, margin .3s ease-in-out;
+    transition: transform .3s ease-in-out, margin .3s ease-in-out;
+
+    .simplebar-content-wrapper {
+        direction: inherit;
+        -webkit-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+        position: relative;
+        display: block;
+        height: 100%;
+        width: auto;
+        visibility: visible;
+        overflow: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.content-wrapper.inner-content {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+// ----------------------------------
+// Left Sidebar open/close properties
+// ----------------------------------
+
+// -- Sidebar over content
+
+.sidebar-over-content.sidebar-collapse,
+.sidebar-over-content {
+    .content-wrapper {
+        margin-left: var(--sidebar-collapse-size);
+    }
+}
+
+// -- Sidebar pushing content
+
+.sidebar-push-content.sidebar-collapse {
+    .content-wrapper {
+        margin-left: var(--sidebar-collapse-size);
+    }
+}
+
+.sidebar-push-content {
+    .content-wrapper {
+        margin-left: var(--sidebar-open-size);
+    }
+}
+
+// -- On less than large, will be over content always
+@media (max-width:991px) {
+    .sidebar-push-content,
+    .sidebar-push-content.sidebar-collapse {
+        .content-wrapper {
+            margin-left: var(--sidebar-collapse-size);
+        }
+    }
+}
+
+
+
+// -------------------------------------------
+// Right Control Sidebar open/close properties
+// -------------------------------------------
+
+// -- Control Sidebar over content
+
+.control-sidebar-over-content,
+.control-sidebar-over-content.control-sidebar-open {
+    .content-wrapper {
+        margin-right: 0;
+    }
+}
+
+// -- Control Sidebar pushing content
+
+
+.control-sidebar-push-content {
+    .content-wrapper {
+        margin-right: 0;
+    }
+}
+
+.control-sidebar-push-content.control-sidebar-open {
+    .content-wrapper {
+        margin-right: var(--control-open-size)
+    }
+}
+
+// -- On less than large, will be over content always
+@media (max-width:991px) {
+    .control-sidebar-push-content,
+    .control-sidebar-push-content.control-sidebar-open {
+        .content-wrapper {
+            margin-right: 0;
+        }
+    }
+}
+
+
+// -- Sidebar Overlay
+
+.sidebar-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(33, 37, 41, .3);
+    z-index: 1000;
+    display: none;
+    transition: transform .3s ease-in-out, margin .3s ease-in-out;
+}
+
+.sidebar-collapse .sidebar-overlay {
+    display: none;
+}
+
+// -- On less than medium, will have overlay always
+
+@media (max-width:991px) {
+    .sidebar-overlay {
+        display: block;
+    }
+}
+
+
+// -- Control Sidebar Overlay
+
+.control-sidebar-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(33, 37, 41, .3);
+    z-index: 890;
+    display: none;
+    transition: transform .3s ease-in-out, margin .3s ease-in-out;
+}
+
+.control-sidebar-open .control-sidebar-overlay {
+    display: none;
+}
+
+// -- On less than medium, will have overlay always
+
+@media (max-width:991px) {
+    .control-sidebar-open .control-sidebar-overlay {
+        display: block;
+    }
+}
+
+
+// -----------
+// Full Screen
+// -----------
+
+.fullscreen {
+
+    #sidebar-menu {
+        display: none;
+    }
+
+    #page-topbar {
+        display: none;
+    }
+
+    .control-sidebar {
+        margin-top: 0 !important;
+        height: calc(100vh) !important;
+    }
+
+    .content-wrapper {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    #control-sidebar-toggle {
+        top: 9px !important;
+    }
+
+    #fullscreen-toggle {
+        display: block;
+    }
+}
+
+
+
+//@media (max-width:768px) {
+//    .content-wrapper,
+//    .sidebar-open .content-wrapper {
+//        -webkit-transform: translate(var(--sidebar-open-size), 0);
+//        -ms-transform: translate(var(--sidebar-open-size), 0);
+//        -o-transform: translate(var(--sidebar-open-size), 0);
+//        transform: translate(var(--sidebar-open-size), 0)
+//    }
+//}
+//
+//@media (min-width:768px) {
+//
+//    .sidebar-collapse .content-wrapper {
+//        margin-left: 0
+//    }
+//
+//    .sidebar-collapse .content-wrapper {
+//        margin-left: var(--sidebar-collapse-size) !important;
+//        height: calc(100vh - var(--top-navbar-height));
+//        overflow: auto;
+//        margin-top: var(--top-navbar-height)
+//    }
+//
+//    .control-sidebar-open .content-wrapper {
+//        margin-right: var(--control-open-size)
+//    }
+//}
+//
+//
+//
+//
+//
+//@media (max-width:992px) {
+//    .main-content {
+//        margin-left: 0
+//    }
+//}

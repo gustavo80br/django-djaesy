@@ -1,0 +1,16 @@
+{% extends 'djaesy/crud/update.html' %}
+{% load static %}
+{% load leaflet_tags %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'geoman-field/leaflet-geoman.css' %}" />
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    {% leaflet_js plugins="forms" %}
+    {% leaflet_css plugins="forms" %}
+    <script src="{% static 'geoman-field/leaflet-geoman.min.js' %}"></script>
+    <script src="{% static 'geoman-field/geoman-field.js' %}"></script>
+{% endblock %}

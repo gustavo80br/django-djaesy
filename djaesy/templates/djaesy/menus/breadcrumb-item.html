@@ -1,0 +1,8 @@
+{% for child in children %}
+    {% if child.selected %}
+        <li class="breadcrumb-item"><a href="{% if child.url %}{{ child.url }}{% else %}javascript: void(0);{% endif %}">{{ child.title }}</a></li>
+        {% if child.children %}
+            {% include 'djaesy/menus/breadcrumb-item.html' with children=child.children %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

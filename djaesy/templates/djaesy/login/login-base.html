@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ page_lang|default:'pt-br' }}">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ page_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{%  static 'djaesy/favicon/favicon.ico' %}"/>
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="{%  static 'main.css' %}"/>
+    <!-- Login css -->
+    <link rel="stylesheet" type="text/css" href="{%  static 'djaesy/login/css/login.css' %}"/>
+</head>
+<body>
+    <div class="container-fluid h-100 mh-100">
+        <div class="row h-100 mh-100">
+            <div class="login-left-area d-none d-sm-none d-md-flex col-md-6 col-lg-7 col-xl-8 align-items-center justify-content-center">
+                <div class="container-fluid h-100 mh-100">
+                    <div class="row h-100 mh-100 justify-content-center">
+                        <div class="col-auto align-self-center">
+                            {% include 'djaesy/login/central-content.html' %}
+                        </div>
+                        <div class="col-12 align-self-end pb-4">
+                            {% include 'djaesy/login/central-footer-content.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="login-form-area pt-5 col-md-6 col-lg-5 col-xl-4 d-flex justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-8 col-md-12 col-lg-10 col-xl-9">
+                        <div class="p-5 p-lg-2 p-xl-2">
+                            <div class="text-center" id="login-logo">
+                                <img src="{% static 'djaesy/login/images/logo.png' %}" alt="App Logo" class="img-fluid"/>
+                            </div>
+                            {% block content %}
+                                <strong>content</strong> block: place content here
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

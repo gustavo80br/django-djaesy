@@ -1,0 +1,9 @@
+.form-datetimepicker {
+  .input-group-prepend {
+    cursor: pointer;
+  }
+}
+
+.daterangepicker select.ampmselect, .daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect {
+    color: #495057 !important;
+}

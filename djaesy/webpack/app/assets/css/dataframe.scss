@@ -1,0 +1,327 @@
+
+:root {
+    --header-radius: 4px;
+    --table-row-padding: 0.4rem 0.8rem;
+    --order-icon-hover-color: #FFC704;
+    --row-border-color: #E5E8EC;
+}
+
+
+#list_datatable_wrapper {
+    margin-top: var(--list-header-height);
+}
+
+table.dataTable tbody>tr.selected td,
+table.dataTable tbody>tr>.selected td {
+    border-color: var(--main-color)
+}
+
+.dataTables_wrapper.container-fluid {
+    padding: 0
+}
+
+.dataframe thead > tr > th,
+.dataframe tbody > tr > td {
+    white-space: nowrap;
+    width: 1%;
+    padding: var(--table-row-padding);
+    vertical-align: middle;
+    padding-right: 0.6rem !important;
+}
+
+.dataframe .dataframe-order {
+    color: var(--black-200);
+    font-size: 1.1rem;
+}
+
+.dataframe .dataframe-order:hover {
+    color: var(--order-icon-hover-color);
+}
+
+.dataframe .dataframe-order.asc,
+.dataframe .dataframe-order.desc {
+    color: var(--gold-dot);
+}
+
+.dataframe {
+    color: var(--text-color) !important;
+}
+
+.dataframe a {
+    color: var(--link-color) !important;
+}
+
+.dataframe tbody > tr > td {
+    font-weight: 400;
+    //height: 2.6rem;
+}
+
+.dataframe thead > tr > th:last-child,
+.dataframe tbody > tr > td:last-child {
+    white-space: nowrap;
+    width: 100%;
+}
+
+.dataframe tr td:first-child,
+.dataframe tr th:first-child {
+    display: none;
+}
+
+.dataframe tr td.child-data:first-child {
+    display: table-cell !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    display: inline-block !important;
+    float: left !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.2rem !important;
+}
+
+.datatable-toolbar {
+    display: inline-block;
+    float: left;
+    margin-right: 1rem;
+}
+
+.datatable-toolbar-info {
+    margin-left: 1rem;
+}
+
+.dataframe thead th {
+    position: sticky !important;
+    top: var(--list-header-height);
+    background-color: #FFF;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 2;
+    border: none;
+}
+
+.dataframe th {
+    border: none;
+    margin-bottom: 20px;
+
+    &.sortable {
+        cursor: pointer !important;
+    }
+}
+
+.dataframe td {
+    vertical-align: middle;
+    border: none;
+}
+
+.action-icon-button {
+    font-size: 1.2rem !important;
+    padding: 2px 8px !important;
+    //background-color: #FFF;
+    margin-right: 4px !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.dataframe-action-btn {
+    //-webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16), 0px 1px 1px 0 rgba(0, 0, 0, 0.12) !important;
+    //box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16), 0px 1px 1px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.action-icon-button.row-checkbox {
+    background-color: transparent !important;
+    padding: 0 0 !important;
+}
+
+.dataframe a.call-item-action {
+    color: var(--red-400) !important;
+}
+
+.update-item-action {
+    margin-right: 0.4rem;
+}
+
+.dataframe {
+    min-width: 100%;
+    padding: 0;
+    //background-color: #FFF !important;
+}
+
+.datatable_controls {
+    margin-right: 52px;
+}
+
+th i.select-all-action {
+    font-size: 1.4rem !important;
+    cursor: pointer;
+}
+
+th i.select-all-action:hover {
+    color: var(--success);
+}
+
+table.dataTable tbody tr.selected, table.dataTable tbody th.selected, table.dataTable tbody td.selected {
+    color: unset !important;
+}
+
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+    background-color: rgba(255, 255, 0, 0.175) !important;
+    border-bottom: 1px solid var(--row-border-color) !important;
+    transition: 0.5s;
+}
+
+table.dataTable tbody > tr > td {
+    border-bottom: 1px solid var(--row-border-color);
+    border-right: 1px solid var(--row-border-color);
+}
+
+table.dataTable tbody>tr.selected .row-checkbox i:before {
+    content: "\F12C" !important;
+    color: var(--success) !important;
+    transform: rotate(0deg) !important;
+    background-color: transparent !important;
+}
+
+table.dataTable tbody>tr .row-checkbox i:before {
+    content: "\F131" !important;
+    transform: rotate(90deg) !important;
+    transition: .3s ease-in-out;
+    color: var(--gray);
+    background-color: transparent !important;
+}
+
+table.dataTable tbody>tr.selected td, table.dataTable tbody>tr>.selected td {
+    border-color: var(--row-border-color) !important;
+}
+
+table.dataTable tbody tr.selected a, table.dataTable tbody th.selected a, table.dataTable tbody td.selected a {
+    color: var(--primary) !important;
+}
+
+table.dataTable {
+    //border-bottom: 1px solid #dee2e6 !important;
+}
+
+table.dataTable tbody>tr.selected,
+table.dataTable tbody>tr>.selected {
+    background-color: var(--main-color)
+}
+
+
+table.dataTable {
+    border-collapse: collapse !important;
+    margin-bottom: 15px !important;
+
+}
+
+table.dataTable tbody td:focus {
+    outline: 0 !important
+}
+
+table.dataTable tbody td.focus,
+table.dataTable tbody th.focus {
+    outline: solid 2px !important;
+    outline-offset: -1px;
+    color: var(--main-color);
+    background-color: rgba(50, 129, 242, .15)
+}
+
+.dataTables_info {
+    font-weight: 500
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>th:first-child:before {
+    -webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, .11);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .11);
+    background-color: #32cb89;
+    top: .75rem
+}
+
+.dataframe tr th:nth-child(2) {
+    border-right: 1px solid var(--row-border-color);
+}
+
+.dataframe tr th:nth-child(2),
+.dataframe tr td:nth-child(2) {
+    padding-left: 1.6rem;
+    padding-right: 1.2rem !important;
+}
+
+
+.dataframe tr th {
+    border-right: 1px solid var(--row-border-color);
+    border-bottom: 1px solid var(--row-border-color);
+    //font-weight: 400;
+    color: var(--text-color);
+    //text-transform: uppercase;
+}
+
+.dataframe tr th:last-child {
+    border-top-right-radius: var(--header-radius);
+    border-bottom-right-radius: var(--header-radius);
+    border-right: none;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+    background-color: #f35956;
+    top: .75rem
+}
+
+$base-color: #FFF;
+
+a.related-link {
+    background-color: $base-color;
+    border-radius: 16px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16), 0px 1px 1px 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16), 0px 1px 1px 0 rgba(0, 0, 0, 0.12) !important;
+
+    &.expanded {
+        width: 100%;
+    }
+}
+
+div.link-text {
+    display: flex;
+    i {
+        margin-left: auto;
+    }
+}
+
+a.related-link .link-text {
+    color: var(--text-color) !important;
+    // text-shadow: 0 1px 0 darken($base-color, 25%);
+}
+
+a.related-link .value {
+    color: var(--text-color) !important;
+}
+
+a.related-link:hover .link-text {
+    color: inherit !important;
+}
+
+a.related-link:hover .value {
+    color: inherit !important;
+}
+
+ul.pagination {
+    margin-bottom: 0 !important;
+    margin-top: 0.5rem !important;
+}
+
+.page-size-selector {
+    width: auto;
+    white-space: nowrap;
+}
+
+.page-size-selector .select2 {
+    width: auto !important;
+}
+
+.hidden {
+    display: none !important;
+}
