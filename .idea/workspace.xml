@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a0d3d8a-711e-49d5-979f-eb1e090fe03e" name="Default Changelist" comment="" />
+    <list default="true" id="7a0d3d8a-711e-49d5-979f-eb1e090fe03e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,15 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/djaesy/templates/djaesy/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="393" selection-start-line="393" selection-end-line="393" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#nav#0;n#header#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="3697">
+              <caret line="286" column="52" lean-forward="true" selection-start-line="286" selection-start-column="52" selection-end-line="286" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -122,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>--rem-</find>
       <find>top-bar</find>
       <find>Cria</find>
       <find>btn-sm</find>
@@ -152,6 +150,7 @@
       <find>background</find>
       <find>toggleSi</find>
       <find>sidebar-bra</find>
+      <find>sendgri</find>
     </findStrings>
     <replaceStrings>
       <replace>djaesy</replace>
@@ -166,13 +165,13 @@
       <dir>D:\Dev\django-djaesy\djaesy\management</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack\app\assets\css\theme</dir>
       <dir>D:\Dev\django-djaesy\djaesy\templates</dir>
-      <dir>D:\Dev\django-djaesy</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack\app\scss</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack\app</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack</dir>
       <dir>D:\Dev\django-djaesy\djaesy</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack\app\assets\css</dir>
       <dir>D:\Dev\django-djaesy\djaesy\webpack\app\assets</dir>
+      <dir>D:\Dev\django-djaesy</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -181,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/djaesy/menu.py" />
         <option value="$PROJECT_DIR$/sample_project/sample_project/permissions.py" />
         <option value="$PROJECT_DIR$/djaesy/permission.py" />
         <option value="$PROJECT_DIR$/djaesy/templates/djaesy/login/central-content.html" />
@@ -232,14 +230,15 @@
         <option value="$PROJECT_DIR$/djaesy/webpack/app/js/djaesy-admin.js" />
         <option value="$PROJECT_DIR$/djaesy/templates/djaesy/menus/main-menu.html" />
         <option value="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" />
+        <option value="$PROJECT_DIR$/sample_project/settings_dev.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-257" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="535" />
+    <option name="y" value="-905" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,12 +338,12 @@
       <workItem from="1602946550581" duration="40884000" />
       <workItem from="1603164108499" duration="74025000" />
       <workItem from="1603423479899" duration="100555000" />
-      <workItem from="1603977433626" duration="1485000" />
+      <workItem from="1603977433626" duration="27855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316868000" />
+    <option name="totallyTimeSpent" value="343238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-257" y="-1088" width="1936" height="1056" extended-state="6" />
@@ -362,9 +361,9 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50373137" side_tool="true" visible="true" weight="0.33586133" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49626866" visible="true" weight="0.33586133" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50378215" side_tool="true" weight="0.492635" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49621785" weight="0.6511376" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3716143" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -776,17 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/djaesy/templates/djaesy/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="393" selection-start-line="393" selection-end-line="393" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#nav#0;n#header#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_project/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -796,8 +784,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="357">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djaesy/templates/djaesy/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3697">
+          <caret line="286" column="52" lean-forward="true" selection-start-line="286" selection-start-column="52" selection-end-line="286" selection-end-column="52" />
         </state>
       </provider>
     </entry>
