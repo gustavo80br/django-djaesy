@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 from subprocess import call
 
-from django.conf import settings
 from django.core.management.base import BaseCommand
 
 
