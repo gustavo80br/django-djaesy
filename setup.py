@@ -61,6 +61,6 @@ setup(
         'pytz',
         'whitenoise[brotli]',
         'markdown',
-    ]',
+    ],
     test_suite = tests.get_suite
 )
