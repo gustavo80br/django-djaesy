@@ -16,7 +16,7 @@ setup(
     include_package_data=True,
     license='MIT License',
     description='Django Djaesy',
-    long_description=README,
+    long_description='Django Djaesy',
     url='https://github.com/gustavo80br/django-djaesy/',
     author='Gustavo H. de A. Gonçalves',
     author_email='gustavo@gemtech.net.br',
