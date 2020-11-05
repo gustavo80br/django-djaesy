@@ -12,8 +12,8 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-djaesy',
     version='1.0',
-    packages=find_packages(),
-    package_data={'': ['static', 'templates', 'webpack']},
+    packages=['djaesy'],
+    package_data={'djaesy': ['*']},
     include_package_data=True,
     license='MIT License',
     description='Django Djaesy',
