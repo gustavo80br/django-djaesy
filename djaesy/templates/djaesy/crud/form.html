@@ -6,22 +6,35 @@
     <form action="" method="post" enctype="multipart/form-data">
 {% endblock %}
 
-{% block content %}
-<div class="card">
-    <div class="card-body">
-        {% include 'djaesy/includes/render_form.html' %}
+{% block header_buttons %}
+    {% if back_url_name %}
+        <a href="{% url back_url_name %}" class="btn btn-sm btn-outline-secondary shadow-sm waves-effect waves-light">
+            <i class="mdi mdi-arrow-left"></i>
+            {% trans 'Voltar' %}
+        </a>
+    {% endif %}
+    <button type="submit" name="new_action" value="1" id="new_action" class="btn btn-sm btn-outline-primary shadow-sm waves-effect waves-light">
+        <i class="mdi mdi mdi-plus-circle-outline"></i>
+        {% trans 'Salvar e criar outro' %}
+    </button>
+    <button type="submit" name="list_action" value="1" id="list_action" class="btn btn-sm btn-primary shadow-sm waves-effect waves-light">
+        <i class="mdi mdi-upload"></i>
+        {% trans 'Salvar' %}
+    </button>
+{% endblock %}
 
+{% block content %}
+
+        {% include 'djaesy/includes/render_form.html' %}
         {% if form.formsets %}
             {% for formset in form.formsets %}
                 {% include 'djaesy/includes/render_formset.html' %}
                 <a class="btn btn-sm btn-mdi btn-secondary" href="#" onclick="return add_inline_form('{{ formset.management_form.prefix }}')">
-                    <i class="mdi mdi-plus-circle-outline"></i> Adicionar Item
+                    <i class="mdi mdi-plus-circle-outline"></i> {% trans "Adicionar Item" %}
                 </a>
             {% endfor %}
         {% endif %}
 
-    </div>
-</div>
 {% endblock %}
 
 {% block extra_js %}
@@ -104,26 +117,6 @@
 
 {% endblock %}
 
-{% block footer %}
-    <div class="float-left">
-        {% if back_url_name %}
-            <a href="{% url back_url_name %}" class="btn btn-mdi btn-secondary">
-                <i class="mdi mdi-arrow-left"></i>
-                {% trans 'Voltar' %}
-            </a>
-        {% endif %}
-    </div>
-    <div class="float-right">
-        <button type="submit" name="new_action" value="1" id="new_action" class="btn btn-mdi btn-outline-secondary">
-            <i class="mdi mdi mdi-plus-circle-outline"></i>
-            {% trans 'Salvar e criar outro' %}
-        </button>
-        <button type="submit" name="list_action" value="1" id="list_action" class="btn btn-mdi btn-primary">
-            <i class="mdi mdi-upload"></i>
-            {% trans 'Salvar' %}
-        </button>
-    </div>
-{% endblock %}
 
 {% block main_content_end %}
     </form>

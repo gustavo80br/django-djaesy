@@ -10,8 +10,11 @@
 
 @import 'theme/_control_sidebar.scss';
 @import 'theme/_content_wrapper.scss';
+@import 'theme/_page_content.scss';
 @import 'theme/_top_navbar.scss';
 @import 'theme/_tabs.scss';
+@import 'theme/_forms.scss';
+@import 'theme/_filter.scss';
 @import 'theme/_sidebar.scss';
 @import 'theme/_footer.scss';
 @import 'theme/_fixed_list_header.scss';
@@ -185,10 +188,7 @@ h1, h2, h3, h4, h5 {
 
 
 
-#fullscreen-toggle.fullscreen,
-.waves-block {
-    display: block
-}
+
 
 
 
@@ -205,13 +205,6 @@ h1, h2, h3, h4, h5 {
     font-size: 1rem;
 }
 
-
-
-
-
-.page-content {
-    padding: var(--grid-gutter) calc(var(--grid-gutter)/2) var(--grid-gutter) calc(var(--grid-gutter)/2)
-}
 
 
 
@@ -1077,20 +1070,6 @@ div.dt-button-info h2 {
     box-shadow: 0 0 8px rgba(0, 0, 0, .5)
 }
 
-
-
-#fullscreen-toggle {
-    position: fixed;
-    top: 0.56rem;
-    right: 4rem;
-    opacity: .2;
-    display: none;
-    padding: 1rem;
-}
-
-#fullscreen-toggle:hover {
-    opacity: 1
-}
 
 
 .fixed .left-side,

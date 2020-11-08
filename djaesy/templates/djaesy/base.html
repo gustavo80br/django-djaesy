@@ -74,38 +74,86 @@
 
                 {% block page_content %}
                 <!-- Start page_content block -->
+                <div class="container-fluid">
+                    <div class="row page-title-box page-title-fixed justify-content-between align-items-center">
+                        <!-- Title -->
+                        <div class="col col-auto">
+                            <div class="container-fluid header-box">
+                                <div class="row align-items-center justify-content-between">
+                                    {% if page_icon %}
+                                        <div class="col col-auto pl-0 pr-2">
+                                            <i class="{{ page_icon }} mdi-36px"></i>
+                                        </div>
+                                    {% endif %}
+                                    <div class="col col-auto pl-0 pr-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="row align-items-center ">
+                                                    <div class="col-auto">
+                                                        <h4 class="h4-responsive mb-0">{{ content_title|default:'content_title context variable' }}</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Title -->
+                        <!-- Middle Data -->
+                        <div class="col-auto">
+                        </div>
+                        <!-- End Middle Data -->
+                        <!-- Action Buttons -->
+                        <div class="col col-auto d-none d-md-block right-buttons">
+                            {% block header_buttons %}
+                            {% endblock %}
+                        </div>
+                        <!-- End Buttons -->
+                        <!-- Action Modal Button on Small Screens -->
+                        <div class="col col-auto d-block d-md-none">
+                            <div class="datatable_controls btn-group" role="group" aria-label="First group">
+                                <button class="btn btn-md btn-secondary" data-toggle="modal" data-target="#list_action_modal">
+                                    <i class="mdi mdi-playlist-check mdi-18px"></i>
+                                    <span class="d-none d-sm-inline">{% trans 'Ações' %}</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- End Action Modal Button on Small Screens -->
+                    </div>
+                </div>
 
                 <div class="page-content">
                     {% block content_container %}
                     <!-- Start content_container block -->
-                    <div class="{% if options.fluid_layout %}container-fluid{% else %}container{% endif %}">
+                    <div class="{% if options.fluid_layout %}container-fluid{% else %}container{% endif %} p-3">
                         {% block content_title %}
                         <!-- start page title -->
-                        <div class="row page-title-box justify-content-center">
+                        <!--<div class="row page-title-box justify-content-center">
                             <div class="col-sm-{% if options.sm_layout_size %}{{ options.sm_layout_size }}{% else %}12{% endif %} col-md-{% if options.md_layout_size %}{{ options.md_layout_size }}{% else %}12{% endif %} col-lg-{% if options.lg_layout_size %}{{ options.lg_layout_size }}{% else %}12{% endif %} col-xl-{% if options.xl_layout_size %}{{ options.xl_layout_size }}{% else %}12{% endif %}">
-                            <div class="col col-auto p-0">
-                                  <h2 class="mb-0">
-                                      {% if page_icon %}
-                                        <i class="{{ page_icon }} header-icon"></i>
-                                      {% endif %}
-                                      {{ content_title|default:'content_title context variable' }}
-                                      {% block content_subtitle %}
-                                      {% if content_subtitle %}<small>{{ content_subtitle }}</small>{% endif %}
-                                      {% endblock %}
-                                      {% block content_actions %}
-                                      {% endblock %}
-                                  </h2>
-                                </div>
-                                <div class="col col-auto">
-                                  {% block header_middle %}{% endblock %}
-                                </div>
+                                <div class="col col-auto p-0">
+                                      <h2 class="mb-0">
+                                          {% if page_icon %}
+                                            <i class="{{ page_icon }} header-icon"></i>
+                                          {% endif %}
+                                          {{ content_title|default:'content_title context variable' }}
+                                          {% block content_subtitle %}
+                                          {% if content_subtitle %}<small>{{ content_subtitle }}</small>{% endif %}
+                                          {% endblock %}
+                                          {% block content_actions %}
+                                          {% endblock %}
+                                      </h2>
+                                    </div>
+                                    <div class="col col-auto">
+                                      {% block header_middle %}{% endblock %}
+                                    </div>
 
-                                <div class="col col-auto">
-                                {% block header_right %}
-                                  {%  include 'djaesy/menus/breadcrumb.html' with item=selected_menu %}
-                                {% endblock %}
+                                    <div class="col col-auto">
+                                    {% block header_right %}
+                                      {%  include 'djaesy/menus/breadcrumb.html' with item=selected_menu %}
+                                    {% endblock %}
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         <!-- end page title -->
                         {% endblock %}
@@ -164,7 +212,7 @@
 
                 {% if options.sidebar and options.sidebar_toggle %}
                 <!-- Control Sidebar Toggle-->
-                <button type="button" id="control-sidebar-toggle" v-on:click="toggleControlSidebar()" class="{% if not options.sidebar_toggle and options.sidebar_open %}d-block d-md-none {% endif %}btn btn-lg waves-effect waves-light {% if options.sidebar_open %}control-sidebar-open{% endif %}">
+                <button type="button" id="control-sidebar-toggle" v-on:click="toggleControlSidebar()" class="{% if not options.sidebar_toggle and options.sidebar_open %}d-block d-md-none {% endif %}btn btn-sm btn-primary shadow-sm waves-effect waves-light {% if options.sidebar_open %}control-sidebar-open{% endif %}">
                     <i class="{{ options.sidebar_icon }}"></i>
                 </button>
                 {% endif %}

@@ -113,6 +113,7 @@ import toastr from 'toastr'
                 this.tabs.push(
                     {id: id, url: url, display_url:url, icon: icon, title: title, iframe_id: iframe_id, active: true}
                 );
+                $('.sidebar-toggle .sidebar .collapse').removeClass('show');
             },
             closeTab: function(event, id) {
                 if(this.tabIsClosable) {

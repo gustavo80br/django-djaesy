@@ -3,11 +3,17 @@
 .page-title-fixed {
     position: fixed !important;
     transition: .3s ease-in-out;
-    //padding-top: 12px;
     z-index: 10;
     height: var(--list-header-height);
     width: 100%;
     background-color: var(--tab-header-active-color);
+}
+
+// -- Control Sidebar Open
+.control-sidebar-push-content.control-sidebar-open {
+    .page-title-fixed {
+        width: calc(100% - var(--control-open-size));
+    }
 }
 
 .page-title-box {
@@ -39,7 +45,7 @@
     //}
 
     .right-buttons {
-        margin-right: 60px;
+        // margin-right: 60px;
     }
 
 }

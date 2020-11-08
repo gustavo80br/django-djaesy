@@ -60,6 +60,7 @@ table.dataTable tbody>tr>.selected td {
 .dataframe tbody > tr > td:last-child {
     white-space: nowrap;
     width: 100%;
+    border-right: none;
 }
 
 .dataframe tr td:first-child,

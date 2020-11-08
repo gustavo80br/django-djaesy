@@ -1,11 +1,13 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 <form action="" method="get">
-    {{ filterset.form|crispy }}
-    <div class="form-group">
-        <button type="submit" class="btn btn-md btn-mdi btn-primary"><i
+    <div class="filter-fields">
+        {{ filterset.form|crispy }}
+    </div>
+    <div class="form-group filter-buttons">
+        <button type="submit" class="btn btn-sm btn-primary shadow-sm waves-effect waves-light"><i
                 class="mdi mdi-magnify"></i> {% trans 'Filtrar' %}</button>
-        <a href="{% url request.resolver_match.url_name %}" class="btn btn-md btn-mdi btn-outline-secondary"><i
+        <a href="{% url request.resolver_match.url_name %}" class="btn btn-sm btn-secondary shadow-sm waves-effect waves-lighty"><i
                 class="mdi mdi-close"></i> {% trans 'Limpar' %}</a>
     </div>
     <div class="form-group">

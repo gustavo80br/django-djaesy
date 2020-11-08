@@ -49,12 +49,11 @@
                     {% if total_count %}
                         {% if actions.actions_group and total_count > 0 and not filtered_count < 1 %}
                             <button id="btnGroupDrop1" type="button"
-                                    class="btn btn-mdi btn-md btn-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
+                                    class="btn btn-mdi btn-md btn-outline-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"
                                     data-placement="left" data-trigger="hover" data-delay="500" title="Execute ações sobre itens selecionados">
                                 <i class="mdi mdi-18px mdi-playlist-play"></i>&nbsp;{% trans 'Ações' %}
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-menu dropdown-menu-left shadow" aria-labelledby="btnGroupDrop1">
                                 {% for action in actions.actions_group %}
                                     {% with action_name=action.action_name %}
                                         <a id="call_action_{{ action.id }}"
@@ -68,6 +67,7 @@
                                     {% endwith %}
                                 {% endfor %}
                             </div>
+                            </button>
                         {% endif %}
                         {% if can_create %}
                             <a class="btn btn-sm btn-primary shadow-sm waves-effect waves-light" href="{% url create_url_name %}">
@@ -80,7 +80,7 @@
                                 {% with action_name=action.action_name %}
                                     {% if action_name == 'delete_action' and can_delete or action_name != 'delete_action' %}
                                     <button id="call_action_{{ action.id }}"
-                                            class="btn btn-sm btn-secondary shadow-sm waves-effect waves-light {% if action_name == 'delete_action' %}btn-danger tooltip-toggle{% else %}btn-secondary{% endif %} call_action"
+                                            class="btn btn-sm shadow-sm waves-effect waves-light {% if action_name == 'delete_action' %}btn-outline-danger tooltip-toggle{% else %}btn-outline-secondary{% endif %} call_action"
                                             data-action="{{ action.id }}"
                                             data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
                                             data-maxselected="{{ action.max_selected }}"
@@ -92,9 +92,9 @@
                                 {% endwith %}
                             {% endfor %}
                             {% for action_group in actions.secondary_groups %}
-                                <div class="btn-group" role="group">
+                                <div class="dropdown d-inline-block">
                                     <button id="btnGroupDrop1" type="button"
-                                            class="btn btn-sm btn-secondary shadow-sm waves-effect waves-light dropdown-toggle"
+                                            class="btn btn-sm btn-outline-secondary shadow-sm waves-effect waves-light dropdown-toggle"
                                             data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
                                         {% if action_group.icon %}
@@ -102,7 +102,7 @@
                                         {% endif %}
                                         <span class="d-none d-lg-inline">{{ action_group.name }}</span>
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <div class="dropdown-menu dropdown-menu-left shadow" aria-labelledby="btnGroupDrop1">
                                         {% for group_action in action_group.actions %}
                                             {% with action_name=group_action.action_name %}
                                                 <a id="call_action_{{ group_action.id }}"
@@ -403,12 +403,12 @@
 
                         {% if actions.actions_group and total_count > 0 and not filtered_count < 1 %}
                             <button id="btnGroupDrop2" type="button"
-                                    class="btn btn-block mb-3 btn-md btn-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
+                                    class="btn btn-block mb-3 btn-md btn-outline-secondary dropdown-toggle tooltip-toggle" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"
                                     data-placement="left" data-trigger="hover" data-delay="500" title="Execute ações sobre itens selecionados">
                                 <i class="mdi mdi-playlist-play mdi-18px"></i>&nbsp;{% trans 'Ações' %}
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                            <div class="dropdown-menu dropdown-menu-left shadow" aria-labelledby="btnGroupDrop2">
                                 {% for action in actions.actions_group %}
                                     {% with action_name=action.action_name %}
                                         <a id="call_action_{{ action.id }}"
@@ -436,7 +436,7 @@
                                 {% with action_name=action.action_name %}
                                     {% if action_name == 'delete_action' and can_delete or action_name != 'delete_action' %}
                                     <button id="call_action_{{ action.id }}"
-                                            class="btn btn-block mb-3 btn-md {% if action_name == 'delete_action' %}btn-danger tooltip-toggle{% else %}btn-secondary{% endif %} waves-effect waves-light call_action"
+                                            class="btn btn-block mb-3 btn-md {% if action_name == 'delete_action' %}btn-outline-danger tooltip-toggle{% else %}btn-outline-secondary{% endif %} waves-effect waves-light call_action"
                                             data-action="{{ action.id }}"
                                             data-form="{% if action.custom_form %}true{% else %}false{% endif %}"
                                             data-maxselected="{{ action.max_selected }}"
@@ -449,7 +449,7 @@
                             {% endfor %}
                             {% for action_group in actions.secondary_groups %}
                                     <button id="btnGroupDrop3" type="button"
-                                            class="btn btn-block mb-3 btn-md btn-secondary dropdown-toggle"
+                                            class="btn btn-block mb-3 btn-md btn-outline-secondary dropdown-toggle"
                                             data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
                                         {% if action_group.icon %}
@@ -457,7 +457,7 @@
                                         {% endif %}
                                         <span>{{ action_group.name }}</span>
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                                    <div class="dropdown-menu dropdown-menu-left shadow" aria-labelledby="btnGroupDrop3">
                                         {% for group_action in action_group.actions %}
                                             {% with action_name=group_action.action_name %}
                                                 <a id="call_action_{{ group_action.id }}"

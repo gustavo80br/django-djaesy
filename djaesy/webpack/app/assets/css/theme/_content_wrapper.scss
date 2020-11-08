@@ -192,6 +192,11 @@
     .content-wrapper {
         margin-left: 0 !important;
         margin-top: 0 !important;
+        height: 100vh;
+    }
+
+    .main-iframe {
+        height: 100vh;
     }
 
     #control-sidebar-toggle {
@@ -201,6 +206,23 @@
     #fullscreen-toggle {
         display: block;
     }
+
+    #fullscreen-toggle:hover {
+        opacity: 1
+    }
+
+}
+
+#fullscreen-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: .2;
+    display: none;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
 }
 
 

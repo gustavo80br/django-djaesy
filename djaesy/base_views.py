@@ -191,7 +191,6 @@ class BaseView(View):
 
     # Footer
     option_footer = False
-    option_footer_height = '80px'
 
     # Control sidebar
     option_sidebar = True
@@ -927,7 +926,7 @@ class CreateView(DjangoCreateView, BaseFormModelView):
     update_url = ''
 
     option_sidebar = False
-    option_footer = True
+    option_footer = False
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -986,7 +985,7 @@ class UpdateView(DjangoUpdateView, BaseFormModelView):
     action_title = _('Editar')
 
     option_sidebar = False
-    option_footer = True
+    option_footer = False
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

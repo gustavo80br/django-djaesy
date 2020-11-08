@@ -1,7 +1,7 @@
 
 
 .control-sidebar-open #control-sidebar-toggle {
-    right: calc(var(--control-open-size) - 6px)
+    right: var(--control-open-size);
 }
 
 .control-sidebar-open .control-sidebar,
@@ -13,9 +13,8 @@
 
 .fixed .control-sidebar {
     position: fixed;
-    height: calc(100vh - var(--top-navbar-height) - var(--top-tabs-height));
+    height: 100vh;
     overflow-y: auto;
-    padding: 24px;
     z-index: 910;
     margin-top: var(--top-navbar-height);
     background-color: #FFF;
@@ -73,18 +72,19 @@
 }
 
 #control-sidebar-toggle {
-    top: calc(var(--top-navbar-height) + 9px);
-    right: -6px;
+    top: calc(var(--top-navbar-height) + 0.7rem);
+    right: 0;
+    margin-right: 0.75rem;
     position: fixed;
     -webkit-transition: right .3s ease-in-out;
     -o-transition: right .3s ease-in-out;
     transition: right .3s ease-in-out;
-    z-index: 900;
-    opacity: 0.7;
-    background-color: var(--main-color);
-    color: #FFF;
-    font-size: 1.25rem;
-    padding: 0.6rem 1rem;
+    z-index: 9;
+    //opacity: 0.7;
+    //background-color: var(--main-color);
+    //color: #FFF;
+    //font-size: 1.25rem;
+    //padding: 0.6rem 1rem;
 }
 
 #control-sidebar-toggle:hover {
@@ -187,8 +187,7 @@
 .control-sidebar,
 .control-sidebar+.control-sidebar-bg {
     background: var(--control-bar-bg-color);
-    -webkit-box-shadow: inset 3px 0 2px 0 rgba(0, 0, 0, .1);
-    box-shadow: inset 3px 0 2px 0 rgba(0, 0, 0, .1)
+    box-shadow: inset 2px 0 0px 0 rgba(0, 0, 0, 0.1);
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs {

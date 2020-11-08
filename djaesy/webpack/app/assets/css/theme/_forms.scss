@@ -1,0 +1,33 @@
+label {
+    margin-bottom: 0 !important;
+}
+
+.form-control {
+    height: calc(1.5em + 0.5rem + 2px) !important;
+    padding: 0.25rem 0.6rem !important;
+    border-radius: 0.2rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+.custom-control-label::after {
+    width: 1.1rem;
+    height: 1.1rem;
+}
