@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.urls import resolve
 
-from views import DjaesyTabViewWrapper
+from djaesy.views import DjaesyTabViewWrapper
 
 
 class ChangePassword:
