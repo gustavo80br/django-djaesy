@@ -3,7 +3,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
 from djaesy.menu import Menu, MenuItem
-from djaesy.models import Role, User
 
 if settings.DJAESY_USER_MENU:
 
@@ -17,3 +16,19 @@ if settings.DJAESY_USER_MENU:
             ]
         ),
     )
+
+
+from menus.app import AppMenu
+
+AppMenu.app({
+    "main": {
+        "users": {
+            "add_user": {
+
+            },
+            "remove_user": {
+
+            }
+        }
+    },
+})

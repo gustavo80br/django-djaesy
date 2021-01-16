@@ -1,6 +1,7 @@
 import copy
 
 from django.conf import settings
+from django.core.exceptions import ImproperlyConfigured
 from django.urls import reverse, NoReverseMatch
 from django.utils.text import slugify
 
@@ -13,7 +14,7 @@ except ImportError:
     apps = False
 
 
-class Menu(object):
+class AppMenu(object):
     """
     Menu is a class that generates menus
 
@@ -35,12 +36,51 @@ class Menu(object):
     sorted = {}
     loaded = False
 
+    menu_structure = {}
+    first_level = {}
+    second_level = {}
+    third_level = {}
+
+    @classmethod
+    def app(cls, tree, level=1):
+
+        def check_menu_existence(menu_key, level):
+            menu_by_level = {
+                1: cls.first_level,
+                2: cls.second_level,
+                3: cls.third_level
+            }
+            menu = menu_by_level[level]
+            if not menu_key in menu.keys():
+                raise ImproperlyConfigured(f'Menu {menu_key} do not exists. Setup it first before using the key')
+            else:
+                return menu[menu_key]
+
+        if not isinstance(tree, dict):
+            raise ImproperlyConfigured('Must be an Dict instance')
+
+        if not isinstance(level, int) or level > 3 or level < 1:
+            raise ImproperlyConfigured('Level must be and int between 1, 2 or 3')
+
+        for menu_key, content in tree.items():
+            actual_node = None
+            if isinstance(content, dict):
+                actual_node = check_menu_existence(menu_key, level)
+                actual_node.add(content)
+            else:
+                pass
+
+
+
+
+
+
     @classmethod
     def add_item(c, name, item):
         """
         add_item adds MenuItems to the menu identified by 'name'
         """
-        if isinstance(item, MenuItem):
+        if isinstance(item, MenuTreeItem):
             if name not in c.items:
                 c.items[name] = []
             c.items[name].append(item)
@@ -145,7 +185,7 @@ class Menu(object):
         return visible
 
 
-class MenuItem(object):
+class MenuTreeItem(object):
     """
     MenuItem represents an item in a menu, possibly one that has a sub-menu (children).
     """
