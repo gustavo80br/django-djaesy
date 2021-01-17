@@ -14,7 +14,7 @@ required_apps = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis',
+    # 'django.contrib.gis',
     'django.contrib.contenttypes',
     'rest_framework',
     'rest_framework.authtoken',
