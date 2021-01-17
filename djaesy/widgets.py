@@ -1,11 +1,11 @@
-import json
-from venv import logger
+# import json
+# from venv import logger
 
-from django.contrib.gis.geos import GEOSGeometry, GEOSException
+# from django.contrib.gis.geos import GEOSGeometry, GEOSException
 from django.forms.widgets import Input
 from leaflet.forms.widgets import LeafletWidget
 
-from djaesy.geos import circle_maker
+# from djaesy.geos import circle_maker
 from djaesy.autocomplete import ModelSelect2Multiple
 
 
@@ -93,67 +93,67 @@ class MultiSelectBox(ModelSelect2Multiple):
     autocomplete_function = 'your-autocomplete-function'
 
 
-class SinglePolygonDraw(LeafletWidget):
-
-    geometry_field_class = 'SinglePolygonGeometryField'
-
-    # settings_overrides = {
-    #     'TILES': [
-    #         (
-    #             'Ruas',
-    #             'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    #             {
-    #                 'attribution': 'OpenStreetMap'
-    #             }
-    #         ),
-    #         (
-    #             'Satelite',
-    #             'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    #             {
-    #                 'attribution': 'ArcGIS Online',
-    #                 'maxZoom': 17
-    #             }
-    #         ),
-    #         (
-    #             'Relevo',
-    #             'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
-    #             {
-    #                 'attribution': 'ArcGIS Online'
-    #             }
-    #         ),
-    #
-    #     ],
-    #     'ATTRIBUTION_PREFIX': '<a href="https://i3track.com.br">i3Track ®</a>',
-    #     'DEFAULT_CENTER': (-22.2864684, -45.8961274),
-    #     'DEFAULT_ZOOM': 10,
-    #     'MIN_ZOOM': 8,
-    #     'MAX_ZOOM': 17,
-    # }
-
-    def __init__(self, settings={}, *args, **kwargs):
-        if settings:
-            self.settings_overrides = settings
-        super().__init__(*args, **kwargs)
-
-    def deserialize(self, value):
-
-        values = json.loads(value)
-        geometry = values.get('geometry', None)
-        properties = values.get('properties', {})
-
-        if not geometry:
-            return None
-        else:
-            geo_type = geometry.get('type', None)
-            if not geo_type:
-                return None
-        try:
-            if 'radius' in properties and geo_type == 'Point':
-                return circle_maker(geometry['coordinates'], properties['radius'])
-            else:
-                value = json.dumps(geometry)
-                return GEOSGeometry(value)
-        except (GEOSException, ValueError, TypeError) as err:
-            logger.error("Error creating geometry from value '%s' (%s)", value, err)
-        return None
+# class SinglePolygonDraw(LeafletWidget):
+#
+#     geometry_field_class = 'SinglePolygonGeometryField'
+#
+#     # settings_overrides = {
+#     #     'TILES': [
+#     #         (
+#     #             'Ruas',
+#     #             'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+#     #             {
+#     #                 'attribution': 'OpenStreetMap'
+#     #             }
+#     #         ),
+#     #         (
+#     #             'Satelite',
+#     #             'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+#     #             {
+#     #                 'attribution': 'ArcGIS Online',
+#     #                 'maxZoom': 17
+#     #             }
+#     #         ),
+#     #         (
+#     #             'Relevo',
+#     #             'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+#     #             {
+#     #                 'attribution': 'ArcGIS Online'
+#     #             }
+#     #         ),
+#     #
+#     #     ],
+#     #     'ATTRIBUTION_PREFIX': '<a href="https://i3track.com.br">i3Track ®</a>',
+#     #     'DEFAULT_CENTER': (-22.2864684, -45.8961274),
+#     #     'DEFAULT_ZOOM': 10,
+#     #     'MIN_ZOOM': 8,
+#     #     'MAX_ZOOM': 17,
+#     # }
+#
+#     def __init__(self, settings={}, *args, **kwargs):
+#         if settings:
+#             self.settings_overrides = settings
+#         super().__init__(*args, **kwargs)
+#
+#     def deserialize(self, value):
+#
+#         values = json.loads(value)
+#         geometry = values.get('geometry', None)
+#         properties = values.get('properties', {})
+#
+#         if not geometry:
+#             return None
+#         else:
+#             geo_type = geometry.get('type', None)
+#             if not geo_type:
+#                 return None
+#         try:
+#             if 'radius' in properties and geo_type == 'Point':
+#                 return circle_maker(geometry['coordinates'], properties['radius'])
+#             else:
+#                 value = json.dumps(geometry)
+#                 return GEOSGeometry(value)
+#         except (GEOSException, ValueError, TypeError) as err:
+#             logger.error("Error creating geometry from value '%s' (%s)", value, err)
+#         return None
 
