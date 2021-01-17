@@ -13,7 +13,7 @@ from crispy_forms.helper import FormHelper
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import permission_required
-from django.contrib.gis.forms import PointField
+# from django.contrib.gis.forms import PointField
 from django.core.exceptions import ImproperlyConfigured
 from django.core.paginator import InvalidPage
 from django.db.models import QuerySet, Count, Value, CharField
