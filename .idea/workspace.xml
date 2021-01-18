@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a0d3d8a-711e-49d5-979f-eb1e090fe03e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/base_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/base_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,10 +196,10 @@
     <state width="1899" height="173" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
     <state x="212" y="-915" key="SettingsEditor" timestamp="1610829154825" />
     <state x="212" y="-915" key="SettingsEditor/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state x="-821" y="6" width="712" height="728" key="find.popup" timestamp="1610922208894">
+    <state x="-821" y="6" width="712" height="728" key="find.popup" timestamp="1610936461791">
       <screen x="-1920" y="-174" width="1920" height="1040" />
     </state>
-    <state x="-821" y="6" width="712" height="728" key="find.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1610922208894" />
+    <state x="-821" y="6" width="712" height="728" key="find.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1610936461791" />
     <state x="299" y="-1080" width="823" height="1040" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@0.0.1366.728" timestamp="1610829154825" />
   </component>
