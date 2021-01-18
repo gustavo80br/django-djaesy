@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LogoutView
 from django.urls import path, include, re_path
 
-from djaesy.base_views import MapListView, BaseView
+from djaesy.base_views import BaseView
 from djaesy.login_views import Login, ResetPassword, ResetPasswordDone, ResetPasswordConfirm, \
     ResetPasswordComplete
 from djaesy.utils import load_view
@@ -28,7 +28,7 @@ urlpatterns = [
 
     re_path('app/(?P<path>.*)$', DjaesyTabViewWrapper.as_view(), name='djaesy_tabview'),
 
-    path('map/test', MapListView.as_view(), name='map_test'),
+    # path('map/test', MapListView.as_view(), name='map_test'),
 
     path('login/', Login.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
