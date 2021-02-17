@@ -73,8 +73,8 @@ settings.DJAESY_USER_TYPES = getattr(
 settings.DJAESY_DEFAULT_USER_TYPE = getattr(settings, 'DJAESY_DEFAULT_USER_TYPE', 'operator')
 
 settings.LOGIN_URL = '/login'
-settings.LOGOUT_REDIRECT_URL = '/'
-settings.LOGIN_REDIRECT_URL = '/'
+settings.LOGOUT_REDIRECT_URL = getattr(settings, 'LOGOUT_REDIRECT_URL', '/app/')
+settings.LOGIN_REDIRECT_URL = getattr(settings, 'LOGIN_REDIRECT_URL', '/app/')
 
 settings.APPLICATION_PAGE_TITLE_PREFIX = 'DJAESY '
 

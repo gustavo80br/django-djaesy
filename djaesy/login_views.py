@@ -38,11 +38,11 @@ class Login(LoginView):
 
     authentication_form = LoginForm
 
-    def get(self, request, **kwargs):
-        if False and request.user.is_authenticated:
-            return redirect(reverse('djaesy_main'))
-        else:
-            return super().get(self, request, **kwargs)
+    # def get(self, request, **kwargs):
+    #     if False and request.user.is_authenticated:
+    #         return redirect(reverse('djaesy_main'))
+    #     else:
+    #         return super().get(self, request, **kwargs)
 
 
 class ResetPassword(PasswordResetView):

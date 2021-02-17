@@ -24,14 +24,14 @@ if isinstance(user_update_view, str):
 
 urlpatterns = [
 
-    path('', login_required(BaseView.as_view()), name='djaesy_main'),
+    # path('', login_required(BaseView.as_view()), name='djaesy_main'),
 
-    re_path('app/(?P<path>.*)$', DjaesyTabViewWrapper.as_view(), name='djaesy_tabview'),
+    re_path('app/(?P<path>.*)$', login_required(DjaesyTabViewWrapper.as_view()), name='djaesy_tabview'),
 
     # path('map/test', MapListView.as_view(), name='map_test'),
 
     path('login/', Login.as_view(), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout'),
+    path('logout/', login_required(LogoutView.as_view()), name='logout'),
     path('login/reset-password', ResetPassword.as_view(), name='login_reset_password'),
     path('login/reset-password/success', ResetPasswordDone.as_view(), name='password_reset_done'),
     path('login/reset-password-confirm/<uidb64>/<token>/', ResetPasswordConfirm.as_view(), name='password_reset_confirm'),

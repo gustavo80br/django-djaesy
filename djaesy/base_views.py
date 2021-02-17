@@ -749,12 +749,12 @@ class BaseListView(FilterView, BaseModelView):
                 model = self.model
                 fields = self.filter_by
                 filter_overrides = {
-                    PointField: {
-                        'filter_class': django_filters.CharFilter,
-                        'extra': lambda f: {
-                            'lookup_expr': 'dwithin',
-                        },
-                    },
+                    # PointField: {
+                    #     'filter_class': django_filters.CharFilter,
+                    #     'extra': lambda f: {
+                    #         'lookup_expr': 'dwithin',
+                    #     },
+                    # },
                 }
 
         for field_filter in self.declared_filters:
