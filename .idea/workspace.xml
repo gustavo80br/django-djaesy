@@ -21,7 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7a0d3d8a-711e-49d5-979f-eb1e090fe03e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/static/djaesy.js" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/static/djaesy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/templates/djaesy/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templates/djaesy/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_content_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_content_wrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_top_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_top_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/djaesy/static/djaesy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gemtech-webserver" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -165,10 +173,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1007" y="186" key="FileChooserDialogImpl" timestamp="1613560913080">
-      <screen x="-1920" y="-174" width="1920" height="1040" />
+    <state x="284" y="124" key="FileChooserDialogImpl" timestamp="1614775430930">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-1007" y="186" key="FileChooserDialogImpl/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1613560913080" />
+    <state x="284" y="124" key="FileChooserDialogImpl/0.0.1366.728/-1920.-174.1920.1040@0.0.1366.728" timestamp="1614775430930" />
     <state x="490" y="-805" key="FileChooserDialogImpl/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
     <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728/-249.-1080.1920.1040@0.0.1366.728" timestamp="1610829154825" />
     <state width="1899" height="173" key="GridCell.Tab.0.bottom" timestamp="1610829154825" />
@@ -195,14 +204,22 @@
     <state width="1899" height="173" key="GridCell.Tab.1.right" timestamp="1610829154825" />
     <state width="1899" height="173" key="GridCell.Tab.1.right/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
     <state width="1899" height="173" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state x="212" y="-915" key="SettingsEditor" timestamp="1610829154825" />
-    <state x="212" y="-915" key="SettingsEditor/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state x="-821" y="6" width="765" height="728" key="find.popup" timestamp="1613576063202">
+    <state x="-1130" y="48" key="RollbackChangesDialog" timestamp="1618675334594">
       <screen x="-1920" y="-174" width="1920" height="1040" />
     </state>
-    <state x="-821" y="6" width="765" height="728" key="find.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1613576063202" />
+    <state x="-1130" y="48" key="RollbackChangesDialog/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618675334594" />
+    <state x="212" y="-915" key="SettingsEditor" timestamp="1610829154825" />
+    <state x="212" y="-915" key="SettingsEditor/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
+    <state x="-821" y="6" width="765" height="728" key="find.popup" timestamp="1618786373835">
+      <screen x="-1920" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="-821" y="6" width="765" height="728" key="find.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618786373835" />
     <state x="299" y="-1080" width="823" height="1040" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@0.0.1366.728" timestamp="1610829154825" />
+    <state x="-1297" y="51" width="672" height="678" key="search.everywhere.popup" timestamp="1618766283424">
+      <screen x="-1920" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="51" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618766283424" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,18 +1,93 @@
 
 :root {
 
+    // MAIN TOPICS
+
+    --base-background: #00FF00;
     --rem-reference: 16px;
+
+
+    // COLORS
 
     --text-color: #585E66;
     --link-color: #3281f2;
-    --header-color: #000;
+
+    --blue: #3281f2;
+    --indigo: #3F51B5;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #f35956;
+    --orange: #fd7e14;
+    --yellow: #fbbc05;
+    --green: #32cb89;
+    --teal: #00c2b2;
+    --cyan: #38b3d6;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #212529;
+    --primary: #3281f2;
+    --secondary: #6c757d;
+    --success: #32cb89;
+    --info: #38b3d6;
+    --warning: #fbbc05;
+    --danger: #f35956;
+    --light: #f8f9fa;
+    --dark: #212529;
+
+    // FONTS
+
+    --font-family-sans-serif: "Roboto", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+    // BREAKPOINTS
 
     --bp-sm-screen: 576px;
     --bp-md-screen: 768px;
     --bp-lg-screen: 992px;
     --bp-xl-screen: 1200px;
 
-    --bg-color: rgb(255, 255, 255);
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+
+    // MENU SIDE BAR
+
+
+    // TOP MENU
+
+    --top-navbar-height: 50px;
+    --top-navbar-bg-color: #0000FF;
+    --top-navbar-text-color: #6b6b6b;
+    --top-navbar-text-hover: #FFC704;
+    --top-navbar-border-highlight-size: 2px;
+    --top-navbar-border-highlight-color: #FFC704;
+
+
+    // TAB BAR
+
+    --tabs-bg-color: #FF0000;
+    --top-tabs-height: 38px;
+    --border-radius: 4px;
+
+
+    // MAIN CONTENT
+
+    --content-left-margin: 16px;
+    --content-right-margin: 16px;
+    --content-top-margin: 16px;
+    --content-bottom-margin: 16px;
+
+
+    // SIDE BAR
+
+
+    // FOOTER
+
+    --header-color: #000;
 
     --main-color-darker: #004c8a;
     --main-color-dark: #0076d6;
@@ -47,16 +122,9 @@
 
     --sidebar-z-index: 1005;
 
-    --top-navbar-height: 50px;
-    --top-navbar-bg-color: #fff;
-    --top-navbar-text-color: #6b6b6b;
-    --top-navbar-text-hover: #FFC704;
-    --top-navbar-border-highlight-size: 2px;
-    --top-navbar-border-highlight-color: #FFC704;
-
-    --top-tabs-height: 38px;
     --tab-header-active-color: #FFF;
-    --top-header-background-color: #f8f9fc;
+
+
 
     --list-header-height: 54px;
 
@@ -69,34 +137,6 @@
     --footer-bg-color: #FFF;
     --footer-height: 4rem;
 
-    --blue: #3281f2;
-    --indigo: #3F51B5;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #f35956;
-    --orange: #fd7e14;
-    --yellow: #fbbc05;
-    --green: #32cb89;
-    --teal: #00c2b2;
-    --cyan: #38b3d6;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #212529;
-    --primary: #3281f2;
-    --secondary: #6c757d;
-    --success: #32cb89;
-    --info: #38b3d6;
-    --warning: #fbbc05;
-    --danger: #f35956;
-    --light: #f8f9fa;
-    --dark: #212529;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: "Roboto", sans-serif;
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
 :root {

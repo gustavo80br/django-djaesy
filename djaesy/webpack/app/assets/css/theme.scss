@@ -122,7 +122,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-color) !important;
+    // background-color: var(--base-background) !important;
     overflow: hidden;
     color: var(--text-color);
 }
@@ -1056,7 +1056,7 @@ div.dt-button-info h2 {
 .wrapper {
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 

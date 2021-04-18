@@ -4,8 +4,9 @@
 
 .main-iframe {
     width: 100%;
-    height: calc(100vh - var(--top-tabs-height) - var(--top-navbar-height));
+    height: calc(100vh - var(--top-tabs-height) - var(--top-navbar-height) - var(--content-top-margin) - var(--content-bottom-margin));
     border: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
 }
 
 #main-tabs .nav-item:first-child .nav-link {
@@ -14,25 +15,28 @@
 
 #main-tabs {
 
-    height: var(--top-tabs-height);
+    height: calc(var(--top-tabs-height) + var(--content-top-margin));
     position: fixed;
     right: 0;
     top: var(--top-navbar-height);
     left: 0;
     z-index: 1002;
-    max-height: 100px;
+    // max-height: 100px;
     padding-left: 0;
-    border-bottom: 1px solid #dee2e6;
-    background-color: var(--top-header-background-color);
+    // border-bottom: 1px solid #dee2e6;
+
+    // background-color: var(--base-background);
+    background: var(--tabs-bg-color);
 
     .nav-link {
-        border-radius: 0;
+        border-radius: var(--border-radius) var(--border-radius) 0px 0px;
         padding: 0.3rem 1rem;
+        height: var(--top-tabs-height);
     }
 
     .navbar-header {
 
-        height: var(--top-tabs-height);
+        // height: calc(var(--top-tabs-height) + var(--content-top-margin));
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -42,10 +46,15 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+
         margin: 0 0 0 var(--sidebar-open-size);
-        //background-color: var(--top-navbar-bg-color);
+        margin-top: var(--content-top-margin);
+
         box-shadow: none;
-        padding: 2px 0 0;
+
+        padding: 0;
+        //padding-top: var(--content-top-margin);
+
         transition: margin-left .3s ease-in-out;
         border: none;
         min-height: var(--top-tabs-height);
@@ -74,7 +83,7 @@
 
 #main-tabs {
     .navbar-header {
-        margin-left: var(--sidebar-open-size);
+        margin-left: calc(var(--sidebar-open-size) + var(--content-left-margin));
     }
 }
 
@@ -82,7 +91,7 @@
 
 .sidebar-collapse #main-tabs {
     .navbar-header {
-        margin-left: var(--sidebar-collapse-size);
+        margin-left: calc(var(--sidebar-collapse-size) + var(--content-left-margin));
     }
 }
 
