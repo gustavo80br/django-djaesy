@@ -90,7 +90,7 @@ def append_item_to_list(position_re, append_str, work_file, adjust=2):
 
 def install_djaesy(project_path):
     if not Path(os.path.join(project_path, 'requirements.txt')).exists():
-        subprocess.call(['pip', 'install', '--no-cache-dir', '-U', djaesy_package], shell=True)
+        subprocess.call(['pip', 'install', '--no-cache-dir', '-U', '--user', djaesy_package], shell=True)
         requirements = open(os.path.join(project_path, 'requirements.txt'), "w")
         requirements.write(djaesy_package)
         requirements.close()
