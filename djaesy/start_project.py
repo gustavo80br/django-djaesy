@@ -89,8 +89,9 @@ def append_item_to_list(position_re, append_str, work_file, adjust=2):
 
 
 def install_djaesy(project_path):
+    pip = os.path.join(project_path, 'venv', 'Scripts', 'pip')
     if not Path(os.path.join(project_path, 'requirements.txt')).exists():
-        subprocess.call(['pip', 'install', '--no-cache-dir', '-U', '--user', djaesy_package], shell=True)
+        subprocess.call([pip, 'install', '--no-cache-dir', djaesy_package], shell=True)
         requirements = open(os.path.join(project_path, 'requirements.txt'), "w")
         requirements.write(djaesy_package)
         requirements.close()
@@ -133,16 +134,10 @@ def main(args=None):
         install_virtualenv(project_pwd, start_pwd)
         print("Creating a .gitignore file")
         create_gitignore(project_pwd)
-        print("Going into Venv environment...")
-        call_in_venv_step(project, project_pwd, src_folder, project)
-    else:
-        path = args.path
-        src_path = args.src_folder
-        main_path = args.main_folder
         print("Installing Djaesy into venv")
-        install_djaesy(path)
+        install_djaesy(project_pwd)
         print("Setting up Djaesy for the project")
-        setup_djaesy(path, src_path, main_path)
+        setup_djaesy(project_pwd, src_folder, project)
 
 
 if __name__ == '__main__':
