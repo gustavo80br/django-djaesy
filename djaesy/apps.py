@@ -4,7 +4,7 @@ from django.apps import AppConfig
 class AppPanelConfig(AppConfig):
     name = 'djaesy'
 
-    def ready(self):
+    def __init__(self, *args, **kwargs):
 
         from django.conf import settings
         from django.utils.translation import ugettext_lazy as _
@@ -96,4 +96,6 @@ class AppPanelConfig(AppConfig):
                 },
             }
         }
+
+        super().__init__(*args, **kwargs)
 
