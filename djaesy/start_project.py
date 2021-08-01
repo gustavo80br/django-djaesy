@@ -104,7 +104,7 @@ def setup_djaesy(project_path, src_folder, main_folder):
     append_item_to_list(r"urlpatterns = \[[\s\w\('\/,\.\)]*\]", "\n    path('', include('djaesy.urls')),", f"{os.path.join(project_path, src_folder, main_folder, 'urls.py')}")
 
 
-def parse_arguments():
+def parse_arguments(args=None):
 
     parser = argparse.ArgumentParser()
 
@@ -114,13 +114,13 @@ def parse_arguments():
     parser.add_argument("--src-folder")
     parser.add_argument("--main-folder")
 
-    arguments, other_arguments = parser.parse_known_args()
+    arguments, other_arguments = parser.parse_known_args(args)
     return arguments, other_arguments
 
 
-def main():
+def main(args=None):
 
-    args, other_args = parse_arguments()
+    args, other_args = parse_arguments(args)
     project = args.project
 
     start_pwd = os.getcwd()
