@@ -118,7 +118,7 @@ def parse_arguments():
     return arguments, other_arguments
 
 
-if __name__ == '__main__':
+def main():
 
     args, other_args = parse_arguments()
     project = args.project
@@ -143,3 +143,7 @@ if __name__ == '__main__':
         install_djaesy(path)
         print("Setting up Djaesy for the project")
         setup_djaesy(path, src_path, main_path)
+
+
+if __name__ == '__main__':
+    main()
