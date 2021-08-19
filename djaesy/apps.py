@@ -1,3 +1,5 @@
+import os
+
 from django.apps import AppConfig
 
 
@@ -96,6 +98,8 @@ class AppPanelConfig(AppConfig):
                 },
             }
         }
+
+        settings.STATIC_ROOT = os.path.join(settings.BASE_DIR, '../static/')
 
         super().__init__(*args, **kwargs)
 
