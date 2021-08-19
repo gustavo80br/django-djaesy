@@ -29,7 +29,7 @@ class AppPanelConfig(AppConfig):
             'crispy_forms',
             'dal',
             'dal_select2',
-            'leaflet',
+            # 'leaflet',
             'django_filters',
             'easy_thumbnails',
             'image_cropping',
