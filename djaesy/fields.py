@@ -1,5 +1,5 @@
 from django.forms.fields import DateTimeField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 import re
 
 from django.core.validators import RegexValidator

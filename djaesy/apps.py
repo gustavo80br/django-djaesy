@@ -9,7 +9,7 @@ class AppPanelConfig(AppConfig):
     def __init__(self, *args, **kwargs):
 
         from django.conf import settings
-        from django.utils.translation import ugettext_lazy as _
+        from django.utils.translation import gettext_lazy as _
 
         from djaesy.layouts import USER_CREATE_EDIT_LAYOUT
 

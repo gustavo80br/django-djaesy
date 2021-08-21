@@ -1,7 +1,7 @@
 from crispy_forms.layout import Div, Layout, HTML
 from crum import get_current_user
 from django.shortcuts import render
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 import django_filters
 from django.conf import settings
