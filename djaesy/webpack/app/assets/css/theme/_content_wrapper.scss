@@ -9,13 +9,15 @@
 .content-wrapper {
 
     overflow: auto;
+    box-shadow: var(--tab-card-shadow);
+    border-radius: var(--border-radius);
 
     padding-top: 0;
     margin-top: calc(var(--top-navbar-height) + var(--top-tabs-height) + var(--content-top-margin) + 0px);
     margin-bottom:  var(--content-bottom-margin);
 
-    height: calc(100vh - var(--top-navbar-height) - var(--top-tabs-height) - var(--content-top-margin));
-    min-height: calc(100vh - var(--top-navbar-height) - var(--top-tabs-height) - var(--content-top-margin)) !important;
+    height: calc(100vh - var(--top-navbar-height) - var(--top-tabs-height) - var(--content-top-margin) - var(--content-bottom-margin));
+    min-height: calc(100vh - var(--top-navbar-height) - var(--top-tabs-height) - var(--content-top-margin) - var(--content-bottom-margin)) !important;
 
     -webkit-transition: -webkit-transform .3s ease-in-out, margin .3s ease-in-out;
     -moz-transition: -moz-transform .3s ease-in-out, margin .3s ease-in-out;

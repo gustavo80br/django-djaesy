@@ -1,8 +1,8 @@
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
-from django.conf import settings
-
-from djaesy.menu import Menu, MenuItem
+from djaesy.menus.engine import Menu, MenuItem
+from djaesy.menus_pkg.app import AppMenu
 
 if settings.DJAESY_USER_MENU:
 
@@ -16,9 +16,6 @@ if settings.DJAESY_USER_MENU:
             ]
         ),
     )
-
-
-from menus.app import AppMenu
 
 AppMenu.app({
     "main": {

@@ -4,7 +4,7 @@ from django.conf import settings
 from django.urls import reverse, NoReverseMatch
 from django.utils.text import slugify
 
-from djaesy.permission import get_permission
+from djaesy.security.permission import get_permission
 from djaesy.utils import get_view_from_url
 
 try:

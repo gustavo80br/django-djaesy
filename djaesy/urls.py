@@ -4,12 +4,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LogoutView
 from django.urls import path, include, re_path
 
-from djaesy.base_views import BaseView
-from djaesy.login_views import Login, ResetPassword, ResetPasswordDone, ResetPasswordConfirm, \
+from djaesy.security.login_views import Login, ResetPassword, ResetPasswordDone, ResetPasswordConfirm, \
     ResetPasswordComplete
 from djaesy.utils import load_view
-from djaesy.views import UserList, UserCreate, UserUpdate, UserChangePassword, UserChangePasswordDone, \
-    RoleList, RoleCreate, RoleUpdate, SetLanguage, DjaesyTabViewWrapper
+from djaesy.security.views import UserList, UserCreate, UserUpdate, UserChangePassword, UserChangePasswordDone, \
+    RoleList, RoleCreate, RoleUpdate
+from djaesy.language.views import SetLanguage
+from djaesy.tabs.views import DjaesyTabViewWrapper
 
 user_list_view = getattr(settings, 'DJAESY_USER_LIST_VIEW', UserList)
 user_create_view = getattr(settings, 'DJAESY_USER_CREATE_VIEW', UserCreate)

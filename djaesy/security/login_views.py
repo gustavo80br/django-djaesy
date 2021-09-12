@@ -5,10 +5,9 @@ from crispy_forms.layout import Layout, Div, Field, Submit
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm, SetPasswordForm, PasswordChangeForm
 from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, \
     PasswordResetCompleteView, PasswordChangeDoneView, PasswordChangeView
-from django.shortcuts import redirect
-from django.urls import reverse
 
-from djaesy.base_views import BaseView, BaseFormModelView
+from djaesy.core.views.base import BaseView
+from djaesy.core.views.form import BaseFormModelView
 
 
 class Login(LoginView):

@@ -5,8 +5,9 @@ from django.core.exceptions import ImproperlyConfigured
 from django.urls import reverse, NoReverseMatch
 from django.utils.text import slugify
 
-from djaesy.permission import get_permission
+from djaesy.security.permission import get_permission
 from djaesy.utils import get_view_from_url
+from menus.engine import Menu, MenuItem
 
 try:
     from django.apps import apps

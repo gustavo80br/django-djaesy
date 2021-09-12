@@ -1,6 +1,6 @@
 # Create your tests here.
 
-from djaesy.menus.app import AppMenu
+from djaesy.menus_pkg.app import AppMenu
 
 # PROJECT MENU
 

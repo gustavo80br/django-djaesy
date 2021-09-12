@@ -1,7 +1,8 @@
 from django.utils.translation import ugettext_lazy as _
 
-from app_panel.menu import menu_combo
+from menus.engine import menu_combo
 from sandbox.views import TabBView, TabAView
+
 
 # menu_combo([
 #     TabBView,

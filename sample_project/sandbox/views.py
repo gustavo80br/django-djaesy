@@ -5,9 +5,11 @@ from django.utils.decorators import method_decorator
 from django.utils.safestring import SafeString
 from django.views.generic.base import View
 
-from djaesy.base_views import BaseView, CrudCombo, TableListView
 # from djaesy.mongo import Mongo
+from djaesy.core.views.base import BaseView
 from sandbox.models import TabB, TabA
+from djaesy.core.views.crud import CrudCombo
+from djaesy.core.views.table import TableListView
 
 
 def index(request):

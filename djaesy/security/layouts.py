@@ -1,4 +1,4 @@
-from crispy_forms.layout import Layout, Fieldset, Div
+from crispy_forms.layout import Layout, Div
 
 USER_CREATE_EDIT_LAYOUT = Layout(
     Div(

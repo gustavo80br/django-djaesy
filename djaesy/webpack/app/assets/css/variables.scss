@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
 
     // MAIN TOPICS
 
-    --base-background: #00FF00;
+    --base-background: #F1F2F7;
     --rem-reference: 16px;
 
+    // FONTS
 
-    // COLORS
+    --font-family: -apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Ubuntu,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif !important;
+    --font-size: 14px !important;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 
     --text-color: #585E66;
     --link-color: #3281f2;
+
+    // COLORS
 
     --blue: #3281f2;
     --indigo: #3F51B5;
@@ -34,12 +40,6 @@
     --light: #f8f9fa;
     --dark: #212529;
 
-    // FONTS
-
-    --font-family-sans-serif: "Roboto", sans-serif;
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-
     // BREAKPOINTS
 
     --bp-sm-screen: 576px;
@@ -60,7 +60,7 @@
     // TOP MENU
 
     --top-navbar-height: 50px;
-    --top-navbar-bg-color: #0000FF;
+    --top-navbar-bg-color: #F1F2F7;
     --top-navbar-text-color: #6b6b6b;
     --top-navbar-text-hover: #FFC704;
     --top-navbar-border-highlight-size: 2px;
@@ -69,16 +69,20 @@
 
     // TAB BAR
 
-    --tabs-bg-color: #FF0000;
-    --top-tabs-height: 38px;
-    --border-radius: 4px;
+    --tabs-margin-left: 1rem;
+    --tabs-bg-color: #F1F2F7;
+    --top-tabs-height: 32px;
+    --border-radius: 6px;
+
+    --tab-card-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    --tab-shadow: 1px 0px 2px rgba(0, 0, 0, 0.1);
 
 
     // MAIN CONTENT
 
     --content-left-margin: 16px;
     --content-right-margin: 16px;
-    --content-top-margin: 16px;
+    --content-top-margin: 0px;
     --content-bottom-margin: 16px;
 
 

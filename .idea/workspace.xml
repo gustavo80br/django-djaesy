@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.32517758" />
+    <option name="FILE_MASK" value="*.py" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,16 +24,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a0d3d8a-711e-49d5-979f-eb1e090fe03e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/djaesy/actions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/actions/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/actions/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/autocomplete/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/autocomplete/combo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/autocomplete/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/core/views/table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/cropimage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/cropimage/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/language/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/language/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/menus/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/menus/engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/security/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/security/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/security/login_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/security/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/security/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/tables/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/tables/formatters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/tabs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djaesy/tabs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/django-djaesy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django-djaesy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/static/djaesy.js" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/static/djaesy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/autocomplete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/base_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/base_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/layouts.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/security/layouts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/login_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/menus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/menus_pkg/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/menus_pkg/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/migrations/0002_user_user_type.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/security/permission.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/static/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/templates/djaesy/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templates/djaesy/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templates/djaesy/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/table_formatters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/templatetags/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/templatetags/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_content_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_content_wrapper.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_top_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/theme/_top_navbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/webpack/app/assets/css/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djaesy/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/djaesy/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/sample_project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_project/sandbox/menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/sample_project/sandbox/menus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_project/sandbox/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sample_project/sandbox/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +114,27 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/djaesy/core/views/crud.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/decorators.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/core/views/list.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/core/views/model.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample_project/sandbox/menus.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample_project/sandbox/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/security/login_views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/tests.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/security/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/djaesy/menus_pkg/app.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1898" />
+    <option name="y" value="-107" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1jxzHubuMjZY61fFelAvwAWKd61" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -65,26 +145,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gemtech-webserver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/djaesy/security" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\Dev\django-djaesy\djaesy\webpack\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Dev\django-djaesy\djaesy\menus" />
-      <recent name="D:\Dev\django-djaesy\djaesy\webpack" />
-      <recent name="D:\Dev\django-djaesy\djaesy\webpack\app\assets\css" />
-      <recent name="D:\Dev\django-djaesy\djaesy\management" />
-      <recent name="D:\Dev\django-djaesy\djaesy\static\djaesy\login\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dev\django-djaesy\djaesy\security" />
       <recent name="D:\Dev\django-djaesy\djaesy\static\djaesy" />
       <recent name="D:\Dev\django-djaesy\djaesy" />
       <recent name="D:\Dev\django-djaesy\djaesy\templates\djaesy" />
       <recent name="D:\Dev\django-djaesy\djaesy\static\djaesy\login\images" />
-      <recent name="D:\Dev\django-djaesy\djaesy\static\djaesy\login" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dev\django-djaesy\djaesy\core" />
+      <recent name="D:\Dev\django-djaesy\djaesy\security" />
+      <recent name="D:\Dev\django-djaesy\djaesy\actions" />
+      <recent name="D:\Dev\django-djaesy\djaesy\menus" />
+      <recent name="D:\Dev\django-djaesy\djaesy\webpack" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,14 +218,50 @@
       <workItem from="1610827881808" duration="754000" />
       <workItem from="1610829030163" duration="106000" />
       <workItem from="1613560225099" duration="650000" />
+      <workItem from="1625711820836" duration="590000" />
+      <workItem from="1631403757741" duration="41000" />
+      <workItem from="1631403992084" duration="328000" />
+      <workItem from="1631404343389" duration="243000" />
+      <workItem from="1631404606984" duration="1121000" />
+      <workItem from="1631405754142" duration="7126000" />
+      <workItem from="1631459804210" duration="226000" />
+      <workItem from="1631460050403" duration="3439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355351000" />
+    <option name="totallyTimeSpent" value="355982000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1928" y="-182" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -172,69 +289,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="284" y="124" key="FileChooserDialogImpl" timestamp="1614775430930">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="-1007" y="186" key="FileChooserDialogImpl/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1613560913080" />
-    <state x="284" y="124" key="FileChooserDialogImpl/0.0.1366.728/-1920.-174.1920.1040@0.0.1366.728" timestamp="1614775430930" />
-    <state x="490" y="-805" key="FileChooserDialogImpl/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728/-249.-1080.1920.1040@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.bottom" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.center" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.center/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.left" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.left/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.right" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.right/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.bottom" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.bottom/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.center" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.center/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.left" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.left/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.right" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.right/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state width="1899" height="173" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610829154825" />
-    <state x="-1130" y="48" key="RollbackChangesDialog" timestamp="1618675334594">
-      <screen x="-1920" y="-174" width="1920" height="1040" />
-    </state>
-    <state x="-1130" y="48" key="RollbackChangesDialog/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618675334594" />
-    <state x="212" y="-915" key="SettingsEditor" timestamp="1610829154825" />
-    <state x="212" y="-915" key="SettingsEditor/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state x="-821" y="6" width="765" height="728" key="find.popup" timestamp="1618786373835">
-      <screen x="-1920" y="-174" width="1920" height="1040" />
-    </state>
-    <state x="-821" y="6" width="765" height="728" key="find.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618786373835" />
-    <state x="299" y="-1080" width="823" height="1040" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@-249.-1080.1920.1040" timestamp="1610829154825" />
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728/-249.-1080.1920.1040@0.0.1366.728" timestamp="1610829154825" />
-    <state x="-1297" y="51" width="672" height="678" key="search.everywhere.popup" timestamp="1618766283424">
-      <screen x="-1920" y="-174" width="1920" height="1040" />
-    </state>
-    <state x="-1297" y="51" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-174.1920.1040@-1920.-174.1920.1040" timestamp="1618766283424" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/djaesy/views.py</url>
-          <line>178</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/djaesy/base_views.py</url>
-          <line>1112</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

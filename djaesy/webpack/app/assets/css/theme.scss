@@ -118,13 +118,17 @@ h4 .mdi {
 
 
 html {
-    font-size: var(--rem-reference) !important;
+    font-size: var(--rem-reference);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 body {
     // background-color: var(--base-background) !important;
     overflow: hidden;
     color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 h1, h2, h3, h4, h5 {

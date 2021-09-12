@@ -34,7 +34,6 @@ nosetests.xml
 coverage.xml
 
 # Mr Developer
-settings_dev.py
 .project
 .pydevproject
 .idea

@@ -6,7 +6,7 @@ from django.forms.widgets import Input
 from leaflet.forms.widgets import LeafletWidget
 
 # from djaesy.geos import circle_maker
-from djaesy.autocomplete import ModelSelect2Multiple
+from djaesy.autocomplete.widgets import ModelSelect2Multiple
 
 
 class CustomClassInput(Input):

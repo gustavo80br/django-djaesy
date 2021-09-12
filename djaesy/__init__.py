@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
-from djaesy.layouts import USER_CREATE_EDIT_LAYOUT
+from djaesy.security.layouts import USER_CREATE_EDIT_LAYOUT
 
 
 settings.DJAESY_PAGE_TITLE_PREFIX = 'DJAESY | '
@@ -34,8 +34,8 @@ for app in required_apps:
 
 settings.DJAESY_USER_MENU = getattr(settings, 'DJAESY_USER_MENU', True)
 
-settings.DJAESY_USER_CREATE_FORM = getattr(settings, 'DJAESY_USER_CREATE_FORM', 'djaesy.UserCreationForm')
-settings.DJAESY_USER_UPDATE_FORM = getattr(settings, 'DJAESY_USER_UPDATE_FORM', 'djaesy.UserUpdateForm')
+settings.DJAESY_USER_CREATE_FORM = getattr(settings, 'DJAESY_USER_CREATE_FORM', 'djaesy.security.forms.UserCreationForm')
+settings.DJAESY_USER_UPDATE_FORM = getattr(settings, 'DJAESY_USER_UPDATE_FORM', 'djaesy.security.forms.UserUpdateForm')
 settings.DJAESY_USER_CREATE_LAYOUT = getattr(settings, 'DJAESY_USER_CREATE_LAYOUT', USER_CREATE_EDIT_LAYOUT)
 settings.DJAESY_USER_UPDATE_LAYOUT = getattr(settings, 'DJAESY_USER_UPDATE_LAYOUT', USER_CREATE_EDIT_LAYOUT)
 
@@ -57,7 +57,7 @@ settings.MIDDLEWARE += (
 
 settings.X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-settings.DJAESY_PERMISSIONS = 'djaesy.permissions'
+settings.DJAESY_PERMISSIONS = 'djaesy.security.permissions'
 settings.AUTH_USER_MODEL = 'djaesy.User'
 settings.STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

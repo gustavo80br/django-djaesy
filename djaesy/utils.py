@@ -9,8 +9,10 @@ def load_view(view_ref):
 
 
 def load_form(form_ref):
-    form_app, form_class = form_ref.split('.')
-    return getattr(import_module(f'{form_app}.forms'), form_class)
+    reference = form_ref.split('.')
+    form_class = reference[-1]
+    form_app = '.'.join(reference[:-1])
+    return getattr(import_module(form_app), form_class)
 
 
 def get_view_from_url(url):

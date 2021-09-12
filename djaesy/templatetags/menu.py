@@ -1,5 +1,5 @@
 from django import template
-from djaesy.menu import Menu
+from djaesy.menus.engine import Menu
 
 register = template.Library()
 

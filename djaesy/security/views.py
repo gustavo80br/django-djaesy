@@ -1,23 +1,19 @@
+import django_filters
 from crispy_forms.layout import Div, Layout, HTML
 from crum import get_current_user
-from django.shortcuts import render
-from django.utils.translation import ugettext_lazy as _
-
-import django_filters
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.http.response import HttpResponseRedirect
 from django.urls import reverse_lazy
-from django.utils import translation
-from django.views.generic.base import View
+from django.utils.translation import ugettext_lazy as _
 
-from djaesy.base_views import TableListView, CreateView, UpdateView, BaseView
-from djaesy.forms import CreateRoleForm, UpdateRoleForm
-from djaesy.layouts import USER_CREATE_EDIT_LAYOUT
-from djaesy.login_views import ChangePassword, ChangePasswordDone
-from djaesy.models import Role
-from djaesy.forms import UserCreationForm, UserUpdateForm
+from djaesy.security.layouts import USER_CREATE_EDIT_LAYOUT
+from djaesy.security.login_views import ChangePassword, ChangePasswordDone
+from djaesy.security.models import Role
 from djaesy.utils import load_form
+from djaesy.security.forms import UserCreationForm, UserUpdateForm, CreateRoleForm, UpdateRoleForm
+from djaesy.core.views.form import CreateView, UpdateView
+from djaesy.core.views.table import TableListView
+
 
 user_creation_form = getattr(settings, 'DJAESY_USER_CREATE_FORM', UserCreationForm)
 if isinstance(user_creation_form, str):
@@ -26,14 +22,6 @@ if isinstance(user_creation_form, str):
 user_update_form = getattr(settings, 'DJAESY_USER_UPDATE_FORM', UserUpdateForm)
 if isinstance(user_update_form, str):
     user_update_form = load_form(user_update_form)
-
-
-class DjaesyTabViewWrapper(BaseView):
-
-    def get(self, request, *args, **kwargs):
-        context = self._get_render_context()
-        context['tab_url'] = f'/{kwargs.get("path", "")}'
-        return render(request, 'djaesy/base2.html', context=context)
 
 
 class UserList(TableListView):
@@ -243,20 +231,3 @@ class RoleUpdate(UpdateView):
                 )
         self.form_layout = Layout(*layout)
         return super()._setup_helper(form_class)
-
-
-class SetLanguage(View):
-
-    def get(self, request, language):
-
-        if language not in dict(settings.LANGUAGES).keys():
-            user_language = 'pt-br'
-        else:
-            user_language = language
-
-        translation.activate(user_language)
-
-        response = HttpResponseRedirect('/')
-        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
-
-        return response

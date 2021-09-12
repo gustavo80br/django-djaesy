@@ -6,7 +6,6 @@
     width: 100%;
     height: calc(100vh - var(--top-tabs-height) - var(--top-navbar-height) - var(--content-top-margin) - var(--content-bottom-margin));
     border: none;
-    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
 }
 
 #main-tabs .nav-item:first-child .nav-link {
@@ -23,15 +22,23 @@
     z-index: 1002;
     // max-height: 100px;
     padding-left: 0;
+    overflow: hidden;
     // border-bottom: 1px solid #dee2e6;
 
     // background-color: var(--base-background);
     background: var(--tabs-bg-color);
 
-    .nav-link {
-        border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-        padding: 0.3rem 1rem;
-        height: var(--top-tabs-height);
+    .nav-tabs {
+        margin-left: var(--tabs-margin-left) !important;
+        .nav-item {
+            border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+            box-shadow: var(--tab-shadow);
+            .nav-link {
+                padding: 0.3rem 1rem;
+                height: var(--top-tabs-height);
+                border: none !important;
+            }
+        }
     }
 
     .navbar-header {

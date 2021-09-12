@@ -8,7 +8,7 @@ from django.conf import settings
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
 
-from djaesy.models import CustomPermission
+from djaesy.security.models import CustomPermission
 
 permissions = [] #import_module(settings.DJAESY_PERMISSIONS)
 

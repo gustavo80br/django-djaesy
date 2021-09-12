@@ -1,6 +1,6 @@
 import pandas
 
-from djaesy.templatetags.djaesy import duration
+from djaesy.templatetags.app_panel import duration
 
 
 def boolean_column(inverse=False, use_red=False):
