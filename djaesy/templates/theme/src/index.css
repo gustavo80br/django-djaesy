@@ -1,0 +1,21 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.el-input {
+    width:100% !important;
+}
+input[type="text"], input.el-input__inner{
+    @apply shadow-sm focus:ring-sky-500 focus:border-sky-500 block w-full sm:text-sm border-gray-300 rounded-md placeholder-primary placeholder-opacity-25;
+}
+.el-date-editor .el-range-separator{
+    font-size: 10px !important;
+}
+
+
+/*body {
+    background-color: tomato;
+}*/
